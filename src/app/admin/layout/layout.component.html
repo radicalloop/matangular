@@ -1,17 +1,16 @@
- <main>
- <mat-sidenav-container class="sidenav-container">
-	<mat-sidenav #sidenav position="end" class="sidenav">
+<mat-sidenav-container class="sidenav-container">
+	<mat-sidenav #sidenav mode="over" align="end" class="sidenav">
 		<div class="quick-panel" fxLayout="column">
 			<mat-list>
-			<h3 mat-subheader>Today</h3>
-			<div class="secondary-text mat-display-1 p-15 mb-0" layout-padding flex>
-				<div class="mb-12">Monday</div>
-				<div fxLayout="row" fxLayoutalign="start start">
-					<span>13</span>
-					<span class="mat-subheading-1">th </span>
-					<span> November</span>
-				</div>
-			</div>
+    			<h3 mat-subheader>Today</h3>
+    			<div class="secondary-text mat-display-1 p-15 mb-0" layout-padding flex>
+    				<div class="mb-12">Monday</div>
+    				<div fxLayout="row" fxLayoutalign="start start">
+    					<span>13</span>
+    					<span class="mat-subheading-1">th </span>
+    					<span> November</span>
+    				</div>
+    			</div>
 			</mat-list>
 			<mat-divider></mat-divider>
 			<mat-list>
@@ -33,34 +32,34 @@
 			<mat-divider></mat-divider>
 
 			<mat-list>
-			<h3 mat-subheader>Quick Settings</h3>
-			<mat-list-item>
-				<mat-slide-toggle
-				class="example-margin"
-				color="primary"
-				[checked]="ischecked"
-				[disabled]="disabled">
-				Notifications
-				</mat-slide-toggle>
-			</mat-list-item>
-			<mat-list-item>
-				<mat-slide-toggle
-				class="example-margin"
-				color="accent"
-				[checked]="checked"
-				[disabled]="disabled">
-				Cloud Sync
-				</mat-slide-toggle>
-			</mat-list-item>
-			<mat-list-item>
-				<mat-slide-toggle
-				class="example-margin"
-				color="warn"
-				[checked]="checked"
-				[disabled]="disabled">
-				Notifications
-				</mat-slide-toggle>
-			</mat-list-item>
+    			<h3 mat-subheader>Quick Settings</h3>
+    			<mat-list-item>
+    				<mat-slide-toggle
+    				class="example-margin"
+    				color="primary"
+    				[checked]="ischecked"
+    				[disabled]="disabled">
+    				Notifications
+    				</mat-slide-toggle>
+    			</mat-list-item>
+    			<mat-list-item>
+    				<mat-slide-toggle
+    				class="example-margin"
+    				color="accent"
+    				[checked]="checked"
+    				[disabled]="disabled">
+    				Cloud Sync
+    				</mat-slide-toggle>
+    			</mat-list-item>
+    			<mat-list-item>
+    				<mat-slide-toggle
+    				class="example-margin"
+    				color="warn"
+    				[checked]="checked"
+    				[disabled]="disabled">
+    				Notifications
+    				</mat-slide-toggle>
+    			</mat-list-item>
 			</mat-list>
 		</div>
 	</mat-sidenav>
@@ -76,4 +75,3 @@
 	</div>
 
 </mat-sidenav-container>
-</main>
