@@ -1,4 +1,6 @@
-<div class="sidebar-panel" fxLayout="column">
+<perfect-scrollbar >
+    <div class="sidebar-panel" fxLayout="column">
+
 	<div class="branding" fxLayout="row" fxLayoutAlign="center center">ADMIN</div>
     <div class="user mb-12">
     	<div class="user-photo"><img src="../assets/images/account_circle.png"></div>
@@ -34,8 +36,8 @@
 
         <div class="menulist">
     		<h3 mat-subheader>Main Items</h3>
-			<mat-list-item class="sidebar-list-item">
-				<a fxLayout="row">
+			<mat-list-item >
+				<a fxLayout="row" fxLayoutAlign="start center">
 					<mat-icon>dashboard</mat-icon>
 					<span>Dashboard</span>
                     <span fxFlex></span>
@@ -44,7 +46,7 @@
 
                 <mat-nav-list class="sub-menu">
                     <mat-list-item>
-                        <a href="">
+                        <a href="" fxLayout="row" fxLayoutAlign="start center">
                             <span>Dashboard 1</span>
                         </a>
                     </mat-list-item>
@@ -138,3 +140,4 @@
         </div>
     </mat-nav-list>
 </div>
+</perfect-scrollbar>

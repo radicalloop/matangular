@@ -3,30 +3,32 @@
 	</div>
 	<div class="content-wrapper">
 	  <mat-toolbar color="primary">
-		<div>
-			<span matTooltip="Menu"><button (click)="sidebar.toggle()" mat-icon-button><mat-icon>menu</mat-icon></button></span>
-			<span matTooltip="Calender"><a href="#" mat-icon-button><mat-icon>today</mat-icon></a></span>
-			<span matTooltip="Mail"><a href="#" mat-icon-button><mat-icon>email</mat-icon></a></span>
-			<span matTooltip="Contacts"><a href="#" mat-icon-button><mat-icon>account_box</mat-icon></a></span>
-			<span matTooltip="To-Do"><a href="#" mat-icon-button><mat-icon>check_box</mat-icon></a></span>
-			<span matTooltip="Add / Remove Shortcuts"><a href="#" mat-icon-button><mat-icon>star</mat-icon></a></span>
-		</div>
-		<span class="fill-space"></span>
+		<div class="mat-toolbar-top" fxHide>
+			<div>
+				<span matTooltip="Menu"><button (click)="sidebar.toggle()" mat-icon-button><mat-icon>menu</mat-icon></button></span>
+			</div>
+			<span class="fill-space"></span>
 
-		<button mat-button [matMenuTriggerFor]="userMenu" class="user-icon">
-			<img class="avatar" src="../../../assets/images/user.svg"><span>John Doe</span><mat-icon>keyboard_arrow_down</mat-icon>
-		</button>
-		<mat-menu #userMenu="matMenu">
-			<button mat-menu-item><mat-icon>account_circle</mat-icon>My Profile</button>
-			<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
-			<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
-		</mat-menu>
-		<div class="mat-separator"></div>
-		<a href="#" mat-icon-button class="search"><mat-icon>search</mat-icon></a>
-		<div class="mat-separator"></div>
-		<button type="button" mat-icon-button (click)="sidenav.toggle()" class="list">
-			<mat-icon>notifications</mat-icon>
-		</button>
+			<button mat-button [matMenuTriggerFor]="userMenu" class="user-icon">
+				<img class="avatar" src="../../../assets/images/user.svg"><span>John Doe</span><mat-icon>keyboard_arrow_down</mat-icon>
+			</button>
+			<mat-menu #userMenu="matMenu">
+				<button mat-menu-item><mat-icon>account_circle</mat-icon>My Profile</button>
+				<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
+				<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
+			</mat-menu>
+			<div class="mat-separator"></div>
+			<a href="#" mat-icon-button class="search"><mat-icon>search</mat-icon></a>
+			<div class="mat-separator"></div>
+			<button type="button" mat-icon-button (click)="sidenav.toggle()" class="list">
+				<mat-icon>notifications</mat-icon>
+			</button>
+		</div>
+
+        <div class="searchbar expanded" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        	<input fxFlex type="text" name="search" placeholder="Search" class="ml-24">
+        	<button mat-icon-button><mat-icon>close</mat-icon></button>
+	    </div>
 	  </mat-toolbar>
 	</div>
 </div>
