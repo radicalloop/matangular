@@ -1,0 +1,57 @@
+<div class="sidebar-panel" fxLayout="column">
+	<div class="branding" fxLayout="row" fxLayoutAlign="center center">ADMIN</div>
+    <div class="user mb-12">
+    	<div class="user-photo"><img src="../assets/images/account_circle.png"></div>
+    	<span class="user-name">Watson Joyce</span>
+    	<div class="user-controls"></div>
+    	<button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
+    		<mat-icon>settings</mat-icon>
+    	</button>
+        	<mat-menu #userControls="matMenu">
+           		<button mat-menu-item><mat-icon>account_circle</mat-icon>My Profile</button>
+				<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
+				<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
+        	</mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
+    		<mat-icon>email</mat-icon>
+    	</button>	
+    	<button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
+    		<mat-icon>exit_to_app</mat-icon>
+    	</button>
+    </div>
+    <mat-divider class="mt-1"></mat-divider>
+    <mat-nav-list>
+	    <div class="frequently-accessed" >
+			<h3 mat-subheader>Frequently Accessed</h3>
+			<div class="button-row" fxLayout="row"  fxLayoutAlign="space-evenly center">
+	            <button mat-raised-button><mat-icon>home</mat-icon></button>
+	            <button mat-raised-button><mat-icon>person</mat-icon></button> 
+	            <button mat-raised-button><mat-icon>flight_takeoff</mat-icon></button>   
+	        </div>
+	    </div>  
+   		 <mat-divider class="mt-1"></mat-divider>
+    
+    	<h3 mat-subheader>Main Items</h3>
+		<mat-list-item >
+			<a matLine href="...">
+				<mat-icon>dashboard</mat-icon>
+				<span>Dashboard</span>
+			</a>	
+		</mat-list-item>
+    	<mat-list-item>
+    		<a><mat-icon>dashboard</mat-icon><span>Dashboard</span></a>
+    	</mat-list-item>
+    	<mat-list-item>
+    		<a><mat-icon>inbox</mat-icon><span>Inbox</span></a>
+    	</mat-list-item>
+    	<mat-list-item>
+    		<a><mat-icon>chat</mat-icon><span>Chat</span></a>
+    	</mat-list-item>
+    	<mat-list-item>
+    		<a><mat-icon>date_range</mat-icon><span>Calender</span></a>
+    	</mat-list-item>
+    	<mat-list-item>
+    		<a><mat-icon>filter_none</mat-icon><span>Dialog</span></a>
+    	</mat-list-item>
+    </mat-nav-list>
+</div>
