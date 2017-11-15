@@ -14,7 +14,7 @@
         	</mat-menu>
         <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
     		<mat-icon>email</mat-icon>
-    	</button>	
+    	</button>
     	<button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
     		<mat-icon>exit_to_app</mat-icon>
     	</button>
@@ -25,33 +25,99 @@
 			<h3 mat-subheader>Frequently Accessed</h3>
 			<div class="button-row" fxLayout="row"  fxLayoutAlign="space-evenly center">
 	            <button mat-raised-button><mat-icon>home</mat-icon></button>
-	            <button mat-raised-button><mat-icon>person</mat-icon></button> 
-	            <button mat-raised-button><mat-icon>flight_takeoff</mat-icon></button>   
+	            <button mat-raised-button><mat-icon>person</mat-icon></button>
+	            <button mat-raised-button><mat-icon>flight_takeoff</mat-icon></button>
 	        </div>
-	    </div>  
-   		 <mat-divider class="mt-1"></mat-divider>
-    
-    	<h3 mat-subheader>Main Items</h3>
-    	
-		
-			<a matLine href="...">
-				<mat-icon>dashboard</mat-icon>
-				<span>Dashboard</span>
-			</a>	
-    	<!-- <mat-list-item>
-    		<a><mat-icon>dashboard</mat-icon><span>Dashboard</span></a>
-    	</mat-list-item>
-    	<mat-list-item>
-    		<a><mat-icon>inbox</mat-icon><span>Inbox</span></a>
-    	</mat-list-item>
-    	<mat-list-item>
-    		<a><mat-icon>chat</mat-icon><span>Chat</span></a>
-    	</mat-list-item>
-    	<mat-list-item>
-    		<a><mat-icon>date_range</mat-icon><span>Calender</span></a>
-    	</mat-list-item>
-    	<mat-list-item>
-    		<a><mat-icon>filter_none</mat-icon><span>Dialog</span></a>
-    	</mat-list-item> -->
+	    </div>
+
+   		<mat-divider class="mt-1"></mat-divider>
+
+        <div class="menulist">
+    		<h3 mat-subheader>Main Items</h3>
+			<mat-list-item>
+				<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>dashboard</mat-icon>
+					<span>Dashboard</span>
+				</a>
+			</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>inbox</mat-icon>
+					<span>Inbox</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>chat</mat-icon>
+					<span>Chat</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>date_range</mat-icon>
+					<span>Calender</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>filter_none</mat-icon>
+					<span>Dialog</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>favorite</mat-icon>
+					<span>Material</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>description</mat-icon>
+					<span>Forms</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>format_line_spacing</mat-icon>
+					<span>Tables</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>person</mat-icon>
+					<span>Profile</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>mail</mat-icon>
+					<span>Mail</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>folder</mat-icon>
+					<span>File Manager</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>account_box</mat-icon>
+					<span>Contacts</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>check_box</mat-icon>
+					<span>To-Do</span>
+				</a>
+	    	</mat-list-item>
+	    	<mat-list-item>
+	    		<a matLine href="..." fxLayoutAlign="start center">
+					<mat-icon>assessment</mat-icon>
+					<span>Scrumboard</span>
+				</a>
+	    	</mat-list-item>
+        </div>
     </mat-nav-list>
 </div>
