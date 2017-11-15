@@ -1,22 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  overflow: hidden;
+html {
+    font-size: 16px;
 }
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+
+html body {
+    // font-family: Roboto, sans-serif;
     width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: .875rem;
+    color: rgba(0,0,0,.87);
+    line-height: 1.5;
+    font-family: "Roboto",Helvetica Neue,sans-serif;
+}
+
+.sidenav-container {
     height: 100vh;
 }
+//   main {
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-orient: vertical;
+//     -webkit-box-direction: normal;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     width: 100%;
+//     height: 100vh;
+// }
+
 .done {
   position: fixed;
   bottom: 20px;
@@ -63,17 +93,9 @@ body {
     flex: 1;
   }
 .quick-panel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     width: 330px;
     min-width: 330px;
     max-width: 330px;
-    z-index: 99;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
 }
 .secondary-text{
   color: rgba(0,0,0,.54);
@@ -92,6 +114,114 @@ body {
 .left-sidenav{
 	width: 240px;
 }
+
+
+.left-sidenav.mat-sidenav {
+    width: 15rem;
+    min-width: 15rem;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.left-sidenav.mat-sidenav .navigation-hold {
+    position: relative;
+    padding-top: 64px;
+    background: rgba(255, 255, 255, .95);
+    height: 100%;
+    -webkit-transition: all .3s cubic-bezier(.35, 0, .25, 1);
+    transition: all .3s cubic-bezier(.35, 0, .25, 1);
+}
+.nav-section-title {
+    padding: 16px 0 0 16px;
+    display: block;
+    font-size: 12px;
+}
+.left-sidenav.mat-sidenav .mat-nav-list .sidebar-list-item .mat-list-item-content {
+    font-size: .875rem !important;
+    display: block;
+    overflow: hidden;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    -webkit-transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
+    transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
+}
+.mat-nav-list .mat-list-item-content.mat-list-item-focus, .mat-nav-list .mat-list-item-content:hover {
+    background: transparent;
+}
+.sidebar-list-item.open > .mat-list-item-content {
+    background: rgba(0, 0, 0, .03);
+}
+.left-sidenav .mat-nav-list a {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px 0 0;
+    z-index: 99;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item mat-icon:not(.menu-caret) {
+    text-align: center;
+    margin-right: 3px;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    border-left: 3px solid;
+    border-color: transparent;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item mat-icon.menu-caret {
+    float: right;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .3s cubic-bezier(.35,0,.25,1);
+    transition: all .3s cubic-bezier(.35,0,.25,1);
+}
+.left-sidenav.mat-sidenav .sidebar-list-item.open mat-icon.menu-caret {
+    float: right;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.left-sidenav.mat-sidenav .mat-list-item-content > a {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item {
+    max-height: 48px;
+    overflow: hidden;
+    -webkit-transition: all .4s cubic-bezier(.35,0,.25,1);
+    transition: all .4s cubic-bezier(.35,0,.25,1);
+}
+.left-sidenav.mat-sidenav .sidebar-list-item.open {
+    max-height: 1000px;
+    overflow: visible;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu {
+    max-height: 1000px;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item .sub-menu {
+    padding: 0;
+    -webkit-transition: max-height .4s cubic-bezier(.35,0,.25,1);
+    transition: max-height .4s cubic-bezier(.35,0,.25,1);
+    border-left: 3px solid transparent;
+}
+.left-sidenav.mat-sidenav .sidebar-list-item .sub-menu .mat-list-item {
+    -webkit-transition: height .4s cubic-bezier(.35,0,.25,1);
+    transition: height .4s cubic-bezier(.35,0,.25,1);
+}
+.left-sidenav.mat-sidenav .sidebar-list-item .sub-menu .mat-list-item.selected {
+    background: rgba(0, 0, 0, .05);
+}
+
 .mat-slide-toggle{
   flex: 1;
 }
