@@ -15,6 +15,14 @@ import {
 } from '@angular/material';
 import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
+
 @NgModule({
   imports: [
     MatButtonModule,
@@ -27,7 +35,8 @@ import { SidenavAccordionDirective } from './directives/sidenav-accordian.direct
   	MatCheckboxModule,
   	MatListModule,
   	MatSlideToggleModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PerfectScrollbarModule
   ],
   exports: [
     MatButtonModule,
@@ -40,8 +49,15 @@ import { SidenavAccordionDirective } from './directives/sidenav-accordian.direct
     MatCheckboxModule,
     MatListModule,
     MatSlideToggleModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PerfectScrollbarModule
   ],
-  declarations: [SidenavAccordionDirective]
+  declarations: [SidenavAccordionDirective],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ]
 })
 export class SharedModule { }
