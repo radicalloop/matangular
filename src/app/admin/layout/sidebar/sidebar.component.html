@@ -12,16 +12,16 @@
 				<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
 				<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
         	</mat-menu>
-        <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
+        <button mat-icon-button mat-xs-button>
     		<mat-icon>email</mat-icon>
     	</button>
-    	<button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
+    	<button mat-icon-button mat-xs-button>
     		<mat-icon>exit_to_app</mat-icon>
     	</button>
     </div>
     <mat-divider class="mt-1"></mat-divider>
     <mat-nav-list>
-	    <div class="frequently-accessed" >
+	    <div class="frequently-accessed">
 			<h3 mat-subheader>Frequently Accessed</h3>
 			<div class="button-row" fxLayout="row"  fxLayoutAlign="space-evenly center">
 	            <button mat-raised-button><mat-icon>home</mat-icon></button>
@@ -34,12 +34,29 @@
 
         <div class="menulist">
     		<h3 mat-subheader>Main Items</h3>
-			<mat-list-item>
-				<a matLine href="..." fxLayoutAlign="start center">
+			<mat-list-item class="sidebar-list-item">
+				<a fxLayout="row">
 					<mat-icon>dashboard</mat-icon>
 					<span>Dashboard</span>
+                    <span fxFlex></span>
+                    <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
 				</a>
-			</mat-list-item>
+
+                <mat-nav-list class="sub-menu">
+                    <mat-list-item>
+                        <a href="">
+                            <span>Dashboard 1</span>
+                        </a>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <a href="" >
+
+                            <span>Dashboard 2</span>
+                        </a>
+                    </mat-list-item>
+                </mat-nav-list>
+            </mat-list-item>
+
 	    	<mat-list-item>
 	    		<a matLine href="..." fxLayoutAlign="start center">
 					<mat-icon>inbox</mat-icon>

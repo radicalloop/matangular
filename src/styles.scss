@@ -35,17 +35,6 @@ body {
 .sidenav-container {
     height: 100vh;
 }
-//   main {
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: flex;
-//     -webkit-box-orient: vertical;
-//     -webkit-box-direction: normal;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-//     width: 100%;
-//     height: 100vh;
-// }
 
 .done {
   position: fixed;
@@ -268,6 +257,9 @@ button[mat-xs-button] mat-icon{
     box-shadow: inset 0 0 0 24px rgba(0,0,0,.37);
     border-radius: 24px;
 }
+.menulist .mat-list-item-content {
+    padding: 0px !important;
+}
 .mb-1 {
     margin-bottom: 1rem!important;
 }
@@ -285,3 +277,15 @@ button[mat-xs-button] mat-icon{
  .p-15{
   padding:15px;;
  }
+
+.sub-menu mat-list-item.mat-list-item {
+    padding-left: 46px;
+}
+.menulist .mat-list-item-content{
+    display: block !important;
+}
+.menulist .mat-list-item{
+    max-height: 1000px;
+    overflow: visible;
+    height: auto !important;
+}
