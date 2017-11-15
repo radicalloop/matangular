@@ -13,6 +13,7 @@ import {
   MatListModule,
   MatSlideToggleModule,
 } from '@angular/material';
+import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
 
 @NgModule({
   imports: [
@@ -41,6 +42,6 @@ import {
     MatSlideToggleModule,
     FlexLayoutModule
   ],
-  declarations: []
+  declarations: [SidenavAccordionDirective]
 })
 export class SharedModule { }
