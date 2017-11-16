@@ -50,7 +50,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatListModule,
     MatSlideToggleModule,
     FlexLayoutModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    SidenavAccordionDirective
   ],
   declarations: [SidenavAccordionDirective],
   providers: [

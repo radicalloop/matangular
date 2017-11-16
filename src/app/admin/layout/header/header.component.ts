@@ -9,11 +9,12 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input('sidenav') sidenav:any;
-
   @Input('sidebar') sidebar:any;
+
+  displaySearch : Boolean = false;
   constructor() { }
 
-  
+
 
   ngOnInit() {
   }
