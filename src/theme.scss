@@ -14,6 +14,22 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);
 
 
+$general-typography: mat-typography-config(
+  $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
+  $body-2:        mat-typography-level(14px, 24px, 600),
+  $body-1:        mat-typography-level(14px, 24px, 600),
+  $subheading-2:  mat-typography-level(14px, 28px, 400)
+);
+
+$secondary-typography: mat-typography-config(
+  $font-family: 'Roboto, sans-serif'
+);
+
+
+// Be sure that you only ever include this mixin once!
+@include mat-core($general-typography);
+@include mat-sidenav-typography($general-typography);
+
 .default-theme {
   @include angular-material-theme($anms-theme);
 }
@@ -31,7 +47,11 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
    $light-primary:  mat-palette($primary, 500, 900, A100);
 
   .branding {
-      background: mat-color($light-primary);
+      background: mat-color($accent);
   }
+
+
 }
+
+
 
