@@ -3,31 +3,35 @@
 	</div>
 	<div class="content-wrapper">
 	  <mat-toolbar color="primary">
-		<div class="mat-toolbar-top" fxHide>
-			<div>
-				<span matTooltip="Menu"><button (click)="sidebar.toggle()" mat-icon-button><mat-icon>menu</mat-icon></button></span>
+	  	<div fxFlex *ngIf="!displaySearch" fxLayoutAlign="start center">
+				<span matTooltip="Menu"  class="pl-15">
+						<button (click)="sidebar.toggle()" mat-icon-button>
+							<mat-icon>menu</mat-icon>
+						</button>
+				</span>
+
+				<span fxFlex></span>
+
+				<button mat-button [matMenuTriggerFor]="userMenu" class="user-icon">
+					<img class="avatar" src="../../../assets/images/user.svg">
+					<span>John Doe</span>
+					<mat-icon class="s-18">keyboard_arrow_down</mat-icon>
+				</button>
+				<mat-menu #userMenu="matMenu">
+					<button mat-menu-item><mat-icon>account_circle</mat-icon>My Profile</button>
+					<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
+					<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
+				</mat-menu>
+				<div class="mat-separator"></div>
+				<a mat-icon-button class="search" (click)="displaySearch = true"><mat-icon>search</mat-icon></a>
+				<div class="mat-separator"></div>
+				<button type="button" mat-icon-button (click)="sidenav.toggle()" class="list">
+					<mat-icon>notifications</mat-icon>
+				</button>
 			</div>
-			<span class="fill-space"></span>
-
-			<button mat-button [matMenuTriggerFor]="userMenu" class="user-icon">
-				<img class="avatar" src="../../../assets/images/user.svg"><span>John Doe</span><mat-icon>keyboard_arrow_down</mat-icon>
-			</button>
-			<mat-menu #userMenu="matMenu">
-				<button mat-menu-item><mat-icon>account_circle</mat-icon>My Profile</button>
-				<button mat-menu-item><mat-icon>email</mat-icon>Inbox</button>
-				<button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
-			</mat-menu>
-			<div class="mat-separator"></div>
-			<a href="#" mat-icon-button class="search"><mat-icon>search</mat-icon></a>
-			<div class="mat-separator"></div>
-			<button type="button" mat-icon-button (click)="sidenav.toggle()" class="list">
-				<mat-icon>notifications</mat-icon>
-			</button>
-		</div>
-
-        <div class="searchbar expanded" fxLayout="row" fxFlex fxLayoutAlign="start center">
+      <div class="searchbar expanded" *ngIf="displaySearch" fxLayout="row" fxFlex fxLayoutAlign="start center">
         	<input fxFlex type="text" name="search" placeholder="Search" class="ml-24">
-        	<button mat-icon-button><mat-icon>close</mat-icon></button>
+        	<button mat-icon-button (click)="displaySearch = false"><mat-icon>close</mat-icon></button>
 	    </div>
 	  </mat-toolbar>
 	</div>

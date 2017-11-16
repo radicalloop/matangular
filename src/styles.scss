@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html {
-    font-size: 16px;
-}
+
+// html {
+//     font-size: 16px;
+// }
 
 html body {
     // font-family: Roboto, sans-serif;
@@ -51,6 +51,9 @@ body {
 
 
 /*Paddings*/
+.pl-15{
+  padding-left: 15px;
+}
 .p-15{
     padding:15px;;
  }
@@ -144,7 +147,6 @@ body {
     height: 64px;
     position: fixed;
     width: 100%;
-    background: #fff;
     top: 0;
     left: 0;
     z-index: 999;
@@ -178,18 +180,26 @@ button[mat-xs-button] mat-icon{
     padding: 0px !important;
 }
 
-.sub-menu mat-list-item.mat-list-item span {
-    padding-left: 46px;
-    height: 48px;
-    line-height: 48px;
-}
 .menulist .mat-list-item-content{
     display: block !important;
 }
-.menulist .mat-list-item{
+.menulist .sidebar-list-item{
+  max-height: 48px ;
+  overflow: hidden;
+}
+.menulist .sidebar-list-item.open{
     max-height: 1000px;
-    overflow: visible;
+    overflow: visible !important;
     height: auto !important;
+}
+.sidebar-list-item{
+   -webkit-transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
+    transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
+}
+.menulist .mat-list-item.open .sub-menu mat-list-item.mat-list-item span {
+    padding-left: 46px;
+    height: 48px;
+    line-height: 48px;
 }
 .searchbar {
     min-height: 64px;
@@ -209,3 +219,24 @@ input:focus{
 .sidebar-panel{
     padding-top: 64px;
 }
+mat-nav-list.sub-menu.mat-nav-list{
+  padding-top:0px;
+}
+.s-18{
+  font-size: 18px;
+  line-height: 18px;
+  width: 18px !important;
+  height: 18px !important;
+}
+.open .menu-caret{
+  transform: rotate(180deg);
+}
+mat-icon.menu-caret.mat-icon.material-icons {
+    font-size: 18px;
+}
+.sub-menu.mat-nav-list, .sub-menu{
+      transition: max-height .4s cubic-bezier(.35,0,.25,1);
+}
+.sub-menu mat-list-item{
+    transition: height .4s cubic-bezier(.35,0,.25,1);
+    }

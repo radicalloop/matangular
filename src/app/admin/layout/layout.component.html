@@ -1,5 +1,6 @@
-<mat-sidenav-container class="sidenav-container">
-	<mat-sidenav #sidenav mode="over" align="end" class="sidenav">
+<mat-sidenav-container class="sidenav-container black-theme">
+	<mat-sidenav #sidenav mode="over" position="end" class="sidenav">
+		<perfect-scrollbar>
 		<div class="quick-panel" fxLayout="column">
 			<mat-list>
     			<h3 mat-subheader>Today</h3>
@@ -62,6 +63,7 @@
     			</mat-list-item>
 			</mat-list>
 		</div>
+	</perfect-scrollbar>
 	</mat-sidenav>
 
 	<mat-sidenav #sidebar position="start" mode="side"  opened="true" class="sidenav left-sidenav">

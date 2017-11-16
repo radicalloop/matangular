@@ -42,7 +42,7 @@
       <mat-divider class="mt-1"></mat-divider>
       <div class="menulist">
         <h3 mat-subheader>Main Items</h3>
-        <mat-list-item  sidenavAccordian>
+        <mat-list-item class="sidebar-list-item" sidenavAccordian>
           <a fxLayout="row" fxLayoutAlign="start center">
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
@@ -80,11 +80,25 @@
             <span>Calender</span>
           </a>
         </mat-list-item>
-        <mat-list-item>
-          <a matLine href="..." fxLayoutAlign="start center">
+        <mat-list-item class="sidebar-list-item" sidenavAccordian>
+          <a matLine fxLayoutAlign="start center">
             <mat-icon>filter_none</mat-icon>
             <span>Dialog</span>
+            <span fxFlex></span>
+            <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
           </a>
+          <mat-nav-list class="sub-menu">
+            <mat-list-item>
+              <a href="" fxLayout="row" fxLayoutAlign="start center">
+                  <span>Dialog 1</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item>
+              <a href="">
+                  <span>Dialog 2</span>
+              </a>
+            </mat-list-item>
+          </mat-nav-list>
         </mat-list-item>
         <mat-list-item>
           <a matLine href="..." fxLayoutAlign="start center">
