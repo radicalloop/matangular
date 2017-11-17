@@ -1,0 +1,11 @@
+.quick-panel {
+    width: 330px;
+    min-width: 330px;
+    max-width: 330px;
+
+    .mat-slide-toggle-content {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+}
