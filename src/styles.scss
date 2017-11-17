@@ -26,7 +26,7 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    font-size: .875rem;
+    // font-size: .875rem;
     color: rgba(0,0,0,.87);
     line-height: 1.5;
     font-family: "Roboto",Helvetica Neue,sans-serif;
@@ -177,15 +177,12 @@ button[mat-xs-button] mat-icon{
 .menulist .sidebar-list-item{
   max-height: 48px ;
   overflow: hidden;
+  transition: all .4s cubic-bezier(.35,0,.25,1);
 }
 .menulist .sidebar-list-item.open{
     max-height: 1000px;
     overflow: visible !important;
     height: auto !important;
-}
-.sidebar-list-item{
-   -webkit-transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
-    transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
 }
 .menulist .mat-list-item.open .sub-menu mat-list-item.mat-list-item span {
     padding-left: 46px;
