@@ -1,33 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
-
-// html {
-//     font-size: 16px;
-// }
-
-html body {
-    // font-family: Roboto, sans-serif;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    min-height: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 body {
     position: relative;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    font-weight: 400;
-    // font-size: .875rem;
-    color: rgba(0,0,0,.87);
     line-height: 1.5;
     font-family: "Roboto",Helvetica Neue,sans-serif;
 }
@@ -49,7 +26,6 @@ body {
     margin-left: 24px !important;
 }
 
-
 /*Paddings*/
 .pl-15{
   padding-left: 15px;
@@ -62,12 +38,6 @@ body {
     height: 100vh;
 }
 
-.done {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-}
 .mat-separator{
     height: 64px;
     width: 1px;
@@ -146,69 +116,9 @@ body {
 	text-align: center
 }
 
-button[mat-xs-button] {
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
-}
-button[mat-xs-button] mat-icon{
-	width: 16px;
-	height: 16px;
-	line-height: 16px !important;
-	font-size: 16px;
-}
+
 .frequently-accessed .button-row button{
 	min-width: auto;
-}
-
-.sidebar-panel .menulist a mat-icon {
-	height: 48px;
-    width: 48px;
-    line-height: 48px;
-    text-align: center;
-}
-.menulist .mat-list-item-content {
-    padding: 0px !important;
-}
-
-.menulist .mat-list-item-content{
-    display: block !important;
-}
-.menulist .sidebar-list-item{
-  max-height: 48px ;
-  overflow: hidden;
-  transition: all .4s cubic-bezier(.35,0,.25,1);
-}
-.menulist .sidebar-list-item.open{
-    max-height: 1000px;
-    overflow: visible !important;
-    height: auto !important;
-}
-.menulist .mat-list-item.open .sub-menu mat-list-item.mat-list-item span {
-    padding-left: 46px;
-    height: 48px;
-    line-height: 48px;
-}
-.searchbar {
-    min-height: 64px;
-}
-.searchbar input {
-    font-size: 20px;
-    background: transparent;
-    border: none;
-    color: #fff;
-}
-input::placeholder{
-    color: #fff;
-}
-input:focus{
-    outline: 0;
-}
-.sidebar-panel{
-    padding-top: 64px;
-}
-mat-nav-list.sub-menu.mat-nav-list{
-  padding-top:0px;
 }
 .s-18{
   font-size: 18px;
@@ -216,15 +126,3 @@ mat-nav-list.sub-menu.mat-nav-list{
   width: 18px !important;
   height: 18px !important;
 }
-.open .menu-caret{
-  transform: rotate(180deg);
-}
-mat-icon.menu-caret.mat-icon.material-icons {
-    font-size: 18px;
-}
-.sub-menu.mat-nav-list, .sub-menu{
-      transition: max-height .4s cubic-bezier(.35,0,.25,1);
-}
-.sub-menu mat-list-item{
-    transition: height .4s cubic-bezier(.35,0,.25,1);
-    }

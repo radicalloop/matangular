@@ -1,0 +1,57 @@
+.sidebar-panel .menulist a mat-icon {
+  height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+button[mat-xs-button] {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+button[mat-xs-button] mat-icon{
+  width: 16px;
+  height: 16px;
+  line-height: 16px !important;
+  font-size: 16px;
+}
+.menulist .mat-list-item-content {
+    padding: 0px !important;
+}
+
+.menulist .mat-list-item-content{
+    display: block !important;
+}
+.menulist .sidebar-list-item{
+  max-height: 48px ;
+  overflow: hidden;
+  transition: all .4s cubic-bezier(.35,0,.25,1);
+}
+.menulist .sidebar-list-item.open{
+    max-height: 1000px;
+    overflow: visible !important;
+    height: auto !important;
+}
+.menulist .mat-list-item.open .sub-menu mat-list-item.mat-list-item span {
+    padding-left: 46px;
+    height: 48px;
+    line-height: 48px;
+}
+.sidebar-panel{
+    padding-top: 64px;
+}
+mat-nav-list.sub-menu.mat-nav-list{
+  padding-top:0px;
+}
+.open .menu-caret{
+  transform: rotate(180deg);
+}
+mat-icon.menu-caret.mat-icon.material-icons {
+    font-size: 18px;
+}
+.sub-menu.mat-nav-list, .sub-menu{
+    transition: max-height .4s cubic-bezier(.35,0,.25,1);
+}
+.sub-menu mat-list-item{
+    transition: height .4s cubic-bezier(.35,0,.25,1);
+}
