@@ -1,79 +1,61 @@
 <mat-sidenav-container class="sidenav-container black-theme">
-	<mat-sidenav #sidenav mode="over" position="end" class="sidenav">
-		<perfect-scrollbar>
-		<div class="quick-panel" fxLayout="column">
-			<mat-list>
-    			<h3 mat-subheader>Today</h3>
-    			<div class="secondary-text mat-display-1 p-15 mb-0" layout-padding flex>
-    				<div class="mb-12">Monday</div>
-    				<div fxLayout="row" fxLayoutalign="start start">
-    					<span>13</span>
-    					<span class="mat-subheading-1">th </span>
-    					<span> November</span>
-    				</div>
-    			</div>
-			</mat-list>
-			<mat-divider></mat-divider>
-			<mat-list>
-				<h3 mat-subheader>Events</h3>
-				<mat-list-item *ngFor="let event of events">
-					<h4 mat-line>{{event.name}}</h4>
-					<p mat-line class="secondary-text">{{event.time}}</p>
-				</mat-list-item>
-			</mat-list>
-			<mat-divider></mat-divider>
-
-			<mat-list>
-				<h3 mat-subheader>Notes</h3>
-				<mat-list-item *ngFor="let note of notes">
-					<h4 mat-line>{{note.name}}</h4>
-					<p mat-line class="secondary-text">Last Edit: {{note.lastedit | date }}</p>
-				</mat-list-item>
-			</mat-list>
-			<mat-divider></mat-divider>
-
-			<mat-list>
-    			<h3 mat-subheader>Quick Settings</h3>
-    			<mat-list-item>
-    				<mat-slide-toggle
-    				class="example-margin"
-    				color="primary"
-    				[checked]="ischecked"
-    				[disabled]="disabled">
-    				Notifications
-    				</mat-slide-toggle>
-    			</mat-list-item>
-    			<mat-list-item>
-    				<mat-slide-toggle
-    				class="example-margin"
-    				color="accent"
-    				[checked]="checked"
-    				[disabled]="disabled">
-    				Cloud Sync
-    				</mat-slide-toggle>
-    			</mat-list-item>
-    			<mat-list-item>
-    				<mat-slide-toggle
-    				class="example-margin"
-    				color="warn"
-    				[checked]="checked"
-    				[disabled]="disabled">
-    				Notifications
-    				</mat-slide-toggle>
-    			</mat-list-item>
-			</mat-list>
-		</div>
-	</perfect-scrollbar>
-	</mat-sidenav>
-
-	<mat-sidenav #sidebar position="start" mode="side"  opened="true" class="sidenav left-sidenav">
-		<app-sidebar></app-sidebar>
-	</mat-sidenav>
-
-	<app-header [sidenav]="sidenav" [sidebar]="sidebar"></app-header>
-
-	<div>
-		<router-outlet></router-outlet>
-	</div>
-
+  <mat-sidenav #sidenav mode="over" position="end" class="sidenav">
+    <perfect-scrollbar>
+      <div class="quick-panel" fxLayout="column">
+        <mat-list>
+          <h3 mat-subheader>Today</h3>
+          <div class="secondary-text mat-display-1 p-15 mb-0" flex>
+            <div class="mb-12">Monday</div>
+            <div fxLayout="row" fxLayoutalign="start start">
+              <span>13</span>
+              <span class="mat-subheading-1">th </span>
+              <span> November</span>
+            </div>
+          </div>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <h3 mat-subheader>Events</h3>
+          <mat-list-item *ngFor="let event of events">
+            <h4 mat-line>{{event.name}}</h4>
+            <p mat-line class="secondary-text">{{event.time}}</p>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <h3 mat-subheader>Notes</h3>
+          <mat-list-item *ngFor="let note of notes">
+            <h4 mat-line>{{note.name}}</h4>
+            <p mat-line class="secondary-text">Last Edit: {{note.lastedit | date }}</p>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <h3 mat-subheader>Quick Settings</h3>
+          <mat-list-item>
+            <mat-slide-toggle color="primary" [checked]="ischecked" [disabled]="disabled">
+              Notifications
+            </mat-slide-toggle>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-slide-toggle color="accent" [checked]="checked" [disabled]="disabled">
+              Cloud Sync
+            </mat-slide-toggle>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-slide-toggle color="warn" [checked]="checked" [disabled]="disabled">
+              Notifications
+            </mat-slide-toggle>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </perfect-scrollbar>
+  </mat-sidenav>
+  <mat-sidenav #sidebar position="start" [opened]="!isNavOver()" [mode]="isNavOver() ? 'over' : 'side'" class="sidenav left-sidenav">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <app-header [sidenav]="sidenav" [sidebar]="sidebar"></app-header>
+  <div class="right-container">
+    <router-outlet></router-outlet>
+  </div>
 </mat-sidenav-container>

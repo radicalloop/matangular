@@ -7,3 +7,25 @@ $anms-black-theme: mat-dark-theme(
   $anms-black-accent,
   $anms-black-warn
 );
+
+// $foreground: (
+//     base:              white,
+//     divider:           $white-12-opacity,
+//     dividers:          $white-12-opacity,
+//     disabled:          rgba(white, 0.3),
+//     disabled-button:   rgba(white, 0.3),
+//     disabled-text:     rgba(white, 0.3),
+//     hint-text:         rgba(white, 0.3),
+//     secondary-text:    rgba(white, 0.7),
+//     icon:              white,
+//     icons:             white,
+//     text:              white,
+//     slider-min:        white,
+//     slider-off:        rgba(white, 0.3),
+//     slider-off-active: rgba(white, 0.3),
+// );
+
+//$anms-black-theme: map-merge($anms-black-theme, (foreground: $foreground));
+
+
+@include angular-material-theme($anms-black-theme);

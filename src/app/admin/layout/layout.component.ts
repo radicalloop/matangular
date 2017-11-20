@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LayoutComponent implements OnInit {
-  
+
   events = [
       {
         name : 'Group Meeting',
@@ -24,7 +24,7 @@ export class LayoutComponent implements OnInit {
       {
        name : 'Q&A Session',
        time : '11:00 PM',
-      } 
+      }
   ];
 
   notes = [
@@ -37,11 +37,13 @@ export class LayoutComponent implements OnInit {
       lastedit : new Date('1/17/17'),
      },
   ];
-  
+
   constructor() { }
 
   ngOnInit() {
   }
-  
 
+  isNavOver() {
+    return window.matchMedia(`(max-width: 960px)`).matches;
+  }
  }

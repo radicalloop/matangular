@@ -9,6 +9,10 @@ body {
     font-family: "Roboto",Helvetica Neue,sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*Margins*/
 .mb-0{
     margin-bottom: 0px !important;
@@ -74,9 +78,9 @@ body {
     -ms-flex: 1;
     flex: 1;
   }
-.secondary-text{
-    color: rgba(0,0,0,.54);
-}
+// .secondary-text{
+//     color: rgba(0,0,0,.54);
+// }
 .mat-slide-toggle .mat-slide-toggle-label{
     order: 1;
 }
@@ -104,14 +108,7 @@ body {
 .mat-slide-toggle{
     flex: 1;
 }
-.branding {
-    height: 64px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
+
 .user{
 	text-align: center
 }

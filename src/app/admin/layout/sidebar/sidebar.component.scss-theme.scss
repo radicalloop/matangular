@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@mixin anms-sidebar-component-theme($theme) {
+
+  $background: map-get($theme, background);
+
+  .branding {
+      background: mat-color($background, card);
+  }
+}
