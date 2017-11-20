@@ -32,6 +32,10 @@ body {
     font-family: "Roboto",Helvetica Neue,sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*Margins*/
 .mb-0{
     margin-bottom: 0px !important;
@@ -104,9 +108,9 @@ body {
     -ms-flex: 1;
     flex: 1;
   }
-.secondary-text{
-    color: rgba(0,0,0,.54);
-}
+// .secondary-text{
+//     color: rgba(0,0,0,.54);
+// }
 .mat-slide-toggle .mat-slide-toggle-label{
     order: 1;
 }
@@ -134,29 +138,22 @@ body {
 .mat-slide-toggle{
     flex: 1;
 }
-.branding {
-    height: 64px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
+
 .user{
 	text-align: center
 }
 
-button[mat-xs-button] {
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
-}
-button[mat-xs-button] mat-icon{
-	width: 16px;
-	height: 16px;
-	line-height: 16px !important;
-	font-size: 16px;
-}
+// button[mat-xs-button] {
+// 	width: 20px;
+// 	height: 20px;
+// 	line-height: 20px;
+// }
+// button[mat-xs-button] mat-icon{
+// 	width: 16px;
+// 	height: 16px;
+// 	line-height: 16px !important;
+// 	font-size: 16px;
+// }
 .frequently-accessed .button-row button{
 	min-width: auto;
 }
@@ -222,9 +219,9 @@ mat-nav-list.sub-menu.mat-nav-list{
 mat-icon.menu-caret.mat-icon.material-icons {
     font-size: 18px;
 }
-.sub-menu.mat-nav-list, .sub-menu{
-      transition: max-height .4s cubic-bezier(.35,0,.25,1);
-}
-.sub-menu mat-list-item{
-    transition: height .4s cubic-bezier(.35,0,.25,1);
-    }
+// .sub-menu.mat-nav-list, .sub-menu{
+//       transition: max-height .4s cubic-bezier(.35,0,.25,1);
+// }
+// .sub-menu mat-list-item{
+//     transition: height .4s cubic-bezier(.35,0,.25,1);
+//     }

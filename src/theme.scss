@@ -1,17 +1,10 @@
 @import '~@angular/material/theming';
-@import 'themes/default-theme.scss';
-@import 'themes/light-theme.scss';
-@import 'themes/black-theme.scss';
 
 @include mat-core();
 
-$my-app-primary: mat-palette($mat-teal);
-$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn:    mat-palette($mat-deep-orange);
-
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-
-@include angular-material-theme($my-app-theme);
+@import 'themes/default-theme.scss';
+@import 'themes/light-theme.scss';
+@import 'themes/black-theme.scss';
 
 
 $general-typography: mat-typography-config(
@@ -30,28 +23,24 @@ $secondary-typography: mat-typography-config(
 @include mat-core($general-typography);
 @include mat-sidenav-typography($general-typography);
 
+@import 'app/admin/layout/sidebar/sidebar.component.scss-theme.scss';
+
+@mixin custom-components-theme($theme) {
+  @include anms-sidebar-component-theme($theme);
+}
+
 .default-theme {
   @include angular-material-theme($anms-theme);
+  @include custom-components-theme($anms-theme);
 }
 
 .light-theme {
   @include angular-material-theme($anms-light-theme);
-
+  @include custom-components-theme($anms-light-theme);
 }
 
 .black-theme {
-  @include angular-material-theme($anms-black-theme);
-   $primary: map-get($anms-black-theme, primary);
-   $accent: map-get($anms-black-theme, accent);
-   $warn: map-get($anms-black-theme, warn);
-   $light-primary:  mat-palette($primary, 500, 900, A100);
-
-  .branding {
-      background: mat-color($accent);
-  }
-
-
+   @include angular-material-theme($anms-black-theme);
+   @include custom-components-theme($anms-black-theme);
 }
-
-
 
