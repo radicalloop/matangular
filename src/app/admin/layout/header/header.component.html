@@ -1,5 +1,3 @@
-<div id="wrapper">
-  <!-- <div class="left-vertical-nav mat-grey-bg"></div> -->
   <div class="content-wrapper">
     <mat-toolbar color="primary">
       <div fxFlex [class.hidden]="displaySearch" fxLayoutAlign="start center">
@@ -9,7 +7,42 @@
             </button>
         </span>
         <span fxFlex></span>
-        <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon">
+
+        <a mat-icon-button class="search ml-1" (click)="displaySearch = true">
+          <mat-icon>search</mat-icon>
+        </a>
+        <button type="button" mat-icon-button class="ml-1" [matMenuTriggerFor]="colorScheme">
+          <mat-icon>format_color_fill</mat-icon>
+        </button>
+        <mat-menu #colorScheme="matMenu" class="color-scheme">
+        	<mat-grid-list cols="2">
+					  <mat-grid-tile>
+					  	<div mat-menu-item>
+					  		<div class="swatch"></div>
+					  		<mat-icon class="active-icon">check</mat-icon>
+					  	</div>
+					  </mat-grid-tile>
+					  <mat-grid-tile>
+					  	<div mat-menu-item>
+					  		<div class="swatch"></div>
+					  	</div>
+					  </mat-grid-tile>
+					  <mat-grid-tile>
+					  	<div mat-menu-item>
+					  		<div class="swatch"></div>
+					  	</div>
+					  </mat-grid-tile>
+					  <mat-grid-tile>
+					  	<div mat-menu-item>
+					  		<div class="swatch"></div>
+					  	</div>
+					  </mat-grid-tile>
+					</mat-grid-list>
+        </mat-menu>
+        <button type="button" mat-icon-button (click)="sidenav.toggle()" class="ml-1">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon ml-1">
           <img class="avatar" src="../../../assets/images/user.svg">
           <span>John Doe</span>
           <mat-icon class="s-18">keyboard_arrow_down</mat-icon>
@@ -22,21 +55,14 @@
           <button mat-menu-item>
             <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
         </mat-menu>
-        <div class="mat-separator"></div>
-        <a mat-icon-button class="search" (click)="displaySearch = true">
-          <mat-icon>search</mat-icon>
-        </a>
-        <div class="mat-separator"></div>
-        <button type="button" mat-icon-button (click)="sidenav.toggle()" class="list">
-          <mat-icon>notifications</mat-icon>
-        </button>
       </div>
       <div class="searchbar expanded" [class.hidden]="!displaySearch" fxLayout="row" fxFlex fxLayoutAlign="start center">
         <input fxFlex type="text" name="search" placeholder="Search" class="ml-24">
         <button mat-icon-button (click)="displaySearch = false">
           <mat-icon>close</mat-icon>
         </button>
+
       </div>
     </mat-toolbar>
   </div>
-</div>
+

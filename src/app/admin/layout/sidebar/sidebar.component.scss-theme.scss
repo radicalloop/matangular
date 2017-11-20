@@ -5,6 +5,12 @@
   $background: map-get($theme, background);
 
   .branding {
+      height: 64px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
       background: mat-color($background, card);
   }
 }

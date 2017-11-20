@@ -1,15 +1,48 @@
-.searchbar {
-    min-height: 64px;
+.mat-toolbar {
+    padding: 0px !important;
+
+    .user-icon{
+        min-height: 64px;
+        height: 64px;
+    }
+
+    .searchbar {
+      min-height: 64px;
+
+      input {
+          font-size: 20px;
+          background: transparent;
+          border: none;
+      }
+      input:focus{
+          outline: 0;
+      }
+    }
 }
-.searchbar input {
-    font-size: 20px;
-    background: transparent;
-    border: none;
-    color: #fff;
-}
-input::placeholder{
-    color: #fff;
-}
-input:focus{
-    outline: 0;
-}
+.color-scheme
+      {
+        .mat-menu-item{
+          height: 40px;
+          width: 40px;
+          padding: 5px;
+
+          .swatch{
+            height: 40px;
+            width: 40px;
+            line-height: 40px !important;
+            border-radius: 50%;
+            background-color: rgb(156, 39, 176);
+          }
+
+          .active-icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto !important;
+            color: #fff;
+          }
+        }
+
+     }

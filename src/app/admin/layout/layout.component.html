@@ -51,10 +51,11 @@
       </div>
     </perfect-scrollbar>
   </mat-sidenav>
-  <mat-sidenav #sidebar position="start" [opened]="!isNavOver()" [mode]="isNavOver() ? 'over' : 'side'" class="sidenav left-sidenav">
+  <mat-sidenav #sidebar position="start" [opened]="!isMobile()" [mode]="isMobile() ? 'over' : 'side'" class="sidenav left-sidenav mat-elevation-z6">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <app-header [sidenav]="sidenav" [sidebar]="sidebar"></app-header>
+  <app-breadcrumb></app-breadcrumb>
   <div class="right-container">
     <router-outlet></router-outlet>
   </div>

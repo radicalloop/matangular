@@ -1,0 +1,19 @@
+
+  .mat-card{
+    margin: 0.33em;
+    padding: 24px;
+
+    .mat-card-header-text{
+      margin: 0;
+    }
+    .mat-chip{
+        padding: 4px 8px;
+
+         .mat-icon{
+          font-size: 16px;
+          height: 16px;
+          width: 16px;
+          margin-right: 4px;
+        }
+      }
+  }

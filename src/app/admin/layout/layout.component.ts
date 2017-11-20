@@ -43,7 +43,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
-  isNavOver() {
+  isMobile() {
     return window.matchMedia(`(max-width: 960px)`).matches;
   }
  }
