@@ -32,6 +32,12 @@ body {
 .ml-1{
   margin-left: 1rem !important;
 }
+.mr-1{
+  margin-right: 1rem;
+}
+.m-0{
+  margin: 0px !important;
+}
 
 /*Paddings*/
 .pl-15{
@@ -39,6 +45,9 @@ body {
 }
 .p-15{
     padding:15px;;
+ }
+ .p-0{
+  padding: 0px !important;
  }
 
 .s-18{

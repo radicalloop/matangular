@@ -1,4 +1,4 @@
-<div fxLayout="row" fxLayoutWrap="wrap" >
+<div fxLayout="row" fxLayoutWrap="wrap">
   <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50">
     <mat-card>
       <mat-card-header>
@@ -61,7 +61,7 @@
   </div>
 </div>
 
-<div fxLayout fxLayoutAlign="stretch stretch">
+<div fxLayout>
   <div fxFlex="100">
     <mat-card>
         <mat-card-header>
@@ -77,6 +77,158 @@
           <small>Monthly</small>
         </mat-card-content>
     </mat-card>
+  </div>
+</div>
+
+<div fxLayout fxLayoutWrap="wrap">
+  <div fxFlex="100" fxFlex.gt-sm="33.33" fxLayout="Column">
+    <mat-card>
+      <mat-card-content>
+        <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile>
+            <mat-progress-spinner mode="indeterminate" color="primary" [value]="65"></mat-progress-spinner>
+          </mat-grid-tile>
+          <mat-grid-tile color="accent">
+            <mat-progress-spinner  mode="indeterminate" color="accent" [value]="25"></mat-progress-spinner>
+          </mat-grid-tile>
+          <mat-grid-tile color="accent">
+            <mat-progress-spinner mode="indeterminate" color="warn" [value]="45"></mat-progress-spinner>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title>
+          <span>Top Campaign Performance</span>
+          <span fxFlex></span>
+          <button mat-icon-button [matMenuTriggerFor]="progressBar">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #progressBar="matMenu">
+            <button mat-menu-item>
+            <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+          <button mat-menu-item>
+            <mat-icon>email</mat-icon><span>Inbox</span></button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+          </mat-menu>
+        </mat-card-title>
+         <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="mb-1">
+         <p>Facebook Campaign</p>
+         <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Google AdSense</p>
+         <mat-progress-bar mode="determinate" value="60" color="accent"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Twitter Campaign</p>
+         <mat-progress-bar mode="determinate" color="warn" value="80"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Linkedin Campaign</p>
+         <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="100" fxFlex.gt-sm="66.66" fxLayout="Column">
+    <mat-card class="recent-tickets">
+      <mat-card-header>
+        <mat-card-title>Recent Tickets</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+       <mat-list>
+         <mat-list-item>
+           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+           <div fxFlex="100" fxLayout="row">
+             <h6 class="m-0">Mike Deck</h6>
+             <span fxFlex></span>
+             <div fxFlex="40">Excerpt pipe is used...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="warn" selected="true">Active</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+           <div fxFlex="100" fxLayout="row">
+             <h6 class="m-0">Mike Deck</h6>
+             <span fxFlex></span>
+             <div fxFlex="40">Excerpt pipe is used...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="primary" selected="true">Active</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+           <div fxFlex="100" fxLayout="row">
+             <h6 class="m-0">Mike Deck</h6>
+             <span fxFlex></span>
+             <div fxFlex="40">Excerpt pipe is used...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="warn" selected="true">Active</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+           <div fxFlex="100" fxLayout="row">
+             <h6 class="m-0">Mike Deck</h6>
+             <span fxFlex></span>
+             <div fxFlex="40">Excerpt pipe is used...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="accent" selected="true">Active</mat-chip>
+         </mat-list-item>
+        </mat-list>
+        <div>
+          <button mat-button fxFlex="100">View All</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div fxFlex="100" fxLayout="row">
+      <mat-card  fxFlex="100" fxFlex.gt-sm="50">
+          <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+            <span>Snow Benton</span>
+            <span fxFlex></span>
+            <button mat-icon-button [matMenuTriggerFor]="progressBar">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-card-subtitle>
+        <mat-card-content>
+          <h3 class="mat-h3 mb-0">22,200</h3>
+          <small>Monthly</small>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card  fxFlex="100" fxFlex.gt-sm="50">
+          <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+            <span>Snow Benton</span>
+            <span fxFlex></span>
+            <button mat-icon-button [matMenuTriggerFor]="progressBar">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-card-subtitle>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
+            <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
+            <mat-list-item><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
   </div>
 </div>
 

@@ -4,4 +4,11 @@
 
   $background: map-get($theme, background);
 
+  .recent-tickets{
+     .mat-list-item:hover{
+       background: mat-color($background, hover);
+     }
+  }
+
+
 }

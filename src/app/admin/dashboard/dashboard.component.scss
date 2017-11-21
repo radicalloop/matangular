@@ -17,3 +17,17 @@
         }
       }
   }
+  .recent-tickets{
+    padding: 0px !important;
+    .mat-card-header{
+       padding: 15px 0px 0px 20px !important;
+
+      .mat-list-item{
+        cursor: pointer;
+
+        .mat-chip{
+            padding: 1px 6px !important;
+        }
+      }
+    }
+  }

@@ -12,6 +12,7 @@
     overflow: hidden;
 
   .sidebar-panel{
+
       padding-top: 64px;
 
       .user{
@@ -34,6 +35,9 @@
         min-width: auto;
       }
       .menulist {
+          .mat-nav-list .mat-list-item {
+            font-size: 14px;
+          }
           .sidebar-list-item{
             max-height: 48px ;
             overflow: hidden;
