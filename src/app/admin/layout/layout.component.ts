@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -7,6 +7,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LayoutComponent implements OnInit {
+
+  @HostBinding('class') componentCssClass = 'black-theme';
 
   events = [
       {
