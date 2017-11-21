@@ -84,7 +84,7 @@
   <div fxFlex="100" fxFlex.gt-sm="33.33" fxLayout="Column">
     <mat-card>
       <mat-card-content>
-        <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-list cols="2" rowHeight="150px">
           <mat-grid-tile>
             <mat-progress-spinner mode="indeterminate" color="primary" [value]="65"></mat-progress-spinner>
           </mat-grid-tile>
@@ -98,9 +98,9 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card>
+    <mat-card class="p0">
         <mat-card-title>
-          <span>Top Campaign Performance</span>
+          <p class="m-0">Top Campaign Performance</p>
           <span fxFlex></span>
           <button mat-icon-button [matMenuTriggerFor]="progressBar">
             <mat-icon>more_vert</mat-icon>
@@ -146,46 +146,46 @@
          <mat-list-item>
            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
            <div fxFlex="100" fxLayout="row">
-             <h6 class="m-0">Mike Deck</h6>
+             <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
              <span fxFlex></span>
              <small class="mr-1">4 months ago</small>
            </div>
-           <mat-chip color="warn" selected="true">Active</mat-chip>
+           <mat-chip color="active" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
            <div fxFlex="100" fxLayout="row">
-             <h6 class="m-0">Mike Deck</h6>
+             <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
              <span fxFlex></span>
              <small class="mr-1">4 months ago</small>
            </div>
-           <mat-chip color="primary" selected="true">Active</mat-chip>
+           <mat-chip color="primary" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
            <div fxFlex="100" fxLayout="row">
-             <h6 class="m-0">Mike Deck</h6>
+             <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
              <span fxFlex></span>
              <small class="mr-1">4 months ago</small>
            </div>
-           <mat-chip color="warn" selected="true">Active</mat-chip>
+           <mat-chip color="warn" selected="true">closed</mat-chip>
          </mat-list-item>
          <mat-list-item>
            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
            <div fxFlex="100" fxLayout="row">
-             <h6 class="m-0">Mike Deck</h6>
+             <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
              <span fxFlex></span>
              <small class="mr-1">4 months ago</small>
            </div>
-           <mat-chip color="accent" selected="true">Active</mat-chip>
+           <mat-chip color="warn" selected="true">closed</mat-chip>
          </mat-list-item>
         </mat-list>
         <div>
@@ -194,42 +194,45 @@
       </mat-card-content>
     </mat-card>
 
-    <div fxFlex="100" fxLayout="row">
-      <mat-card  fxFlex="100" fxFlex.gt-sm="50">
-          <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-            <span>Snow Benton</span>
-            <span fxFlex></span>
-            <button mat-icon-button [matMenuTriggerFor]="progressBar">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-          </mat-card-subtitle>
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
-            <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
-            <mat-list-item><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
-
-      <mat-card  fxFlex="100" fxFlex.gt-sm="50">
-          <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-            <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-            <span>Snow Benton</span>
-            <span fxFlex></span>
-            <button mat-icon-button [matMenuTriggerFor]="progressBar">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-          </mat-card-subtitle>
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
-            <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
-            <mat-list-item><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
+    <div class="user-details" fxLayout="row" fxLayoutWrap="wrap">
+      <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
+        <mat-card class="p-0">
+            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center">
+              <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+              <span>Snow Benton</span>
+              <span fxFlex></span>
+              <button mat-icon-button [matMenuTriggerFor]="progressBar">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+            </mat-card-subtitle>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
+              <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
+              <mat-list-item class="mb-1"><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
+        <mat-card class="p-0">
+            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center" >
+              <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+              <span>Snow Benton</span>
+              <span fxFlex></span>
+              <button mat-icon-button [matMenuTriggerFor]="progressBar">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+            </mat-card-subtitle>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
+              <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
+              <mat-list-item class="mb-1"><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
 
   </div>
