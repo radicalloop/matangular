@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core
 })
 export class LayoutComponent implements OnInit {
 
-  @HostBinding('class') componentCssClass = 'black-theme';
+  //@HostBinding('class') componentCssClass = 'default-theme';
 
   events = [
       {

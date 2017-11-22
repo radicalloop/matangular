@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { BreadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
     AdminRoutingModule,
     SharedModule
   ],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent]
 })
 export class AdminModule { }

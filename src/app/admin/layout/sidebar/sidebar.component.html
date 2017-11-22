@@ -2,7 +2,7 @@
   <div class="sidebar-panel" fxLayout="column">
     <div class="branding" fxLayout="row" fxLayoutAlign="center center">ADMIN</div>
     <div class="user mb-12">
-      <div class="user-photo"><img src="../assets/images/account_circle.png"></div>
+      <div class="user-photo"><img src="assets/images/avataar.png"></div>
       <span class="user-name">Watson Joyce</span>
       <div class="user-controls"></div>
       <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
@@ -43,7 +43,7 @@
       <div class="menulist">
         <h3 mat-subheader>Main Items</h3>
         <mat-list-item class="sidebar-list-item" sidenavAccordian>
-          <a fxLayout="row" fxLayoutAlign="start center">
+          <a fxLayout="row" fxLayoutAlign="start center" routerLink="dashboard">
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
             <span fxFlex></span>
@@ -63,13 +63,13 @@
           </mat-nav-list>
         </mat-list-item>
         <mat-list-item>
-          <a matLine href="..." fxLayoutAlign="start center">
+          <a matLine fxLayoutAlign="start center" routerLink="profile">
             <mat-icon>inbox</mat-icon>
-            <span>Inbox</span>
+            <span>Profile</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine href="..." fxLayoutAlign="start center">
+          <a matLine fxLayoutAlign="start center">
             <mat-icon>chat</mat-icon>
             <span>Chat</span>
           </a>

@@ -15,7 +15,7 @@
           <mat-icon>format_color_fill</mat-icon>
         </button>
         <mat-menu #colorScheme="matMenu" class="color-scheme">
-        	<mat-grid-list cols="2">
+        	<mat-grid-list cols="2" rowHeight="46px">
 					  <mat-grid-tile>
 					  	<div mat-menu-item>
 					  		<div class="swatch"></div>
@@ -43,9 +43,9 @@
           <mat-icon>notifications</mat-icon>
         </button>
         <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon ml-1">
-          <img class="avatar" src="../../../assets/images/user.svg">
-          <span>John Doe</span>
-          <mat-icon class="s-18">keyboard_arrow_down</mat-icon>
+          <img mat-card-avatar src="assets/images/avataar.png">
+          <span fxHide.xs>John Doe</span>
+          <mat-icon class="s-18" fxHide.xs>keyboard_arrow_down</mat-icon>
         </button>
         <mat-menu #userMenu="matMenu">
           <button mat-menu-item>

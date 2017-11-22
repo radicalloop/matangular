@@ -9,7 +9,7 @@
         </mat-chip-list>
       </mat-card-header>
       <mat-card-content>
-        <h3 class="mat-h3 mb-0">22,200</h3>
+        <h3 class="mat-h3-light mb-0">22,200</h3>
         <small>Monthly</small>
       </mat-card-content>
     </mat-card>
@@ -24,7 +24,7 @@
         </mat-chip-list>
       </mat-card-header>
       <mat-card-content>
-        <h3 class="mat-h3 mb-0">22,200</h3>
+        <h3 class="mat-h3-light mb-0">22,200</h3>
         <small>Monthly</small>
       </mat-card-content>
     </mat-card>
@@ -39,7 +39,7 @@
         </mat-chip-list>
       </mat-card-header>
       <mat-card-content>
-        <h3 class="mat-h3 mb-0">22,200</h3>
+        <h3 class="mat-h3-light mb-0">22,200</h3>
         <small>Monthly</small>
       </mat-card-content>
     </mat-card>
@@ -54,7 +54,7 @@
         </mat-chip-list>
       </mat-card-header>
       <mat-card-content>
-        <h3 class="mat-h3 mb-0">22,200</h3>
+        <h3 class="mat-h3-light mb-0">22,200</h3>
         <small>Monthly</small>
       </mat-card-content>
     </mat-card>
@@ -98,9 +98,9 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="p0">
-        <mat-card-title>
-          <p class="m-0">Top Campaign Performance</p>
+    <mat-card class="p-0 p0">
+        <mat-card-title class="mb-0">
+          <p class="m-0 f-20">Top Campaign Performance</p>
           <span fxFlex></span>
           <button mat-icon-button [matMenuTriggerFor]="progressBar">
             <mat-icon>more_vert</mat-icon>
@@ -144,19 +144,19 @@
       <mat-card-content>
        <mat-list>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-           <div fxFlex="100" fxLayout="row">
+           <img class="mr-1" mat-list-avatar src="assets/images/avataar.png">
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
-             <div fxFlex="40">Excerpt pipe is used...</div>
+             <div fxFlex="40" fxFlex-sm="60%">Excerpt pipe is used...</div>
              <span fxFlex></span>
              <small class="mr-1">4 months ago</small>
            </div>
            <mat-chip color="active" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-           <div fxFlex="100" fxLayout="row">
+           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
@@ -166,8 +166,8 @@
            <mat-chip color="primary" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-           <div fxFlex="100" fxLayout="row">
+           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
@@ -177,8 +177,8 @@
            <mat-chip color="warn" selected="true">closed</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
-           <div fxFlex="100" fxLayout="row">
+           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <p class="m-0">Mike Deck</p>
              <span fxFlex></span>
              <div fxFlex="40">Excerpt pipe is used...</div>
@@ -188,17 +188,17 @@
            <mat-chip color="warn" selected="true">closed</mat-chip>
          </mat-list-item>
         </mat-list>
-        <div>
-          <button mat-button fxFlex="100">View All</button>
-        </div>
       </mat-card-content>
+      <mat-card-footer class="m-0">
+        <button mat-button fxFlex="100">View All</button>
+      </mat-card-footer>
     </mat-card>
 
     <div class="user-details" fxLayout="row" fxLayoutWrap="wrap">
       <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
         <mat-card class="p-0">
-            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center">
-              <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center" color="primary">
+              <img class="mr-1"  mat-card-avatar src="assets/images/card-avatar.png">
               <span>Snow Benton</span>
               <span fxFlex></span>
               <button mat-icon-button [matMenuTriggerFor]="progressBar">
@@ -216,8 +216,8 @@
       </div>
       <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
         <mat-card class="p-0">
-            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center" >
-              <img class="mr-1" mat-list-avatar src="assets/images/account_circle.png">
+            <mat-card-subtitle class="p-tl" fxLayout="row" fxLayoutAlign="start center" color="primary">
+              <img class="mr-1" mat-card-avatar src="assets/images/avataar.png">
               <span>Snow Benton</span>
               <span fxFlex></span>
               <button mat-icon-button [matMenuTriggerFor]="progressBar">

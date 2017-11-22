@@ -1,7 +1,5 @@
 
   .mat-card{
-    margin: 0.33em;
-    padding: 24px;
 
     .mat-card-header-text{
       margin: 0;
@@ -23,12 +21,21 @@
     .mat-card-header{
        padding: 15px 0px 0px 20px !important;
     }
-      .mat-list-item{
-        cursor: pointer;
+    .mat-list-item{
+      cursor: pointer;
 
-        .mat-chip{
-            padding: 1px 6px !important;
-        }
+      .mat-chip{
+          padding: 1px 6px !important;
       }
+    }
   }
-
+@media screen and (max-width: 599px){
+  .mat-card-content{
+    overflow: auto;
+  }
+  .mat-list{
+    min-width: 490px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
