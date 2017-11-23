@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { ThemeService } from '../../../shared/services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -11,12 +12,16 @@ export class HeaderComponent implements OnInit {
   @Input('sidenav') sidenav:any;
   @Input('sidebar') sidebar:any;
 
+  themes;
   displaySearch : Boolean = false;
-  constructor() { }
 
-
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
+    this.themes = this.themeService.themes;
   }
 
+  changeTheme(theme) {
+    this.themeService.changeTheme(theme);
+  }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ThemeService } from '../shared/services/theme.service';
 
 import { LayoutComponent } from './layout/layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
     AdminRoutingModule,
     SharedModule
   ],
+  providers: [ThemeService],
   declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent]
 })
 export class AdminModule { }
