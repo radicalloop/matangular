@@ -15,7 +15,63 @@
     .mat-icon{
         color: #fff;
         border-radius: 50%;
-        background-color: mat-color($primary);
       }
    }
+   .mat-list-item{
+     .task-options{
+        visibility: hidden;
+      }
+      &:hover{
+         background: mat-color($background, hover);
+
+          .task-options{
+          visibility: visible !important;
+        }
+      }
+    }
+
+    .timeline{
+      position: relative;
+       &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 24px;
+          border-left: 1px solid;
+          border-color: mat-color($foreground, divider);
+       }
+      .timeline-badge{
+        width: 48px;
+        height: 48px;
+        position: relative;
+
+          img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%
+          }
+
+      }
+      .timeline-body{
+        overflow: hidden;
+
+        .timeline-body-top{
+          margin-bottom: 8px;
+        }
+
+        .timeline-body-content{
+
+          & :last-child{
+            margin-bottom: 8px;
+          }
+
+        }
+      }
+    }
+  .mat-row{
+    &:hover{
+     background: mat-color($background, hover);
+   }
+  }
 }

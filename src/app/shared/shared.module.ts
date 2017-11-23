@@ -15,7 +15,8 @@ import {
   MatGridListModule,
   MatProgressSpinnerModule,
   MatChipsModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatTableModule
 } from '@angular/material';
 import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
 
@@ -44,6 +45,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FlexLayoutModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatTableModule,
     PerfectScrollbarModule
   ],
   exports: [
@@ -63,6 +65,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatTableModule,
     SidenavAccordionDirective
   ],
   declarations: [SidenavAccordionDirective],

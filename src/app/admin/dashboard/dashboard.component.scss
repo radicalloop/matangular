@@ -25,17 +25,8 @@
       cursor: pointer;
 
       .mat-chip{
-          padding: 1px 6px !important;
+          padding: 2px 6px !important;
+          border-radius: 4px;
       }
     }
   }
-@media screen and (max-width: 599px){
-  .mat-card-content{
-    overflow: auto;
-  }
-  .mat-list{
-    min-width: 490px;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-}

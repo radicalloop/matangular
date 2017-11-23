@@ -1,58 +1,61 @@
 <div fxLayout="row" fxLayoutWrap="wrap">
-  <div fxFlex="100" fxFlex.gt-sm="300px" fxFlex.sm="50" fxLayout="column">
-    <mat-card class="text-center" fxLayout="column">
-      <div class="propic">
-        <img src="assets/images/avataar.png">
-      </div>
-      <h3 class="mat-h3-light text-center mb-0 mt-5">John Doe</h3>
-      <p class="text-center m-0-auto">Big Data Expert</p>
-      <small class="text-center mat-hint">Hi I'm Jhone, sit amet consectetur adipisicing elit. Aperiam repellendus nam perspiciatis.</small>
+  <div fxFlex="100" fxFlex.gt-sm="300px" fxFlex.sm="100" fxLayoutWrap="Wrap" fxLayoutAlign.gt-sm="start start">
+    <div fxFlex.sm="50" fxFlex="100" fxFlex.gt-md="100">
+      <mat-card class="text-center">
+        <div class="propic">
+          <img src="assets/images/avataar.png">
+        </div>
+        <h3 class="mat-h3-light text-center mb-0 mt-5">John Doe</h3>
+        <p class="text-center m-0-auto">Big Data Expert</p>
+        <small class="text-center mat-hint">Hi I'm Jhone, sit amet consectetur adipisicing elit. Aperiam repellendus nam perspiciatis.</small>
 
-      <div class="profile-actions mt-1 mb-1">
-        <button class="mr-1" mat-raised-button color="primary">Mesage</button>
-         <button mat-raised-button color="accent">Follow</button>
-      </div>
+        <div class="profile-actions mt-1 mb-1">
+          <button class="mr-1" mat-raised-button color="primary">Mesage</button>
+           <button mat-raised-button color="accent">Follow</button>
+        </div>
 
-      <div class="profile-nav">
-        <mat-nav-list class="icon-48">
-          <mat-list-item class="list-item-active">
-            <mat-icon>home</mat-icon><span>Overview</span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
+        <div class="profile-nav">
+          <mat-nav-list class="icon-48">
+            <mat-list-item class="list-item-active">
+              <mat-icon>home</mat-icon><span>Overview</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <mat-icon>settings</mat-icon><span>Settings</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <mat-icon>content_paste</mat-icon><span>Blank</span>
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+      </mat-card>
+    </div>
+    <div fxFlex.sm="50" fxFlex="100" fxFlex.gt-md="100" fxLayoutAlign.xs="stretch stretch">
+      <mat-card class="default" fxFlex.xs="100">
+        <mat-card-header>
+          <mat-card-title>Contact Information</mat-card-title>
+        </mat-card-header>
+        <mat-list class="icon-48">
           <mat-list-item>
-            <mat-icon>settings</mat-icon><span>Settings</span>
+            <mat-icon>public</mat-icon>www.public.com
           </mat-list-item>
-          <mat-divider></mat-divider>
           <mat-list-item>
-            <mat-icon>content_paste</mat-icon><span>Blank</span>
+            <mat-icon>email</mat-icon>public@public.com
           </mat-list-item>
-        </mat-nav-list>
-      </div>
-    </mat-card>
-
-    <mat-card class="default">
-      <mat-card-header>
-        <mat-card-title>Contact Information</mat-card-title>
-      </mat-card-header>
-      <mat-list class="icon-48">
-        <mat-list-item>
-          <mat-icon>public</mat-icon>www.public.com
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon>email</mat-icon>public@public.com
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon>phone</mat-icon>9876543210
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon>add_location</mat-icon>Ahmedabad
-        </mat-list-item>
-      </mat-list>
-    </mat-card>
+          <mat-list-item>
+            <mat-icon>phone</mat-icon>9876543210
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon>add_location</mat-icon>Ahmedabad
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+    </div>
   </div>
 
-  <div fxFlex.gt-sm="calc(100%-300px)" fxFlex="100">
-    <div fxFlex.gt-sm="50%" fxFlex="50">
+  <div fxFlex.gt-sm="calc(100%-300px)" fxFlex="100" fxLayoutWrap="Wrap">
+    <div fxFlex.gt-md="50" fxFlex="100">
       <mat-card class="default">
         <mat-card-header>
           <mat-card-title>Timeline</mat-card-title>
@@ -97,7 +100,7 @@
 
             <div class="timeline-item mb-1" fxLayout="row">
               <div class="timeline-badge mr-1 icon-48">
-               <mat-icon>settings</mat-icon>
+               <mat-icon class="mat-bg-primary">settings</mat-icon>
               </div>
               <div class="timeline-body ml-1">
                 <div class="timeline-body-top" fxLayout="row">
@@ -115,7 +118,7 @@
 
             <div class="timeline-item mb-1" fxLayout="row">
               <div class="timeline-badge mr-1 icon-48">
-               <mat-icon>settings</mat-icon>
+               <mat-icon class="mat-bg-accent">settings</mat-icon>
               </div>
               <div class="timeline-body ml-1">
                 <div class="timeline-body-top" fxLayout="row">
@@ -135,31 +138,122 @@
       </mat-card>
     </div>
 
-    <div fxFlex.gt-sm="50%" fxFlex="50">
-      <mat-card class="default">
-        <mat-card-header>
-          <mat-card-title>
-            Assigned Tasks
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item>
-              <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
-              <span fxFlex></span>
-           <mat-chip color="primary" selected="true">Pending</mat-chip>
-              <button mat-icon-button [matMenuTriggerFor]="taskOptions">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #taskOptions="matMenu">
-                <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
-                <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
-                <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
-              </mat-menu>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
+    <div fxFlex.gt-md="50" fxFlex="100" fxLayoutWrap="wrap" fxLayoutAlign="column" fxLayoutAlign.gt-sm="start start">
+      <div fxFlex="100" >
+        <mat-card class="default list-scroll">
+          <mat-card-header>
+            <mat-card-title>
+              Assigned Tasks
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="mb-0">
+            <mat-list>
+              <mat-list-item>
+                <mat-checkbox></mat-checkbox><span class="ml-1">Lorem, ipsum dolor sit amet</span>
+                <span fxFlex></span>
+                <mat-chip color="primary" selected="true">pending</mat-chip>
+                <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #taskOptions="matMenu">
+                  <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+                  <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
+                  <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
+                </mat-menu>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-checkbox></mat-checkbox><span class="ml-1">Lorem, ipsum dolor sit amet</span>
+                <span fxFlex></span>
+                <mat-chip color="primary" selected="true">pending</mat-chip>
+                <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #taskOptions="matMenu">
+                  <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+                  <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
+                  <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
+                </mat-menu>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-checkbox></mat-checkbox><span class="ml-1">Lorem, ipsum dolor sit amet</span>
+                <span fxFlex></span>
+                <mat-chip color="primary" selected="true">pending</mat-chip>
+                <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #taskOptions="matMenu">
+                  <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+                  <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
+                  <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
+                </mat-menu>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-checkbox></mat-checkbox><span class="ml-1">Lorem, ipsum dolor sit amet</span>
+                <span fxFlex></span>
+                <mat-chip color="primary" selected="true">pending</mat-chip>
+                <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #taskOptions="matMenu">
+                  <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+                  <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
+                  <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
+                </mat-menu>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-checkbox></mat-checkbox><span class="ml-1">Lorem, ipsum dolor sit amet</span>
+                <span fxFlex></span>
+                <mat-chip color="primary" selected="true">pending</mat-chip>
+                <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #taskOptions="matMenu">
+                  <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+                  <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
+                  <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
+                </mat-menu>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-footer class="m-0">
+            <button mat-button fxFlex="100">View All</button>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+
+      <div fxFlex="100">
+        <mat-card class="default list-scroll">
+          <mat-card-header>
+            <mat-card-title>
+              Activity
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-table #table [dataSource]="dataSource">
+              <ng-container matColumnDef="position">
+                <mat-header-cell *matHeaderCellDef>Position</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.position}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="weight">
+                <mat-header-cell *matHeaderCellDef>Weight</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.weight}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="symbol">
+                <mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.symbol}}</mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
     </div>
   </div>
 </div>

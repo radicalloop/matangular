@@ -7,8 +7,10 @@
   $foreground: map-get($theme, foreground);
 
   .recent-tickets{
-     .mat-list-item:hover{
-       background: mat-color($background, hover);
+     .mat-list-item{
+       &:hover{
+         background: mat-color($background, hover);
+       }
      }
   }
 

@@ -8,7 +8,7 @@
         </span>
         <span fxFlex></span>
 
-        <a mat-icon-button class="search ml-1" (click)="displaySearch = true">
+        <a mat-icon-button class="search" ngClass.gt-xs="ml-1" (click)="displaySearch = true">
           <mat-icon>search</mat-icon>
         </a>
         <button type="button" mat-icon-button class="ml-1" [matMenuTriggerFor]="colorScheme">
@@ -29,7 +29,7 @@
         <button type="button" mat-icon-button (click)="sidenav.toggle()" class="ml-1">
           <mat-icon>notifications</mat-icon>
         </button>
-        <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon ml-1">
+        <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon" ngClass.gt-xs="ml-1">
           <img mat-card-avatar src="assets/images/avataar.png">
           <span fxHide.xs>John Doe</span>
           <mat-icon class="s-18" fxHide.xs>keyboard_arrow_down</mat-icon>

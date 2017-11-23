@@ -22,10 +22,23 @@ $general-typography: mat-typography-config(
 @import 'app/admin/profile/profile.component.scss-theme.scss';
 
 @mixin custom-components-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
   @include anms-sidebar-component-theme($theme);
   @include anms-breadcrumb-component-theme($theme);
   @include anms-dashboard-component-theme($theme);
   @include anms-profile-component-theme($theme);
+
+  .mat-bg-primary {
+    background: mat-color($primary);
+  }
+  .mat-bg-accent {
+    background: mat-color($accent);
+  }
 }
 
 .default-theme {
