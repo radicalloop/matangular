@@ -10,16 +10,49 @@
 }
 .profile-nav{
   margin: 0px -24px -24px !important;
-
-    .mat-icon{
-      height: 48px;
-      width: 48px;
-      line-height: 48px;
-      text-align: center;
-  }
-
 }
 
 .mat-nav-list .mat-list-item-content{
       padding: 0px !important;
+}
+.timeline{
+  position: relative;
+   &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 24px;
+      border-left: 1px solid rgba(0,0,0,.12);
+   }
+  .timeline-badge{
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+      img{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%
+      }
+
+  }
+  .timeline-body{
+    overflow: hidden;
+
+    .timeline-body-top{
+      margin-bottom: 8px;
+    }
+
+    .timeline-body-content{
+
+      & :last-child{
+        margin-bottom: 8px;
+      }
+
+    }
+  }
+}
+.mat-chip{
+  padding: 1px 6px !important;
 }

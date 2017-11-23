@@ -8,7 +8,9 @@ body {
     line-height: 1.5;
     font-family: "Roboto",Helvetica Neue,sans-serif;
 }
-
+p{
+  margin: 0 0 1rem;
+}
 .hidden {
   display: none !important;
 }
@@ -33,7 +35,7 @@ body {
   margin-left: 1rem !important;
 }
 .mr-1{
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 .m-0{
   margin: 0px !important;
@@ -93,4 +95,24 @@ body {
 .mat-card{
   margin: 0.33rem;
   padding: 24px;
+}
+.mat-card{
+
+  &.default{
+      padding: 0;
+
+      .mat-card-title{
+      padding: 1rem 1rem 0rem 1rem;
+      font-size: 1rem;
+    }
+  }
+}
+.icon-48 .mat-icon{
+  height: 48px;
+  width: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+a{
+  text-decoration: none
 }

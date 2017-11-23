@@ -25,6 +25,7 @@ $general-typography: mat-typography-config(
   @include anms-sidebar-component-theme($theme);
   @include anms-breadcrumb-component-theme($theme);
   @include anms-dashboard-component-theme($theme);
+  @include anms-profile-component-theme($theme);
 }
 
 .default-theme {

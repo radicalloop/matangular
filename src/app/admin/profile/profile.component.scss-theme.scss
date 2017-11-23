@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@mixin anms-dashboard-component-theme($theme) {
+@mixin anms-profile-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
@@ -9,5 +9,13 @@
   .list-item-active{
      border-left: 3px solid;
      border-color: mat-color($primary);
+   }
+
+   .timeline-badge{
+    .mat-icon{
+        color: #fff;
+        border-radius: 50%;
+        background-color: mat-color($primary);
+      }
    }
 }
