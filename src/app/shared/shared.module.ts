@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -16,7 +16,18 @@ import {
   MatProgressSpinnerModule,
   MatChipsModule,
   MatProgressBarModule,
-  MatTableModule
+  MatTableModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatRadioModule,
+  MatFormFieldModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatSnackBarModule,
+  MatDialogModule
 } from '@angular/material';
 import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
 
@@ -46,7 +57,20 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatTableModule,
-    PerfectScrollbarModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    FormsModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    PerfectScrollbarModule,
+    MatNativeDateModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,
@@ -66,7 +90,20 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatTableModule,
-    SidenavAccordionDirective
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    FormsModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSortModule,
+    MatPaginatorModule,
+    SidenavAccordionDirective,
+    MatDialogModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   declarations: [SidenavAccordionDirective],
   providers: [

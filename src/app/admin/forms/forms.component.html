@@ -1,0 +1,128 @@
+<div>
+  <div fxLayout="column">
+  <mat-card class="default">
+    <mat-card-header>
+      <mat-card-title>Forms</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mb-0 px-1">
+      <form ngClass.gt-xs="px-1">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pr-1">
+            <div>
+              <mat-form-field fxFlex="100">
+                <input matInput placeholder="Company (disabled)" disabled value="Company">
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+              <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50" >
+                <input matInput placeholder="First Name">
+              </mat-form-field>
+              <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                <input matInput placeholder="Last Name">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field fxFlex="100">
+                <input matInput placeholder="Enter your email" [formControl]="email">
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="Address"></textarea>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+              <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                <input matInput placeholder="City">
+              </mat-form-field>
+              <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                <input matInput placeholder="State">
+              </mat-form-field>
+              <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+              <mat-form-field fxFlex.gt-xs="48.50" fxFlex="100">
+                <input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field fxFlex.gt-xs="48.50" fxFlex="100">
+                <input matInput [matDatepicker]="picker2" placeholder="Angular forms (w/ deserialization)"[formControl]="serializedDate">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pl-1">
+            <div>
+              <mat-form-field hintLabel="Max 10 characters" fxFlex="100">
+                <input matInput #input maxlength="10" placeholder="Enter some input">
+                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+              <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                <mat-select placeholder="Select">
+                  <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+              </mat-form-field>
+
+              <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                <mat-select placeholder="Select with group options" [formControl]="pokemonControl">
+                  <mat-option>-- None --</mat-option>
+                  <mat-optgroup *ngFor="let group of pokemonGroups" [label]="group.name" [disabled]="group.disabled">
+                    <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
+                      {{ pokemon.viewValue }}
+                    </mat-option>
+                  </mat-optgroup>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field fxFlex="100">
+                <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{ option }}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </div>
+            <div>
+              <label class="mr-1 mat-body-2">Options:</label>
+              <mat-radio-group fxFlex="100">
+                <mat-radio-button value="1" class="mr-1">Option 1</mat-radio-button>
+                <mat-radio-button value="2" class="mr-1">Option 2</mat-radio-button>
+                <mat-radio-button value="3">Option 3</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="mt-5" fxLayoutAlign="start">
+              <mat-checkbox class="mr-1"></mat-checkbox><span >I have read and agree to the terms of service.</span>
+            </div>
+          </div>
+        </div>
+        <div class="pb-1" ngClass.lt-lg="mt-5">
+          <button mat-raised-button color="primary">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div fxLayout="column">
+  <mat-card class="default">
+    <mat-card-header>
+      <mat-card-title>Editor</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="px-1 mb-1">
+      <quill-editor [style]="{height:'250px',width:'100%'}"></quill-editor>
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>

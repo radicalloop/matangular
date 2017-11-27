@@ -1,0 +1,50 @@
+<div fxLayout="column">
+  <mat-card class="default">
+    <mat-card-title>Confirm Dialog</mat-card-title>
+    <mat-card-content class="pb-1 px-1">
+      <div fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Title" [(ngModel)]="title">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Text" [(ngModel)]="text">
+        </mat-form-field>
+      </div>
+      <button class="mb-1" mat-raised-button color="primary" (click)="openDialog()">Open Dialog</button>
+
+     <div class="mb-5">
+      You Selected: {{selected}}
+    </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="default">
+    <mat-card-title>Loader Dialog</mat-card-title>
+    <mat-card-content class="pb-1 px-1">
+      <div fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Loader Text" [(ngModel)]="loaderText">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Loading Time(ms)" [(ngModel)]="loadingTime">
+        </mat-form-field>
+      </div>
+      <button class="mb-1" mat-raised-button color="primary" (click)="showLoader()">Show Loader</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Snackbar</mat-card-title>
+    <mat-card-content>
+      <div fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Message" value="Disco Party!" #message>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Action" value="Dance" #action>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+    </mat-card-content>
+  </mat-card>
+</div>

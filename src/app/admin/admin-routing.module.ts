@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsComponent } from './forms/forms.component';
+import { TablesComponent } from './tables/tables.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 const routes: Routes = [
 	{
@@ -15,7 +18,11 @@ const routes: Routes = [
         component: LayoutComponent,
         children : [
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'profile', component: ProfileComponent }
+            { path: 'profile', component: ProfileComponent },
+            { path: 'forms', component: FormsComponent },
+            { path: 'tables', component: TablesComponent },
+            { path: 'dialog', component: DialogComponent }
+
         ]
     }
 ];

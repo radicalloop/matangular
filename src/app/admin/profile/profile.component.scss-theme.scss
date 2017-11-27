@@ -46,15 +46,15 @@
         height: 48px;
         position: relative;
 
-          img{
-            width: 48px;
-            height: 48px;
-            border-radius: 50%
-          }
-
+        img{
+          width: 48px;
+          height: 48px;
+          border-radius: 50%
+        }
       }
       .timeline-body{
         overflow: hidden;
+        width: 100%;
 
         .timeline-body-top{
           margin-bottom: 8px;
@@ -64,7 +64,11 @@
 
           & :last-child{
             margin-bottom: 8px;
-          }
+         }
+
+         img{
+          width: 100%;
+         }
 
         }
       }
