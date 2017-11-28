@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@mixin anms-header-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .searchbar input,.searchbar input::placeholder{
+    color: mat-color($primary, default-contrast);
+  }
+}

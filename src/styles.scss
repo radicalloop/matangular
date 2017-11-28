@@ -43,12 +43,15 @@ p{
 .m-t-0{
   margin-top: 0px !important
 }
-
 .m-0-auto{
   margin: 0 auto
 }
 .mt-5{
   margin-top: .5rem !important;
+}
+.my-1{
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 /*Paddings*/
@@ -86,7 +89,6 @@ padding: 5px 15px 5px 15px;
   width: 18px !important;
   height: 18px !important;
 }
-
 .mat-h3-light{
   font-size: 22px;
   font-weight: 400;
@@ -94,7 +96,6 @@ padding: 5px 15px 5px 15px;
 .f-20{
   font-size: 20px;
 }
-
 .p0 .mat-card-title{
   padding: 1rem 1.5rem .5rem;
 }
@@ -103,7 +104,7 @@ padding: 5px 15px 5px 15px;
 }
 
 .text-center{
-  text-align: center !important
+  text-align: center
 }
 .mat-card{
   margin: 0.33rem;
@@ -128,6 +129,17 @@ padding: 5px 15px 5px 15px;
 }
 a{
   text-decoration: none
+}
+
+.fixed-topbar .right-container{
+    padding: 0.33em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    top: 104px;
+    z-index: -9;
 }
 
 @media screen and (max-width: 599px){

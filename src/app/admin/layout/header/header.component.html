@@ -1,4 +1,3 @@
-  <div class="content-wrapper">
     <mat-toolbar color="primary">
       <div fxFlex [class.hidden]="displaySearch" fxLayoutAlign="start center">
         <span matTooltip="Menu" class="pl-15">
@@ -43,6 +42,7 @@
             <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
         </mat-menu>
       </div>
+
       <div class="searchbar expanded" [class.hidden]="!displaySearch" fxLayout="row" fxFlex fxLayoutAlign="start center">
         <input fxFlex type="text" name="search" placeholder="Search" class="ml-24">
         <button mat-icon-button (click)="displaySearch = false">
@@ -51,5 +51,5 @@
 
       </div>
     </mat-toolbar>
-  </div>
+
 

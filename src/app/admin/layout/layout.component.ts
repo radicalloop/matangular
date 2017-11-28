@@ -29,17 +29,6 @@ export class LayoutComponent implements OnInit {
       }
   ];
 
-  notes = [
-     {
-      name      : 'Best songs to listen while working',
-      lastedit: new Date('1/17/17'),
-     },
-     {
-      name      : 'Useful subreddits',
-      lastedit : new Date('1/17/17'),
-     },
-  ];
-
   constructor() { }
 
   ngOnInit() {

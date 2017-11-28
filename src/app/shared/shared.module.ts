@@ -27,7 +27,8 @@ import {
   MatPaginatorModule,
   MatSortModule,
   MatSnackBarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSliderModule
 } from '@angular/material';
 import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
 
@@ -70,7 +71,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule
   ],
   exports: [
     MatButtonModule,
@@ -103,7 +105,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SidenavAccordionDirective,
     MatDialogModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    MatSliderModule,
+    ReactiveFormsModule,
   ],
   declarations: [SidenavAccordionDirective],
   providers: [

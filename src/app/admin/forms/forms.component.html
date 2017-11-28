@@ -106,6 +106,20 @@
             <div class="mt-5" fxLayoutAlign="start">
               <mat-checkbox class="mr-1"></mat-checkbox><span >I have read and agree to the terms of service.</span>
             </div>
+            <div class="mt-5">
+              <label class="mr-1 mat-body-2">Slide Toggle:</label>
+              <mat-slide-toggle [checked]="true">Slide me!</mat-slide-toggle>
+            </div>
+            <div class="mt-1" fxLayout fxLayoutWrap="wrap">
+              <div fxFlex >
+                <label class="mr-1 mat-body-2">Horizontal Slider:</label>
+                <mat-slider [style.width]="'250px'" min="1" max="5" step="1" value="2.5"></mat-slider>
+              </div>
+              <div fxFlex>
+                <label class="mr-1 mat-body-2">Vertical Slider:</label>
+                <mat-slider vertical [style.height]="'150px'" min="1" max="5" step="1" value="2.5"></mat-slider>
+              </div>
+            </div>
           </div>
         </div>
         <div class="pb-1" ngClass.lt-lg="mt-5">
