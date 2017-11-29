@@ -1,3 +1,8 @@
 .mat-form-field, .mat-radio-group, .mat-checkbox{
   margin-bottom: 1rem;
 }
+.mat-chip-list{
+  .mat-chip{
+    margin: 0px 8px 6px 0px !important;
+  }
+}

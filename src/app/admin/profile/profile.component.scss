@@ -1,7 +1,7 @@
 .propic{
   margin: 0 auto;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 
   img{
     width: 100%;
@@ -10,10 +10,22 @@
 }
 .profile-nav{
   margin: 0px -24px -24px !important;
-}
+  padding: 15px 0px !important;
 
+  .mat-list-item{
+    height: 52px;
+  }
+  span{
+    line-height: 1.1rem !important;
+  }
+}
+.profile-menulist{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 .mat-nav-list .mat-list-item-content{
-      padding: 0px !important;
+  padding: 0px !important;
 }
 
 .mat-list-item{
@@ -36,4 +48,8 @@
   .profile-nav{
     margin: 0px -16px -24px !important;
   }
+}
+
+.mat-h5{
+  font-size: 13px;
 }

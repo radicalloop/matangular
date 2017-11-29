@@ -1,10 +1,11 @@
 <perfect-scrollbar>
   <div class="sidebar-panel" fxLayout="column">
-    <div class="branding" fxLayout="row" fxLayoutAlign="center center">ADMIN</div>
-    <div class="user mb-12">
+    <div class="branding" fxLayoutAlign="center center">ADMIN</div>
+    <div class="user mb-12" fxLayout="column">
       <div class="user-photo"><img src="assets/images/avataar.png"></div>
       <span class="user-name">Watson Joyce</span>
-      <div class="user-controls"></div>
+      <span class="mat-h5">example@gmail.com</span>
+      <!-- <div class="user-controls"></div>
       <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
         <mat-icon>settings</mat-icon>
       </button>
@@ -21,7 +22,7 @@
       </button>
       <button mat-icon-button mat-xs-button>
         <mat-icon>exit_to_app</mat-icon>
-      </button>
+      </button> -->
     </div>
     <mat-divider class="mt-1"></mat-divider>
     <mat-nav-list>
@@ -51,12 +52,12 @@
           </a>
           <mat-nav-list class="sub-menu">
             <mat-list-item>
-              <a href="" fxLayout="row" fxLayoutAlign="start center">
+              <a fxLayout="row" fxLayoutAlign="start center">
                   <span>Dashboard 1</span>
               </a>
             </mat-list-item>
             <mat-list-item>
-              <a href="">
+              <a>
                   <span>Dashboard 2</span>
               </a>
             </mat-list-item>
@@ -69,9 +70,27 @@
           </a>
         </mat-list-item>
         <mat-list-item>
+          <a matLine fxLayoutAlign="start center" routerLink="dialog">
+            <mat-icon>person</mat-icon>
+            <span>Dialog</span>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
           <a matLine fxLayoutAlign="start center" routerLink="forms">
             <mat-icon>description</mat-icon>
             <span>Forms</span>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a matLine fxLayoutAlign="start center" routerLink="wizard">
+            <mat-icon>description</mat-icon>
+            <span>Wizard</span>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a matLine fxLayoutAlign="start center" routerLink="otherElements">
+            <mat-icon>description</mat-icon>
+            <span>Other Elements</span>
           </a>
         </mat-list-item>
         <mat-list-item>
@@ -80,19 +99,6 @@
             <span>Tables</span>
           </a>
         </mat-list-item>
-        <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="dialog">
-            <mat-icon>person</mat-icon>
-            <span>Dialog</span>
-          </a>
-        </mat-list-item>
-        <mat-list-item>
-          <a matLine fxLayoutAlign="start center">
-            <mat-icon>mail</mat-icon>
-            <span>Mail</span>
-          </a>
-        </mat-list-item>
-
       </div>
     </mat-nav-list>
   </div>

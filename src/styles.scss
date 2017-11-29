@@ -16,20 +16,33 @@ p{
 }
 
 /*Margins*/
+.m-0{
+  margin: 0rem !important;
+}
 .mb-0{
-    margin-bottom: 0px !important;
+  margin-bottom: 0rem !important;
 }
-.mb-12{
-    margin-bottom: 12px;
+.mt-0{
+  margin-top: 0rem !important
 }
-.mb-1 {
-    margin-bottom: 1rem!important;
+.m-0-auto{
+  margin: 0 auto
+}
+.my-1{
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.mt-5{
+  margin-top: .5rem !important;
+}
+.ml-5{
+  margin-left: .5rem;
 }
 .mt-1 {
-    margin-top: 1rem!important;
+  margin-top: 1rem!important;
 }
-.ml-24{
-    margin-left: 24px !important;
+.mb-1 {
+  margin-bottom: 1rem!important;
 }
 .ml-1{
   margin-left: 1rem !important;
@@ -37,51 +50,35 @@ p{
 .mr-1{
   margin-right: 1rem !important;
 }
-.m-0{
-  margin: 0px !important;
+.mb-12{
+  margin-bottom: 12px;
 }
-.m-t-0{
-  margin-top: 0px !important
-}
-.m-0-auto{
-  margin: 0 auto
-}
-.mt-5{
-  margin-top: .5rem !important;
-}
-.my-1{
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
+.ml-24{
+  margin-left: 24px !important;
 }
 
 /*Paddings*/
-.pl-15{
-  padding-left: 15px;
-}
-.p-15{
-  padding:15px;
-}
 .p-0{
-padding: 0px !important;
-}
-.p-tl{
-padding: 5px 15px 5px 15px;
+  padding: 0rem !important;
 }
 .p-1{
   padding: 1rem;
 }
+.px-1{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pr-1{
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 .pl-1{
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 .pb-1{
   padding-bottom: 1rem;
 }
-.px-1{
-  padding-left : 1rem;
-  padding-right: 1rem;
+.p-tl{
+  padding: 5px 15px 5px 15px;
 }
 .s-18{
   font-size: 18px;
@@ -102,7 +99,6 @@ padding: 5px 15px 5px 15px;
 .p0 .mat-card-content{
   padding: 1rem 1.5rem 1.5rem;
 }
-
 .text-center{
   text-align: center
 }
@@ -130,7 +126,6 @@ padding: 5px 15px 5px 15px;
 a{
   text-decoration: none
 }
-
 .fixed-topbar .right-container{
     padding: 0.33em;
     position: absolute;
@@ -141,13 +136,16 @@ a{
     top: 104px;
     z-index: -9;
 }
+.font-weight-500{
+  font-weight: 500;
+}
 
 @media screen and (max-width: 599px){
   .list-scroll{
     .mat-card-content{
       overflow: auto;
     }
-    .mat-list, .mat-table{
+    .mat-list, .mat-table, .mat-stepper-horizontal{
       min-width: 490px;
       overflow-x: auto;
       overflow-y: hidden;

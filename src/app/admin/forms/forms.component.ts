@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {Observable} from 'rxjs/Observable';
+import { FormControl, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { MatChipInputEvent } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 
@@ -11,19 +13,13 @@ import 'rxjs/add/operator/map';
 })
 export class FormsComponent implements OnInit {
 
+  filteredOptions: Observable<string[]>;
+
   email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' :
-            '';
-  }
-
   date = new FormControl(new Date());
   serializedDate = new FormControl((new Date()).toISOString());
-  constructor() { }
-
-   pokemonControl = new FormControl();
+  pokemonControl = new FormControl();
+  myControl: FormControl = new FormControl();
 
   pokemonGroups = [
     {
@@ -60,24 +56,64 @@ export class FormsComponent implements OnInit {
     }
   ];
 
-  myControl: FormControl = new FormControl();
-
   options = [
    'One',
    'Two',
    'Three'
   ];
 
+  visible: boolean = true;
+  selectable: boolean = true;
+  removable: boolean = true;
+  addOnBlur: boolean = true;
 
-  filteredOptions: Observable<string[]>;
+  separatorKeysCodes = [ENTER, COMMA];
+
+  chips = [
+    { name: 'none', selected: false},
+    { name: 'Primary', color: 'primary', selected: true },
+    { name: 'Accent', color: 'accent', selected: true },
+    { name: 'Warn', color: 'warn', selected: true },
+  ];
+
+  constructor() { }
 
   ngOnInit() {
       this.filteredOptions = this.myControl.valueChanges
          .startWith('')
          .map(val => this.filter(val));
-   }
+  }
 
-    filter(val: string): string[] {
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+        this.email.hasError('email') ? 'Not a valid email' :
+            '';
+  }
+
+  add(event: MatChipInputEvent): void {
+    let input = event.input;
+    let value = event.value;
+
+    // Add our color
+    if ((value || '').trim()) {
+      this.chips.push({ name: value.trim(), selected: true });
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+  }
+
+  remove(color: any): void {
+    let index = this.chips.indexOf(color);
+
+    if (index >= 0) {
+      this.chips.splice(index, 1);
+    }
+  }
+
+  filter(val: string): string[] {
       return this.options.filter(option =>
         option.toLowerCase().indexOf(val.toLowerCase()) === 0);
    }

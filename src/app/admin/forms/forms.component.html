@@ -55,15 +55,15 @@
                 <mat-datepicker #picker2></mat-datepicker>
               </mat-form-field>
             </div>
-          </div>
-
-          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pl-1">
             <div>
               <mat-form-field hintLabel="Max 10 characters" fxFlex="100">
                 <input matInput #input maxlength="10" placeholder="Enter some input">
                 <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
               </mat-form-field>
             </div>
+          </div>
+
+          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pl-1">
             <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
               <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
                 <mat-select placeholder="Select">
@@ -87,7 +87,7 @@
             </div>
             <div>
               <mat-form-field fxFlex="100">
-                <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                <input type="text" placeholder="Pick One (AutoComplete)" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
                 <mat-autocomplete #auto="matAutocomplete">
                   <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                     {{ option }}
@@ -96,27 +96,52 @@
               </mat-form-field>
             </div>
             <div>
+                <mat-form-field fxFlex="100">
+                  <!-- <mat-chip-list>
+                    <mat-chip>One fish</mat-chip>
+                    <mat-chip>Two fish</mat-chip>
+                    <mat-chip color="primary" selected="true">Primary fish</mat-chip>
+                    <mat-chip color="accent" selected="true">Accent fish</mat-chip>
+                  </mat-chip-list> -->
+                  <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let chip of chips"
+                     [selected]="chip.selected" [color]="chip.color"
+                     [removable]="removable" (remove)="remove(chip)"
+                     >
+                     {{chip.name}}
+                     <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                   </mat-chip>
+                    <input placeholder="Chips with input"
+                      [matChipInputFor]="chipList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event)"
+                      >
+                  </mat-chip-list>
+                </mat-form-field>
+            </div>
+            <div>
               <label class="mr-1 mat-body-2">Options:</label>
-              <mat-radio-group fxFlex="100">
-                <mat-radio-button value="1" class="mr-1">Option 1</mat-radio-button>
-                <mat-radio-button value="2" class="mr-1">Option 2</mat-radio-button>
+              <mat-radio-group fxFlex="100" fxLayoutGap=".5rem">
+                <mat-radio-button value="1">Option 1</mat-radio-button>
+                <mat-radio-button value="2">Option 2</mat-radio-button>
                 <mat-radio-button value="3">Option 3</mat-radio-button>
               </mat-radio-group>
             </div>
             <div class="mt-5" fxLayoutAlign="start">
-              <mat-checkbox class="mr-1"></mat-checkbox><span >I have read and agree to the terms of service.</span>
+              <mat-checkbox class="mr-1">I have read and agree to the terms of service.</mat-checkbox>
             </div>
             <div class="mt-5">
               <label class="mr-1 mat-body-2">Slide Toggle:</label>
               <mat-slide-toggle [checked]="true">Slide me!</mat-slide-toggle>
             </div>
             <div class="mt-1" fxLayout fxLayoutWrap="wrap">
-              <div fxFlex >
+              <div fxFlex fxFlex.xs="100" class="mr-1">
                 <label class="mr-1 mat-body-2">Horizontal Slider:</label>
                 <mat-slider [style.width]="'250px'" min="1" max="5" step="1" value="2.5"></mat-slider>
               </div>
-              <div fxFlex>
-                <label class="mr-1 mat-body-2">Vertical Slider:</label>
+              <div fxFlex fxFlex.xs="100">
+                <label class="mr-1 mat-body-2" [style.vertical-align]="'top'">Vertical Slider:</label>
                 <mat-slider vertical [style.height]="'150px'" min="1" max="5" step="1" value="2.5"></mat-slider>
               </div>
             </div>

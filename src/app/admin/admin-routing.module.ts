@@ -6,6 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { TablesComponent } from './tables/tables.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { WizardComponent } from './wizard/wizard.component';
+import { OtherElementsComponent } from './other-elements/other-elements.component';
 
 const routes: Routes = [
 	{
@@ -21,8 +23,9 @@ const routes: Routes = [
             { path: 'profile', component: ProfileComponent },
             { path: 'forms', component: FormsComponent },
             { path: 'tables', component: TablesComponent },
-            { path: 'dialog', component: DialogComponent }
-
+            { path: 'dialog', component: DialogComponent },
+            { path: 'wizard', component: WizardComponent },
+            { path: 'otherElements', component: OtherElementsComponent }
         ]
     }
 ];

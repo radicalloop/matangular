@@ -6,6 +6,9 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
+  .profile-nav{
+    background-color : mat-color($background, card);
+  }
   .list-item-active{
      border-left: 3px solid;
      border-color: mat-color($primary);

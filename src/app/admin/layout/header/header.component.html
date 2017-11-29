@@ -1,6 +1,6 @@
     <mat-toolbar color="primary">
       <div fxFlex [class.hidden]="displaySearch" fxLayoutAlign="start center">
-        <span matTooltip="Menu" class="pl-15">
+        <span matTooltip="Menu" class="pl-1">
             <button (click)="sidebar.toggle()" mat-icon-button>
               <mat-icon>menu</mat-icon>
             </button>
@@ -30,7 +30,7 @@
         </button>
         <button mat-button [matMenuTriggerFor]="userMenu" class="user-icon" ngClass.gt-xs="ml-1">
           <img mat-card-avatar src="assets/images/avataar.png">
-          <span fxHide.xs>John Doe</span>
+          <span fxHide.xs class="ml-5">John Doe</span>
           <mat-icon class="s-18" fxHide.xs>keyboard_arrow_down</mat-icon>
         </button>
         <mat-menu #userMenu="matMenu">
@@ -43,8 +43,8 @@
         </mat-menu>
       </div>
 
-      <div class="searchbar expanded" [class.hidden]="!displaySearch" fxLayout="row" fxFlex fxLayoutAlign="start center">
-        <input fxFlex type="text" name="search" placeholder="Search" class="ml-24">
+      <div class="searchbar expanded px-1" [class.hidden]="!displaySearch" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <input fxFlex type="text" name="search" placeholder="Search" class="ml-1">
         <button mat-icon-button (click)="displaySearch = false">
           <mat-icon>close</mat-icon>
         </button>
