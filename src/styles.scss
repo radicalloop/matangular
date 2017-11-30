@@ -140,6 +140,10 @@ a{
   font-weight: 500;
 }
 
+.mat-selection-list .mat-list-option .mat-list-text {
+  padding: 0px !important;
+}
+
 @media screen and (max-width: 599px){
   .list-scroll{
     .mat-card-content{

@@ -8,6 +8,7 @@ import { TablesComponent } from './tables/tables.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { OtherElementsComponent } from './other-elements/other-elements.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 	{
@@ -27,6 +28,10 @@ const routes: Routes = [
             { path: 'wizard', component: WizardComponent },
             { path: 'otherElements', component: OtherElementsComponent }
         ]
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
 ];
 

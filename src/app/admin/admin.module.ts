@@ -20,6 +20,7 @@ import { LoaderDialogComponent } from './dialog/loader-dialog/loader-dialog.comp
 import { SettingsComponent } from './layout/settings/settings.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { OtherElementsComponent } from './other-elements/other-elements.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,6 @@ import { OtherElementsComponent } from './other-elements/other-elements.componen
   ],
   providers: [ThemeService],
   entryComponents: [ConfirmDialogComponent, LoaderDialogComponent],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent]
 })
 export class AdminModule { }

@@ -1,0 +1,29 @@
+.logo-image img{
+  width: 100px;
+  height: 100px;
+}
+.seperator{
+  margin: 0 auto;
+  .text{
+    position: relative;
+  }
+  :before{
+    content: "";
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    border-top: 1px solid rgba(0,0,0,.12);
+  }
+  :after{
+    content: "";
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    border-top: 1px solid rgba(0,0,0,.12);
+  }
+
+}

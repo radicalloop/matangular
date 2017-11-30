@@ -1,0 +1,48 @@
+<div class="mat-bg-primary" [style.min-height] = "'100vh'" fxFlex="100" fxLayoutAlign="center center">
+  <div fxFlex="400px">
+    <mat-card>
+      <div class="login-form p-1">
+        <div class="logo-image text-center">
+          <img src="assets/images/avatar.png">
+          <div class="mat-h2">LOGIN TO YOUR ACCOUNT</div>
+        </div>
+        <div class="p-1">
+          <form>
+            <div fxFlex="100" fxLayout="column">
+              <div fxFlex="100">
+                <mat-form-field>
+                  <input matInput placeholder="Email">
+                </mat-form-field>
+              </div>
+              <div fxFlex="100">
+                <mat-form-field>
+                  <input matInput placeholder="Password">
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+          <div fxLayoutAlign="space-between start">
+            <mat-checkbox>Remember Me</mat-checkbox>
+            <span fxFlex></span>
+            <a class="mat-h5">Forgot Password?</a>
+          </div>
+          <div fxLayoutAlign="center center" class="my-1">
+            <button mat-raised-button>Login</button>
+          </div>
+
+          <div fxLayout="column" fxLayoutAlign="center center" class="my-1" fxLayoutGap="1rem">
+            <div class="seperator">
+            <span class="text">OR</span>
+          </div>
+            <button mat-raised-button color="primary">Login with Goggle</button>
+            <button mat-raised-button color="accent">Login with Facebook</button>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center" class="mt-1" fxLayoutGap=".5rem">
+            <div class="mat-body-h2">Don't have an account?</div>
+            <a>Create an account</a>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
