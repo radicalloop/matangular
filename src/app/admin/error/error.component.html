@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center" [style.min-height] = "'100vh'" fxFlex="100">
+  <div class="error" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div class="mr-1" fxLayoutAlign="start center">
+        <mat-icon color="warn">error</mat-icon>
+      </div>
+      <div class="error-text" fxLayout="column" fxLayoutAlign="start center">
+        <div class="error-digit">404</div>
+        <div class="error-text-small">Page Not Found!</div>
+      </div>
+    </div>
+    <div class="mat-hint text-center font-size-20" ngClass.xs="px-1">
+      Sorry but we could not find the page you are looking for
+    </div>
+    <div class="mt">
+      <a mat-raised-button color="primary" routerLink="/admin/dashboard">Back to Dashboard</a>
+    </div>
+  </div>
+</div>

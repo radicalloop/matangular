@@ -9,6 +9,9 @@ import { DialogComponent } from './dialog/dialog.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { OtherElementsComponent } from './other-elements/other-elements.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
 	{
@@ -30,8 +33,20 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'login',
-        component: LoginComponent
+       path: 'login',
+       component: LoginComponent
+    },
+    {
+       path: 'register',
+       component: RegisterComponent
+    },
+    {
+       path: 'forgot-password',
+       component: ForgotPasswordComponent
+    },
+    {
+       path: 'error',
+       component: ErrorComponent
     }
 ];
 

@@ -8,8 +8,6 @@
 
 $general-typography: mat-typography-config(
   $subheading-2:  mat-typography-level(14px, 28px, 400)
- // $body-1: mat-typography-level(14px, 28px, 400),
- // $headline: mat-typography-level(32px, 48px, 700)
 );
 
 // Be sure that you only ever include this mixin once!
@@ -17,6 +15,9 @@ $general-typography: mat-typography-config(
 @include mat-base-typography($general-typography);
 
 @import 'themes/quill-editor/quill-editor.scss';
+
+@import 'app/admin/login/login.component.scss-theme.scss';
+@import 'app/admin/register/register.component.scss-theme.scss';
 
 @import 'app/admin/layout/sidebar/sidebar.component.scss-theme.scss';
 @import 'app/admin/layout/breadcrumb/breadcrumb.component.scss-theme.scss';
@@ -34,6 +35,8 @@ $general-typography: mat-typography-config(
   // Quill Editor
   @include anms-quill-editor-theme($theme);
 
+  @include anms-login-component-theme($theme);
+  @include anms-register-component-theme($theme);
   @include anms-sidebar-component-theme($theme);
   @include anms-breadcrumb-component-theme($theme);
   @include anms-dashboard-component-theme($theme);

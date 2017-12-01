@@ -99,11 +99,35 @@
             <span>Tables</span>
           </a>
         </mat-list-item>
-        <mat-list-item>
-          <a matLine routerLink="login" fxLayoutAlign="start center">
-            <mat-icon>lock open</mat-icon>
-            <span>Login</span>
+        <mat-list-item class="sidebar-list-item" sidenavAccordian>
+          <a fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>view_carousel</mat-icon>
+            <span>Pages</span>
+            <span fxFlex></span>
+            <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
           </a>
+          <mat-nav-list class="sub-menu">
+            <mat-list-item>
+              <a fxLayout="row" routerLink="login">
+                  <span>Login</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item>
+              <a fxLayout="row" routerLink="register">
+                  <span>Register</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item>
+              <a fxLayout="row" routerLink="forgot-password">
+                  <span>Forgot Password</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item>
+              <a fxLayout="row" routerLink="error">
+                  <span>Error</span>
+              </a>
+            </mat-list-item>
+          </mat-nav-list>
         </mat-list-item>
       </div>
     </mat-nav-list>

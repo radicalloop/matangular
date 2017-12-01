@@ -1,14 +1,15 @@
 @import '~@angular/material/theming';
 
-@mixin anms-dashboard-component-theme($theme) {
+@mixin anms-login-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-
-  .user-details .mat-card-subtitle {
-    background: mat-color($primary);
-    color: mat-color($primary, default-contrast);
+  .mat-bg-primary-400{
+    background-color: mat-color($primary, 400);
+  }
+  .link{
+    color: mat-color($accent);
   }
 }

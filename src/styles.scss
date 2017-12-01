@@ -68,6 +68,10 @@ p{
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.py-1{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .pr-1{
   padding-right: 1rem;
 }
@@ -137,11 +141,15 @@ a{
     z-index: -9;
 }
 .font-weight-500{
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .mat-selection-list .mat-list-option .mat-list-text {
   padding: 0px !important;
+}
+
+.mat-checkbox-layout{
+  white-space: initial !important;
 }
 
 @media screen and (max-width: 599px){

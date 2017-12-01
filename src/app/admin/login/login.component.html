@@ -1,45 +1,40 @@
-<div class="mat-bg-primary" [style.min-height] = "'100vh'" fxFlex="100" fxLayoutAlign="center center">
-  <div fxFlex="400px">
+<div class="mat-bg-primary-400" [style.min-height] = "'100vh'" fxFlex="100" fxLayoutAlign="center center">
+  <div fxFlex="100" [style.max-width]="'400px'">
     <mat-card>
       <div class="login-form p-1">
         <div class="logo-image text-center">
           <img src="assets/images/avatar.png">
-          <div class="mat-h2">LOGIN TO YOUR ACCOUNT</div>
+          <div class="mat-h2 mt-5">LOGIN TO YOUR ACCOUNT</div>
         </div>
-        <div class="p-1">
+        <div class="mt-1">
           <form>
-            <div fxFlex="100" fxLayout="column">
-              <div fxFlex="100">
-                <mat-form-field>
+              <div>
+                <mat-form-field fxFlex="100">
                   <input matInput placeholder="Email">
                 </mat-form-field>
               </div>
-              <div fxFlex="100">
-                <mat-form-field>
+              <div>
+                <mat-form-field fxFlex="100">
                   <input matInput placeholder="Password">
                 </mat-form-field>
               </div>
-            </div>
           </form>
-          <div fxLayoutAlign="space-between start">
+          <div fxLayoutAlign="space-between center" fxLayout="row" class="mb-1" fxLayoutGap=".2rem">
             <mat-checkbox>Remember Me</mat-checkbox>
             <span fxFlex></span>
-            <a class="mat-h5">Forgot Password?</a>
+            <a routerLink="admin/forgot-password" class="mat-body-1 text-center link">Forgot Password?</a>
           </div>
-          <div fxLayoutAlign="center center" class="my-1">
-            <button mat-raised-button>Login</button>
-          </div>
-
           <div fxLayout="column" fxLayoutAlign="center center" class="my-1" fxLayoutGap="1rem">
+            <button mat-raised-button color="accent" class="my-1" [style.width]="'220px'">LOGIN</button>
             <div class="seperator">
-            <span class="text">OR</span>
-          </div>
-            <button mat-raised-button color="primary">Login with Goggle</button>
-            <button mat-raised-button color="accent">Login with Facebook</button>
+              <span class="text">OR</span>
+            </div>
+            <button mat-raised-button class="google-btn f-13-400">Login with Google</button>
+            <button mat-raised-button class="fb-btn f-13-400">Login with Facebook</button>
           </div>
           <div fxLayout="column" fxLayoutAlign="center center" class="mt-1" fxLayoutGap=".5rem">
-            <div class="mat-body-h2">Don't have an account?</div>
-            <a>Create an account</a>
+            <div class="mat-body-2 mb-0">Don't have an account?</div>
+            <a routerLink="admin/register" class="mat-body-1 link">Create an account</a>
           </div>
         </div>
       </div>

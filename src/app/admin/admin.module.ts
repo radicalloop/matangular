@@ -21,6 +21,9 @@ import { SettingsComponent } from './layout/settings/settings.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { OtherElementsComponent } from './other-elements/other-elements.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   imports: [
@@ -31,6 +34,6 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [ThemeService],
   entryComponents: [ConfirmDialogComponent, LoaderDialogComponent],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent]
 })
 export class AdminModule { }
