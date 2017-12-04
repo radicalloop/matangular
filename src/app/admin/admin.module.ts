@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QuillModule } from 'ngx-quill';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -24,16 +25,18 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ErrorComponent } from './error/error.component';
+import { DatatablesComponent } from './datatables/datatables.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    QuillModule
+    QuillModule,
+    NgxDatatableModule
   ],
   providers: [ThemeService],
   entryComponents: [ConfirmDialogComponent, LoaderDialogComponent],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent, DatatablesComponent]
 })
 export class AdminModule { }

@@ -4,6 +4,10 @@
 @import 'themes/light-theme.scss';
 @import 'themes/black-theme.scss';
 
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
 @include mat-core();
 
 $general-typography: mat-typography-config(
@@ -66,4 +70,6 @@ $general-typography: mat-typography-config(
    @include angular-material-theme($anms-black-theme);
    @include custom-components-theme($anms-black-theme);
 }
+
+
 
