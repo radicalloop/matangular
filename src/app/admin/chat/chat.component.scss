@@ -1,0 +1,36 @@
+.mat-sidenav {
+  width: 300px;
+}
+.mat-toolbar {
+  padding: 15px !important;
+}
+.conversations-hold{
+  .sender{
+    .toolbar-avatar{
+      margin-right: 1rem;
+    }
+  }
+  .receiver{
+    .toolbar-avatar{
+      margin-left: 1rem;
+      order: 2;
+    }
+  }
+}
+
+.toolbar-avatar{
+  position:relative;
+  &.online{
+    .chat-status{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 25px;
+      right: -2px;
+      border: 2px solid #fff;
+      background: #ccc;
+    }
+  }
+}
+

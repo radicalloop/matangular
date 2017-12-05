@@ -1,9 +1,9 @@
 
-    <div fxLayout="column">
-      <div fxLayoutAlign="center center" fxLayout="row">
-        <mat-form-field fxFlex="40">
+    <div fxLayout="column" [style.padding]="'.33rem'">
+      <div fxLayoutAlign="end center" fxLayout="row">
+        <mat-form-field fxFlex.gt-xs="35">
           <div>
-            <input matInput type='text'  placeholder='Type to filter the name column...' (keyup)='updateFilter($event)' />
+            <input matInput type='text' placeholder='Type to filter the name column...' (keyup)='updateFilter($event)' />
           </div>
         </mat-form-field>
       </div>
@@ -17,7 +17,8 @@
           [footerHeight]="50"
           [rowHeight]="'auto'"
           [limit]="10"
-          [rows]='rows'>
+          [rows]='rows'
+          [scrollbarH]="true" >
         </ngx-datatable>
       </div>
     </div>

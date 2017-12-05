@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+@mixin anms-chat-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .conversation-msg{
+    padding: .48rem .94rem;
+    border-radius: 4px;
+  }
+
+  .sender{
+    .conversation-msg{
+      background-color: mat-color($primary);
+      color: mat-color($primary, default-contrast);
+    }
+  }
+  .receiver{
+    .conversation-msg{
+      background-color: mat-color($accent);
+      color: mat-color($accent, default-contrast);
+    }
+  }
+}

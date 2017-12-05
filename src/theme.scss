@@ -4,9 +4,33 @@
 @import 'themes/light-theme.scss';
 @import 'themes/black-theme.scss';
 
+// Datatables CSS
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+@media screen and (max-width: 599px){
+  .ngx-datatable.material{
+    .datatable-footer{
+      .datatable-pager {
+        margin: 0 10px 0 0px;
+
+        a{
+          min-width: 16px;
+          padding: 0 0px;
+          margin: 6px 1px;
+        }
+        .datatable-icon-prev {
+          font-size: 20px;
+          padding: 0 0px;
+        }
+      }
+      .page-count{
+        padding: 0 0 0 .5rem ;
+      }
+    }
+  }
+}
 
 @include mat-core();
 
@@ -22,12 +46,14 @@ $general-typography: mat-typography-config(
 
 @import 'app/admin/login/login.component.scss-theme.scss';
 @import 'app/admin/register/register.component.scss-theme.scss';
+@import 'app/admin/chat/chat.component.scss-theme.scss';
 
 @import 'app/admin/layout/sidebar/sidebar.component.scss-theme.scss';
 @import 'app/admin/layout/breadcrumb/breadcrumb.component.scss-theme.scss';
 @import 'app/admin/dashboard/dashboard.component.scss-theme.scss';
 @import 'app/admin/profile/profile.component.scss-theme.scss';
 @import 'app/admin/layout/header/header.component.scss-theme.scss';
+
 
 @mixin custom-components-theme($theme) {
   $primary: map-get($theme, primary);
@@ -41,6 +67,8 @@ $general-typography: mat-typography-config(
 
   @include anms-login-component-theme($theme);
   @include anms-register-component-theme($theme);
+  @include anms-chat-component-theme($theme);
+
   @include anms-sidebar-component-theme($theme);
   @include anms-breadcrumb-component-theme($theme);
   @include anms-dashboard-component-theme($theme);
@@ -70,6 +98,3 @@ $general-typography: mat-typography-config(
    @include angular-material-theme($anms-black-theme);
    @include custom-components-theme($anms-black-theme);
 }
-
-
-

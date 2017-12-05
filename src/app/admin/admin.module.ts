@@ -26,6 +26,7 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ErrorComponent } from './error/error.component';
 import { DatatablesComponent } from './datatables/datatables.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,6 @@ import { DatatablesComponent } from './datatables/datatables.component';
   ],
   providers: [ThemeService],
   entryComponents: [ConfirmDialogComponent, LoaderDialogComponent],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent, DatatablesComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent, DatatablesComponent, ChatComponent]
 })
 export class AdminModule { }

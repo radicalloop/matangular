@@ -1,0 +1,103 @@
+<mat-card class="default">
+  <mat-sidenav-container class="chat-container">
+    <mat-sidenav mode="side" opened="true" position="start" #chat>
+      <mat-toolbar color="primary">
+        <a class="toolbar-avatar online">
+          <img mat-card-avatar src="assets/images/avataar.png">
+          <span class="chat-status"></span>
+        </a>
+      </mat-toolbar>
+      <mat-nav-list>
+        <mat-list-item>
+          <a>
+            <img mat-card-avatar src="assets/images/avataar.png">
+          </a>
+          <h4 mat-line>John Doe</h4>
+          <p mat-line class="mat-hint">What's going on?</p>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button class="mr-1" (click)="chat.toggle()"><mat-icon>short_text</mat-icon></button>
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a class="toolbar-avatar online active-chat-user mr-1">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxLayout="column">
+            <h4 mat-line>John Doe</h4>
+          </div>
+        </div>
+      </mat-toolbar>
+
+      <div class="conversations-hold p-1" fxLayout="column">
+        <div class="sender" fxLayout fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70" fxLayoutAlign="start start" fxLayout="column">
+            <p class="conversation-msg m-0">Hello, How are you</p>
+            <div class="mat-hint mat-h5">10 min ago</div>
+          </div>
+        </div>
+
+        <div class="receiver" fxLayout fxLayoutAlign="end start" fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70">
+            <p class="conversation-msg m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper velit euismod. Morbi dapibus varius imperdiet. </p>
+            <div class="mat-hint mat-h5" fxLayoutAlign="end start">Mar 22, 2017, 2:30:28 PM</div>
+          </div>
+        </div>
+
+        <div class="sender" fxLayout fxFlex="70" fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70" fxLayoutAlign="start start" fxLayout="column">
+            <p class="conversation-msg m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper velit euismod. Morbi dapibus varius imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper velit euismod. Morbi dapibus varius imperdiet.</p>
+            <div class="mat-hint mat-h5">10 min ago</div>
+          </div>
+        </div>
+
+        <div class="receiver" fxLayout fxLayoutAlign="end start" fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70" fxLayoutAlign="start end" fxLayout="column">
+            <p class="conversation-msg m-0">Hello, How are you</p>
+            <div class="mat-hint mat-h5" fxLayoutAlign="end start">Mar 22, 2017, 2:30:28 PM</div>
+          </div>
+        </div>
+        <div class="sender" fxLayout fxFlex="70" fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70" fxLayoutAlign="start start" fxLayout="column">
+            <p class="conversation-msg m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper</p>
+            <div class="mat-hint mat-h5">10 min ago</div>
+          </div>
+        </div>
+
+        <div class="receiver" fxLayout fxLayoutAlign="end start" fxFlex="100">
+          <a class="toolbar-avatar">
+            <img mat-card-avatar src="assets/images/avataar.png" />
+            <span class="chat-status"></span>
+          </a>
+          <div fxFlex="70" fxLayoutAlign="start end" fxLayout="column">
+            <p class="conversation-msg m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper velit euismod. Morbi dapibus varius imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis et leo imperdiet, ut ullamcorper velit euismod. Morbi dapibus varius imperdiet.</p>
+            <div class="mat-hint mat-h5" fxLayoutAlign="end start">Mar 22, 2017, 2:30:28 PM</div>
+          </div>
+        </div>
+
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</mat-card>

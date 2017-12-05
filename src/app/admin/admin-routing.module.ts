@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ErrorComponent } from './error/error.component';
 import { DatatablesComponent } from './datatables/datatables.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
 	{
@@ -31,7 +32,8 @@ const routes: Routes = [
             { path: 'dialog', component: DialogComponent },
             { path: 'wizard', component: WizardComponent },
             { path: 'otherElements', component: OtherElementsComponent },
-            { path: 'datatables', component: DatatablesComponent }
+            { path: 'datatables', component: DatatablesComponent },
+            { path: 'chat', component: ChatComponent }
         ]
     },
     {
