@@ -12,4 +12,7 @@ export class ChatComponent implements OnInit {
   ngOnInit() {
   }
 
+  isMobile() {
+    return window.matchMedia(`(max-width: 960px)`).matches;
+  }
 }

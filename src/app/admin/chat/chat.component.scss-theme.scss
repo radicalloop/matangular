@@ -5,7 +5,9 @@
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
-
+  .mat-sidenav{
+    border-right: 1px solid mat-color($foreground, divider);
+  }
   .conversation-msg{
     padding: .48rem .94rem;
     border-radius: 4px;

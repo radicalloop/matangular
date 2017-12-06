@@ -1,10 +1,30 @@
-.mat-sidenav {
-  width: 300px;
+.chat-container{
+  overflow: hidden;
 }
+
 .mat-toolbar {
   padding: 15px !important;
 }
+.pos-absolute{
+  position: absolute;
+  z-index: 9999;
+}
+.chat-search{
+  div{
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    input{
+    border: none;
+    overflow:hidden;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
 .conversations-hold{
+  overflow-y: scroll;
+  overflow-x: hidden;
   .sender{
     .toolbar-avatar{
       margin-right: 1rem;
@@ -17,10 +37,27 @@
     }
   }
 }
-
+.mat-nav-list{
+  .toolbar-avatar{
+    order: -1;
+    margin-right: 1rem;
+  }
+}
 .toolbar-avatar{
   position:relative;
   &.online{
+    .chat-status{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 25px;
+      right: -2px;
+      border: 2px solid #fff;
+      background: #4caf50;
+    }
+  }
+  &.offline{
     .chat-status{
       position: absolute;
       width: 10px;
@@ -33,4 +70,3 @@
     }
   }
 }
-
