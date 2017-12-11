@@ -2,12 +2,6 @@
   <mat-sidenav-container>
     <mat-sidenav [opened]="!isMobile()" [mode]="isMobile() ? 'over' : 'side'" position="start" #chat fxFlex.gt-sm="300px" fxFlex="250px" fxLayout="column">
       <mat-toolbar color="primary" fxFlex="64px">
-        <a class="toolbar-avatar online">
-          <img mat-card-avatar src="assets/images/avataar.png">
-          <span class="chat-status"></span>
-        </a>
-      </mat-toolbar>
-      <mat-toolbar color="primary" fxFlex="64px">
       <form fxFlex="100" class="chat-search">
         <div class="mat-elevation-z1 p-1"  fxLayout="row" fxLayoutAlign="start center">
            <mat-icon class="mat-hint">search</mat-icon>
@@ -16,15 +10,23 @@
       </form>
       </mat-toolbar>
 
-      <mat-nav-list fxFlex [style.overflow-y]="'scroll'" class="p-0">
+      <mat-nav-list fxFlex [style.overflow-y]="'auto'" class="p-0">
         <perfect-scrollbar>
         <a mat-list-item>
           <div class="toolbar-avatar offline">
             <img mat-list-avatar src="assets/images/avataar.png">
             <span class="chat-status"></span>
           </div>
-          <h4 mat-line>John Doe</h4>
-          <p mat-line class="mat-hint">What's going on? What's going on? What's going on?</p>
+          <div fxLayout="column">
+            <h4 mat-line class="m-0">John Doe</h4>
+            <p mat-line class="mat-hint m-0">What's going on?</p>
+          </div>
+          <span fxFlex></span>
+          <div fxLayout="column" fxLayoutAlign="center end">
+             <p class="mat-hint m-0 mat-body-1">Dec 10, 2017</p>
+             <div class="unread m-0">5</div>
+          </div>
+
         </a>
         <mat-divider></mat-divider>
         <a mat-list-item>
@@ -144,7 +146,8 @@
             <h4 mat-line>John Doe</h4>
           </div>
         </div>
-        <div fxLayoutAlign="end center">
+        <span fxFlex></span>
+        <div>
           <button mat-icon-button [matMenuTriggerFor]="progressBar">
             <mat-icon>more_vert</mat-icon>
           </button>
@@ -158,8 +161,8 @@
           </mat-menu>
         </div>
       </mat-toolbar>
-
-      <div class="conversations-hold p-1" fxFlex>
+      <div class="conversations-hold p-1" [style.overflow-y]="'auto'" fxFlex>
+        <perfect-scrollbar>
         <div fxLayout="column">
         <div class="sender" fxLayout fxFlex="100">
           <a class="toolbar-avatar">
@@ -359,7 +362,9 @@
           </div>
         </div>
       </div>
-      </div>
+      </perfect-scrollbar>
+        </div>
+
 
 
       <mat-divider></mat-divider>
