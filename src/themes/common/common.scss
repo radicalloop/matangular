@@ -1,13 +1,21 @@
-@import '~@angular/material/theming';
-
-@mixin anms-register-component-theme($theme) {
+@mixin anms-common-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
+  .mat-bg-primary {
+    background: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+  .mat-bg-accent {
+    background: mat-color($accent);
+  }
   .mat-bg-primary-400{
     background-color: mat-color($primary, 400);
+  }
+  .mat-card-bg{
+    background: mat-color($background, card);
   }
   .link{
     color: mat-color($accent);

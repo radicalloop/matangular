@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+// Datatables CSS
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+@media screen and (max-width: 599px){
+  .ngx-datatable.material{
+    .datatable-footer{
+      .datatable-pager {
+        margin: 0 10px 0 0px;
+
+        a{
+          min-width: 16px;
+          padding: 0 0px;
+          margin: 6px 1px;
+        }
+        .datatable-icon-prev {
+          font-size: 20px;
+          padding: 0 0px;
+        }
+      }
+      .page-count{
+        padding: 0 0 0 .5rem ;
+      }
+    }
+  }
+}
+
 body {
   position: relative;
   width: 100%;
