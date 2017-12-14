@@ -15,7 +15,9 @@ export class SidenavAccordionDirective implements OnInit {
   }
 
   onClick(event) {
-    $('.menulist').find('.open').removeClass('open');
-    $(this.el.nativeElement).toggleClass('open');
+    if ($(event.target).parents('.sub-menu').length == 0) {
+      $('.menulist').find('.open').not($(this.el.nativeElement)).removeClass('open');
+      $(this.el.nativeElement).toggleClass('open');
+    }
   }
 }
