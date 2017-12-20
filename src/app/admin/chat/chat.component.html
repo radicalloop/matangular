@@ -1,136 +1,133 @@
 <mat-card class="default chat-container" ngStyle.gt-sm="height:calc(100vh - 180px)">
    <mat-sidenav-container>
       <mat-sidenav [opened]="!isMobile()" [mode]="isMobile() ? 'over' : 'side'" position="start" #chat fxFlex.gt-sm="300px" fxFlex="250px" fxLayout="column">
-
         <perfect-scrollbar>
           <div fxLayout="column">
-        <mat-toolbar color="primary" fxFlex="64px">
-           <form fxFlex="100" class="chat-search">
-              <div class="mat-elevation-z1 p-1" fxLayout="row" fxLayoutAlign="start center">
-                 <mat-icon class="mat-hint">search</mat-icon>
-                 <input type="text" placeholder="Search or Start new chat" class="mat-body-1 ml-5">
+          <mat-toolbar color="primary" fxFlex="64px">
+             <form fxFlex="100" class="chat-search">
+                <div class="mat-elevation-z1 p-1" fxLayout="row" fxLayoutAlign="start center">
+                   <mat-icon class="mat-hint">search</mat-icon>
+                   <input type="text" placeholder="Search or Start new chat" class="mat-body-1 ml-5">
+                </div>
+             </form>
+          </mat-toolbar>
+          <mat-nav-list fxFlex class="p-0">
+            <a mat-list-item>
+              <div class="toolbar-avatar offline">
+                <img mat-list-avatar src="assets/images/avataar.png">
+                <span class="chat-status"></span>
               </div>
-           </form>
-        </mat-toolbar>
-        <mat-nav-list fxFlex class="p-0">
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <div fxLayout="column">
-                    <h4 mat-line class="m-0">John Doe</h4>
-                    <p mat-line class="mat-hint m-0">What's going on?</p>
-                 </div>
-                 <span fxFlex></span>
-                 <div fxLayout="column" fxLayoutAlign="center end">
-                    <p class="mat-hint m-0 mat-body-1">Dec 10, 2017</p>
-                    <div class="unread m-0">5</div>
-                 </div>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on? What's going on? What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar offline">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-              <a mat-list-item>
-                 <div class="toolbar-avatar online">
-                    <img mat-list-avatar src="assets/images/avataar.png">
-                    <span class="chat-status"></span>
-                 </div>
-                 <h4 mat-line>John Doe</h4>
-                 <p mat-line class="mat-hint">What's going on?</p>
-              </a>
-              <mat-divider></mat-divider>
-        </mat-nav-list>
-        </div>
-      </perfect-scrollbar>
+              <h4 mat-line class="m-0">John Doe</h4>
+              <p mat-line class="mat-hint m-0">What's going on?</p>
+              <span fxFlex></span>
+              <div fxLayout="column" fxLayoutAlign="center end" fxFlex="70px">
+                <p class="mat-hint m-0 mat-caption">Dec 10, 2017</p>
+                <div class="unread m-0">5</div>
+              </div>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar offline">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar offline">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar offline">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on? What's going on? What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar offline">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar offline">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+               <div class="toolbar-avatar online">
+                  <img mat-list-avatar src="assets/images/avataar.png">
+                  <span class="chat-status"></span>
+               </div>
+               <h4 mat-line>John Doe</h4>
+               <p mat-line class="mat-hint">What's going on?</p>
+            </a>
+            <mat-divider></mat-divider>
+          </mat-nav-list>
+          </div>
+        </perfect-scrollbar>
       </mat-sidenav>
       <mat-sidenav-content>
          <div fxLayout="column" fxLayoutWrap="wrap">

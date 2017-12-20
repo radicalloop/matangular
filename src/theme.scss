@@ -34,16 +34,34 @@ $general-typography: mat-typography-config(
 }
 
 .default-theme {
+  $primary: map-get($anms-theme, primary);
+
   @include angular-material-theme($anms-theme);
   @include custom-components-theme($anms-theme);
+
+  .mat-brand-bg{
+    background: mat-color($primary, 50);
+  }
 }
 
+
 .light-theme {
+
+  $primary: map-get($anms-light-theme, primary);
+
   @include angular-material-theme($anms-light-theme);
   @include custom-components-theme($anms-light-theme);
+
+  .mat-brand-bg{
+    background: mat-color($primary, 50);
+  }
 }
 
 .black-theme {
+  $background: map-get($anms-black-theme, background);
+  .mat-brand-bg{
+    background: mat-color($background, card);
+  }
    @include angular-material-theme($anms-black-theme);
    @include custom-components-theme($anms-black-theme);
 }

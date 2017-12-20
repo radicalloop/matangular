@@ -12,26 +12,28 @@
     overflow: hidden;
 
   .sidebar-panel{
-      padding-top: 64px;
+      padding-top: 115px;
 
       .branding {
-          height: 64px;
+          height: 115px;
           position: fixed;
           width: 100%;
           top: 0;
           left: 0;
           z-index: 999;
+          .mat-h5{
+            line-height: 10px !important;
+          }
       }
       .user{
-        text-align: center;
 
           .user-photo
            {
-            border: 1px solid hsla(210,8%,51%,.13);
-            padding: 4px;
+            border: 1px solid hsla(210,8%,51%,1);
+            padding: 2px;
             border-radius: 50%;
-            width: 72px;
-            height: 72px;
+            width: 45px;
+            height: 45px;
             margin: 0 auto;
            img {
             width: 100%;

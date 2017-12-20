@@ -1,14 +1,26 @@
 .chat-container{
   overflow: hidden;
+
+  .mat-nav-list{
+    padding-top: 64px !important;
+  }
+  .mat-toolbar {
+    padding: 15px !important;
+  }
+
+  .mat-sidenav{
+    .mat-toolbar {
+      z-index: 9;
+      position: fixed;
+    }
+  }
 }
 
-.mat-toolbar {
-  padding: 15px !important;
-}
 .pos-absolute{
   position: absolute;
   z-index: 9999;
 }
+
 .chat-search{
   div{
     padding: 0.5rem 1rem;
@@ -71,13 +83,15 @@
 .unread{
   border-radius: 50%;
   text-align: center;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  background-color: #ccc;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #283593;
   color: #fff;
+  font-size: 13px;
 }
 .conversation-msg{
   padding: .48rem .94rem;
   border-radius: 4px;
+  font-size: 14px;
 }

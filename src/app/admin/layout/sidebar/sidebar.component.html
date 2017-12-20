@@ -1,48 +1,20 @@
 <perfect-scrollbar>
   <div class="sidebar-panel" fxLayout="column">
-    <div class="branding mat-card-bg" fxLayoutAlign="center center">ADMIN</div>
-    <div class="user mb-12" fxLayout="column">
-      <div class="user-photo"><img src="assets/images/avataar.png"></div>
-      <span class="user-name">John Doe</span>
-      <span class="mat-h5">john@doe.com</span>
-      <!-- <div class="user-controls"></div>
-      <button mat-icon-button [matMenuTriggerFor]="userControls" mat-xs-button>
-        <mat-icon>settings</mat-icon>
-      </button>
-      <mat-menu #userControls="matMenu">
-        <button mat-menu-item>
-          <mat-icon>account_circle</mat-icon>My Profile</button>
-        <button mat-menu-item>
-          <mat-icon>email</mat-icon>Inbox</button>
-        <button mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>Logout</button>
-      </mat-menu>
-      <button mat-icon-button mat-xs-button>
-        <mat-icon>email</mat-icon>
-      </button>
-      <button mat-icon-button mat-xs-button>
-        <mat-icon>exit_to_app</mat-icon>
-      </button> -->
-    </div>
-    <mat-divider class="mt-1"></mat-divider>
-    <mat-nav-list>
-      <div class="frequently-accessed">
-        <h3 mat-subheader>Frequently Accessed</h3>
-        <div class="button-row" fxLayout="row" fxLayoutAlign="space-evenly center">
-          <button mat-raised-button>
-            <mat-icon>home</mat-icon>
-          </button>
-          <button mat-raised-button>
-            <mat-icon>person</mat-icon>
-          </button>
-          <button mat-raised-button>
-            <mat-icon>flight_takeoff</mat-icon>
-          </button>
+    <div class="branding mat-brand-bg mat-elevation-z1">
+      <div class="p-1">
+        <div class="f-20 mb-0">ADMIN</div>
+        <div class="user mb-12" fxLayout="row" fxLayoutAlign="start center">
+          <div>
+            <div class="user-name">John Doe</div>
+            <div class="mat-h5 mb-0">john@doe.com</div>
+          </div>
+          <span fxFlex></span>
+          <div class="user-photo"><img src="assets/images/avataar.png"></div>
         </div>
       </div>
-      <mat-divider class="mt-1"></mat-divider>
-      <div class="menulist">
-        <h3 mat-subheader>Main Items</h3>
+    </div>
+    <mat-nav-list>
+      <div class="menulist mb-1">
         <mat-list-item class="sidebar-list-item" sidenavAccordian>
           <a fxLayout="row" fxLayoutAlign="start center" routerLink="dashboard">
             <mat-icon>dashboard</mat-icon>

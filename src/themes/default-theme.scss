@@ -1,5 +1,39 @@
-$anms-primary: mat-palette($mat-indigo, 800, 300, 900);
-$anms-accent: mat-palette($mat-light-blue);
+$md-palettegrey: (
+    50 : #f3f4f6,
+    100 : #e2e3ea,
+    200 : #ced1dc,
+    300 : #babfcd,
+    400 : #acb1c3,
+    500 : #9da3b8,
+    600 : #959bb1,
+    700 : #8b91a8,
+    800 : #8188a0,
+    900 : #6f7791,
+    A100 : #ffffff,
+    A200 : #dce4fe,
+    A400 : #a8bcff,
+    A700 : #8fa8ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$anms-primary: mat-palette($mat-deep-purple, 400);
+$anms-accent: mat-palette($md-palettegrey);
 $anms-warn: mat-palette($mat-deep-orange, A200);
 
 $anms-theme: mat-light-theme($anms-primary, $anms-accent, $anms-warn);
+
