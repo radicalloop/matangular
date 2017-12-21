@@ -1,7 +1,7 @@
 <div fxLayout="column">
-  <mat-card class="default">
+  <mat-card >
     <mat-card-title>Confirm Dialog</mat-card-title>
-    <mat-card-content class="pb-1 px-1">
+    <mat-card-content>
       <div fxLayout="column">
         <mat-form-field>
           <input matInput placeholder="Title" [(ngModel)]="title">
@@ -18,9 +18,9 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="default">
+  <mat-card >
     <mat-card-title>Loader Dialog</mat-card-title>
-    <mat-card-content class="pb-1 px-1">
+    <mat-card-content>
       <div fxLayout="column">
         <mat-form-field>
           <input matInput placeholder="Loader Text" [(ngModel)]="loaderText">
@@ -37,14 +37,14 @@
     <mat-card-title>Snackbar</mat-card-title>
     <mat-card-content>
       <div fxLayout="column">
-        <mat-form-field>
+        <mat-form-field position="top">
           <input matInput placeholder="Message" value="Disco Party!" #message>
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Action" value="Dance" #action>
         </mat-form-field>
       </div>
-      <button mat-raised-button color="primary" (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+      <button mat-raised-button color="primary" position="top" (click)="openSnackBar(message.value, action.value)">Show Snackbar</button>
     </mat-card-content>
   </mat-card>
 </div>

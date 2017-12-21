@@ -6,7 +6,7 @@
 
   .mat-bg-primary {
     background: mat-color($primary);
-    color: mat-color($primary, default-contrast);
+    color: mat-color($primary, default-contrast) !important;
   }
   .mat-bg-accent {
     background: mat-color($accent);

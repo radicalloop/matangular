@@ -5,9 +5,9 @@
           <div fxLayout="column">
           <mat-toolbar color="primary" fxFlex="64px">
              <form fxFlex="100" class="chat-search">
-                <div class="mat-elevation-z1 p-1" fxLayout="row" fxLayoutAlign="start center">
+                <div class="mat-elevation-z1 p-1" fxLayout="row" fxLayoutAlign="stretch center">
                    <mat-icon class="mat-hint">search</mat-icon>
-                   <input type="text" placeholder="Search or Start new chat" class="mat-body-1 ml-5">
+                   <input type="text" placeholder="Search or Start new chat" class="mat-body-1 ml-5" fxFlex="100">
                 </div>
              </form>
           </mat-toolbar>
@@ -20,9 +20,9 @@
               <h4 mat-line class="m-0">John Doe</h4>
               <p mat-line class="mat-hint m-0">What's going on?</p>
               <span fxFlex></span>
-              <div fxLayout="column" fxLayoutAlign="center end" fxFlex="70px">
+              <div fxLayout="column" fxLayoutAlign="center end" fxFlex="80px">
                 <p class="mat-hint m-0 mat-caption">Dec 10, 2017</p>
-                <div class="unread m-0">5</div>
+                <div class="unread mat-bg-primary m-0">5</div>
               </div>
             </a>
             <mat-divider></mat-divider>
@@ -132,7 +132,7 @@
       <mat-sidenav-content>
          <div fxLayout="column" fxLayoutWrap="wrap">
             <div fxFlex.gt-sm="calc(100vh - 180px)" fxLayout="column" fxFlex="calc(100vh - 120px)">
-               <mat-toolbar color="primary" fxFlex="65px">
+               <mat-toolbar color="primary" fxFlex="64px">
                   <button mat-icon-button class="mr-1" (click)="chat.toggle()">
                      <mat-icon>short_text</mat-icon>
                   </button>

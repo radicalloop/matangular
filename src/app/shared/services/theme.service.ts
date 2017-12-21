@@ -6,7 +6,7 @@ export class ThemeService {
 
   themes = [{
      name: 'default-theme',
-     baseColor: '#283593',
+     baseColor: '#7e57c2',
      isActive: false
   },
   {

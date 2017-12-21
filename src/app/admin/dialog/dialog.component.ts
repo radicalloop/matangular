@@ -47,9 +47,10 @@ export class DialogComponent implements OnInit {
     });
   }
 
-
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
+      verticalPosition : 'top',
+      horizontalPosition: 'right',
       duration: 2000
     });
   }

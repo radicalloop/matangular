@@ -140,7 +140,6 @@ p{
   padding: 24px;
 }
 .mat-card{
-
   &.default{
       padding: 0;
 
@@ -191,5 +190,13 @@ a{
       overflow-x: auto;
       overflow-y: hidden;
     }
+  }
+
+  .mat-card{
+    margin: 0.22rem 0rem !important;
+    padding: 24px;
+  }
+  .right-container{
+    padding:0rem !important;
   }
 }
