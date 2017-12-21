@@ -1,6 +1,7 @@
 @mixin anms-common-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
@@ -20,4 +21,27 @@
   .link{
     color: mat-color($accent);
   }
+  .mat-success{
+    background: #43a047;
+    color: #fff !important;
+  }
+  .mat-success .mat-snack-bar-container{
+    background: #43a047 !important;
+    color: #fff !important;
+  }
+  .mat-success .mat-simple-snackbar-action{
+    color: #fff !important;
+  }
+  .mat-errors{
+    background: #f44336 !important;
+    color: #fff !important;
+  }
+  .mat-errors .mat-snack-bar-container{
+    background: #f44336 !important;
+    color: #fff !important;
+  }
+  .mat-errors .mat-simple-snackbar-action{
+    color: #fff !important;
+  }
+
 }

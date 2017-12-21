@@ -49,9 +49,25 @@ export class DialogComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      verticalPosition : 'top',
-      horizontalPosition: 'right',
       duration: 2000
+    });
+  }
+
+  openSuccessSnackBar() {
+    this.snackBar.open('Saved Successfully!', 'Success!', {
+      extraClasses: ['mat-success'],
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+      duration: 4000
+    });
+  }
+
+  openErrorSnackBar() {
+    this.snackBar.open('Error in updation!', 'Error!', {
+      extraClasses: ['mat-errors'],
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+      duration: 4000
     });
   }
 

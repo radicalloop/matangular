@@ -166,8 +166,10 @@
                      </mat-menu>
                   </div>
                </mat-toolbar>
-               <div class="conversations-hold p-1" [style.overflow-y]="'auto'" fxFlex>
-                    <div fxLayout="column">
+               <div class="conversations-hold" fxFlex fxLayoutWrap="wrap">
+                  <div fxLayout="column">
+                    <perfect-scrollbar>
+                      <div fxLayout="column" class="p-1">
                         <div class="sender" fxLayout fxFlex="100">
                            <a class="toolbar-avatar">
                            <img mat-card-avatar src="assets/images/avataar.png" />
@@ -358,7 +360,9 @@
                               <div class="mat-hint mat-h5">10 min ago</div>
                            </div>
                         </div>
-                     </div>
+                      </div>
+                    </perfect-scrollbar>
+                  </div>
                </div>
                <mat-divider></mat-divider>
                <div fxLayout="row" fxLayoutAlign="stretch center" fxLayoutWrap="wrap" class="type-conversation p-1" fxFlex.gt-sm="100px" fxFlex="80px">

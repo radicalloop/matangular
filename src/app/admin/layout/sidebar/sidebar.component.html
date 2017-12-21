@@ -36,43 +36,43 @@
           </mat-nav-list>
         </mat-list-item>
         <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="profile">
+          <a fxLayoutAlign="start center" routerLink="profile">
             <mat-icon>inbox</mat-icon>
             <span>Profile</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="dialog">
+          <a fxLayoutAlign="start center" routerLink="dialog">
             <mat-icon>person</mat-icon>
             <span>Dialog</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="forms">
+          <a fxLayoutAlign="start center" routerLink="forms">
             <mat-icon>description</mat-icon>
             <span>Forms</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="wizard">
+          <a fxLayoutAlign="start center" routerLink="wizard">
             <mat-icon>receipt</mat-icon>
             <span>Wizard</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine fxLayoutAlign="start center" routerLink="otherElements">
+          <a fxLayoutAlign="start center" routerLink="otherElements">
             <mat-icon>blur_on</mat-icon>
             <span>Other Elements</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine routerLink="tables" fxLayoutAlign="start center">
+          <a routerLink="tables" fxLayoutAlign="start center">
             <mat-icon>format_line_spacing</mat-icon>
             <span>Tables</span>
           </a>
         </mat-list-item>
         <mat-list-item>
-          <a matLine routerLink="datatables" fxLayoutAlign="start center">
+          <a routerLink="datatables" fxLayoutAlign="start center">
             <mat-icon>border_all</mat-icon>
             <span>DataTables</span>
           </a>
@@ -85,6 +85,11 @@
             <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
           </a>
           <mat-nav-list class="sub-menu">
+            <mat-list-item>
+              <a fxLayout="row" routerLink="chat">
+                <span>Chat</span>
+              </a>
+            </mat-list-item>
             <mat-list-item>
               <a fxLayout="row" routerLink="login">
                   <span>Login</span>
@@ -103,11 +108,6 @@
             <mat-list-item>
               <a fxLayout="row" routerLink="error">
                   <span>Error</span>
-              </a>
-            </mat-list-item>
-             <mat-list-item>
-              <a fxLayout="row" routerLink="chat">
-                <span>Chat</span>
               </a>
             </mat-list-item>
           </mat-nav-list>

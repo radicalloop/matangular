@@ -37,14 +37,17 @@
     <mat-card-title>Snackbar</mat-card-title>
     <mat-card-content>
       <div fxLayout="column">
-        <mat-form-field position="top">
+        <mat-form-field>
           <input matInput placeholder="Message" value="Disco Party!" #message>
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Action" value="Dance" #action>
         </mat-form-field>
       </div>
-      <button mat-raised-button color="primary" position="top" (click)="openSnackBar(message.value, action.value)">Show Snackbar</button>
+      <button mat-raised-button color="primary" ngClass.xs="mb-12" (click)="openSnackBar(message.value, action.value)">Show Snackbar</button>
+      <button mat-raised-button class="mat-success ml-5 mr-5"(click)="openSuccessSnackBar()">Success!</button>
+
+      <button mat-raised-button class="mat-errors" (click)="openErrorSnackBar()">Error!</button>
     </mat-card-content>
   </mat-card>
 </div>

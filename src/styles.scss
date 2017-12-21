@@ -65,7 +65,10 @@ p{
   margin-top: .5rem !important;
 }
 .ml-5{
-  margin-left: .5rem;
+  margin-left: .5rem !important;
+}
+.mr-5{
+  margin-right: .5rem !important;
 }
 .mt-1 {
   margin-top: 1rem!important;
@@ -80,7 +83,7 @@ p{
   margin-right: 1rem !important;
 }
 .mb-12{
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
 }
 .ml-24{
   margin-left: 24px !important;
@@ -197,6 +200,6 @@ a{
     padding: 24px;
   }
   .right-container{
-    padding:0rem !important;
+    padding:.22rem 0rem !important;
   }
 }
