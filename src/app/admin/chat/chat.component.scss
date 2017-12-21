@@ -50,7 +50,7 @@
 .mat-nav-list{
   .toolbar-avatar{
     order: -1;
-    margin-right: 1rem;
+    margin-right: .6rem;
   }
 }
 .toolbar-avatar{
@@ -81,12 +81,13 @@
   }
 }
 .unread{
-  border-radius: 50%;
+  border-radius: 100%;
   text-align: center;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  min-width: 12px;
+  height: 16px;
+  line-height: 17px;
   font-size: 13px;
+  padding: 2px 4px;
 }
 .conversation-msg{
   padding: .48rem .94rem;
