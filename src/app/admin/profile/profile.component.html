@@ -8,7 +8,7 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #taskOptions="matMenu">
-              <button mat-menu-item><mat-icon>done</mat-icon><span>Completed</span></button>
+              <button mat-menu-item><mat-icon>close</mat-icon><span>Suspend</span></button>
               <button mat-menu-item><mat-icon>edit</mat-icon><span>Edit</span></button>
               <button mat-menu-item><mat-icon>delete</mat-icon><span>Delete</span></button>
             </mat-menu>
@@ -17,14 +17,14 @@
           <img src="assets/images/avataar.png">
         </div>
         <h3 class="mat-h3-light text-center mb-0 mt-5">John Doe</h3>
-        <span class="mat-h5">example@gmail.com</span>
+        <span class="mat-h5">john.doe@example.com</span>
       </div>
         <div class="profile-nav mat-card-bg pt-1 pb-1">
           <mat-nav-list class="icon-48">
             <mat-list-item>
               <mat-icon>email</mat-icon>
               <div fxLayout="column">
-                <span class="font-weight-500">example@gmail.com</span>
+                <span class="font-weight-500">john.doe@example.com</span>
                 <span class="mat-hint mat-h5 m-0">Email</span>
               </div>
             </mat-list-item>
@@ -40,7 +40,7 @@
             <mat-list-item>
               <mat-icon>public</mat-icon>
               <div fxLayout="column">
-                <span class="font-weight-500">facebook.com/envato</span>
+                <span class="font-weight-500">facebook.com/johndoe</span>
                 <span class="mat-hint mat-h5 m-0">Facebook</span>
               </div>
             </mat-list-item>
@@ -51,7 +51,7 @@
     <div fxFlex.sm="50" fxFlex="100" fxFlex.gt-md="100" fxLayoutAlign.xs="stretch stretch">
       <mat-card class="default" fxFlex.xs="100">
         <mat-card-header>
-          <mat-card-title>Contact Information</mat-card-title>
+          <mat-card-title>Contact Info</mat-card-title>
         </mat-card-header>
         <mat-list class="icon-48">
           <mat-list-item>
@@ -75,7 +75,7 @@
     <div fxFlex.gt-md="50" fxFlex="100">
       <mat-card class="default">
         <mat-card-header>
-          <mat-card-title>Timeline</mat-card-title>
+          <mat-card-title>Story</mat-card-title>
         </mat-card-header>
         <mat-card-content class="p-1">
           <div class="timeline">
@@ -85,32 +85,13 @@
               </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <a>John Doe added phone number</a><span class="mat-hint"> - 1 hour ago</span>
                 </div>
                 <div class="timeline-body-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem necessitatibus natus fugit porro at sunt mollitia repellendus deserunt, libero similique.</p>
+                    <p>987654321</p>
                 </div>
                 <div class="timeline-body-actions">
-                  <a href="" class="mr-1 mat-hint">Like</a>
-                  <a href="" class="mat-hint">Comment</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item mb-1" fxLayout="row">
-              <div class="timeline-badge mr-1">
-               <img src="assets/images/card-avatar.png">
-              </div>
-              <div class="timeline-body" ngclass.gt-xs="ml-1">
-                <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
-                </div>
-                <div class="timeline-body-content">
-                    <img src="assets/images/timeline-photo.jpg">
-                </div>
-                <div class="timeline-body-actions">
-                  <a href="" class="mr-1 mat-hint">Like</a>
-                  <a href="" class="mat-hint">Comment</a>
+                  <a href="#" class="mat-hint">Comment</a>
                 </div>
               </div>
             </div>
@@ -121,14 +102,30 @@
               </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <a>John Doe updated his status</a><span class="mat-hint"> - 2 hours ago</span>
                 </div>
                 <div class="timeline-body-content">
-                    <p>Membership has been upgraded to pro</p>
+                    <p>Back to work</p>
                 </div>
                 <div class="timeline-body-actions">
-                  <a href="" class="mr-1 mat-hint">Like</a>
-                  <a href="" class="mat-hint">Comment</a>
+                  <a href="#" class="mat-hint">Comment</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item mb-1" fxLayout="row">
+              <div class="timeline-badge mr-1">
+               <img src="assets/images/card-avatar.png">
+              </div>
+              <div class="timeline-body" ngclass.gt-xs="ml-1">
+                <div class="timeline-body-top">
+                 <a>John Doe added profile picture</a><span class="mat-hint"> - Yesterday</span>
+                </div>
+                <div class="timeline-body-content">
+                    <img src="assets/images/timeline-photo.png">
+                </div>
+                <div class="timeline-body-actions">
+                  <a href="#" class="mat-hint">Comment</a>
                 </div>
               </div>
             </div>
@@ -139,17 +136,17 @@
               </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <a>John Doe updated his status</a><span class="mat-hint"> - 4 hours ago</span>
                 </div>
                 <div class="timeline-body-content">
-                    <p><span>Membership</span> has been upgraded to pro</p>
+                    <p>On a vacation!</p>
                 </div>
                 <div class="timeline-body-actions">
-                  <a href="" class="mr-1 mat-hint">Like</a>
-                  <a href="" class="mat-hint">Comment</a>
+                  <a href="#" class="mat-hint">Comment</a>
                 </div>
               </div>
             </div>
+
           </div>
         </mat-card-content>
       </mat-card>
@@ -160,13 +157,13 @@
         <mat-card class="default list-scroll">
           <mat-card-header>
             <mat-card-title>
-              Assigned Tasks
+              To-Do List
             </mat-card-title>
           </mat-card-header>
           <mat-card-content class="mb-0">
             <mat-list>
               <mat-list-item>
-                <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
+                <mat-checkbox>Go shopping</mat-checkbox>
                 <span fxFlex></span>
                 <mat-chip color="primary" selected="true">pending</mat-chip>
                 <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
@@ -179,7 +176,7 @@
                 </mat-menu>
               </mat-list-item>
               <mat-list-item>
-                <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
+                <mat-checkbox>Go swimming</mat-checkbox>
                 <span fxFlex></span>
                 <mat-chip color="primary" selected="true">pending</mat-chip>
                 <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
@@ -192,7 +189,7 @@
                 </mat-menu>
               </mat-list-item>
               <mat-list-item>
-                <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
+                <mat-checkbox>Buy a cake</mat-checkbox>
                 <span fxFlex></span>
                 <mat-chip color="primary" selected="true">pending</mat-chip>
                 <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
@@ -205,7 +202,7 @@
                 </mat-menu>
               </mat-list-item>
               <mat-list-item>
-                <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
+                <mat-checkbox>Meet Andy</mat-checkbox>
                 <span fxFlex></span>
                 <mat-chip color="primary" selected="true">pending</mat-chip>
                 <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
@@ -218,7 +215,7 @@
                 </mat-menu>
               </mat-list-item>
               <mat-list-item>
-                <mat-checkbox>Lorem, ipsum dolor sit amet</mat-checkbox>
+                <mat-checkbox>Watch any movie</mat-checkbox>
                 <span fxFlex></span>
                 <mat-chip color="primary" selected="true">pending</mat-chip>
                 <button mat-icon-button [matMenuTriggerFor]="taskOptions" class="task-options">
@@ -242,7 +239,7 @@
         <mat-card class="default list-scroll">
           <mat-card-header>
             <mat-card-title>
-              Activity
+              Simple List
             </mat-card-title>
           </mat-card-header>
           <mat-card-content>
