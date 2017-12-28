@@ -20,6 +20,7 @@ $general-typography: mat-typography-config(
 @import 'app/admin/chat/chat.component.scss-theme.scss';
 @import 'app/admin/profile/profile.component.scss-theme.scss';
 @import 'app/admin/layout/header/header.component.scss-theme.scss';
+@import 'app/admin/grid-system/grid-system.component.scss-theme.scss';
 
 @mixin custom-components-theme($theme) {
 
@@ -31,6 +32,7 @@ $general-typography: mat-typography-config(
   @include anms-chat-component-theme($theme);
   @include anms-profile-component-theme($theme);
   @include anms-header-component-theme($theme);
+  @include anms-gridSystem-component-theme($theme);
 }
 
 .default-theme {
@@ -43,7 +45,6 @@ $general-typography: mat-typography-config(
     background: mat-color($primary, 50);
   }
 }
-
 
 .light-theme {
 
