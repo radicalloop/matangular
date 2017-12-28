@@ -27,6 +27,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ErrorComponent } from './error/error.component';
 import { DatatablesComponent } from './datatables/datatables.component';
 import { ChatComponent } from './chat/chat.component';
+import { GridSystemComponent } from './grid-system/grid-system.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,6 @@ import { ChatComponent } from './chat/chat.component';
   ],
   providers: [ThemeService],
   entryComponents: [ConfirmDialogComponent, LoaderDialogComponent],
-  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent, DatatablesComponent, ChatComponent]
+  declarations: [LayoutComponent, DashboardComponent, HeaderComponent, SidebarComponent, BreadcrumbComponent, ProfileComponent, FormsComponent, TablesComponent, DialogComponent, ConfirmDialogComponent, LoaderDialogComponent, SettingsComponent, WizardComponent, OtherElementsComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, ErrorComponent, DatatablesComponent, ChatComponent, GridSystemComponent]
 })
 export class AdminModule { }

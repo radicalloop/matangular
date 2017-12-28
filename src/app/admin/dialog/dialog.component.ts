@@ -55,7 +55,7 @@ export class DialogComponent implements OnInit {
 
   openSuccessSnackBar() {
     this.snackBar.open('Saved Successfully!', 'Success!', {
-      extraClasses: ['mat-success'],
+      panelClass: ['mat-success'],
       verticalPosition: 'top',
       horizontalPosition: 'right',
       duration: 4000
@@ -64,13 +64,12 @@ export class DialogComponent implements OnInit {
 
   openErrorSnackBar() {
     this.snackBar.open('Error in updation!', 'Error!', {
-      extraClasses: ['mat-errors'],
+      panelClass: ['mat-errors'],
       verticalPosition: 'top',
       horizontalPosition: 'right',
       duration: 4000
     });
   }
-
 
   ngOnInit() {
   }
