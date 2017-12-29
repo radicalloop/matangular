@@ -72,7 +72,7 @@
   </div>
 
   <div fxFlex.gt-sm="calc(100%-350px)" fxFlex="100" fxLayoutWrap="Wrap">
-    <div fxFlex.gt-md="50" fxFlex="100">
+    <div fxFlex.gt-md="40" fxFlex="100">
       <mat-card class="default">
         <mat-card-header>
           <mat-card-title>Timeline</mat-card-title>
@@ -80,25 +80,29 @@
         <mat-card-content class="p-1">
           <div class="timeline">
             <div class="timeline-item mb-1" fxLayout="row">
-              <div class="timeline-badge mr-1">
-               <img src="assets/images/card-avatar.png">
-              </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <div class="mat-hint">1 hour ago</div>
+                 <div><a class="link">Jhone Doe</a> updated his status</div>
                 </div>
-                <div class="timeline-body-content">
+                <!-- <div class="timeline-body-content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem necessitatibus natus fugit porro at sunt mollitia repellendus deserunt, libero similique.</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="timeline-item mb-1" fxLayout="row">
+              <div class="timeline-body" ngclass.gt-xs="ml-1">
+                <div class="timeline-body-top">
+                 <div class="mat-hint">Sun, 11 Feb</div>
+                 <div><a class="link">Jhone Doe</a> assign you a <a class="link">Mockup Design.</a>.</div>
                 </div>
               </div>
             </div>
             <div class="timeline-item mb-1" fxLayout="row">
-              <div class="timeline-badge mr-1 icon-48">
-               <mat-icon class="mat-bg-primary">settings</mat-icon>
-              </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <div class="mat-hint">1 hour ago</div>
+                 <div><a class="link">Jhone Doe</a> updated his status</div>
                 </div>
                 <div class="timeline-body-content">
                     <p>Membership has been upgraded to pro</p>
@@ -107,12 +111,10 @@
             </div>
 
             <div class="timeline-item mb-1" fxLayout="row">
-              <div class="timeline-badge mr-1 icon-48">
-               <mat-icon class="mat-bg-accent">settings</mat-icon>
-              </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <div class="mat-hint">1 hour ago</div>
+                 <div><a class="link">Jhone Doe</a> updated his status</div>
                 </div>
                 <div class="timeline-body-content">
                     <p><span>Membership</span> has been upgraded to pro</p>
@@ -121,17 +123,24 @@
             </div>
 
             <div class="timeline-item mb-1" fxLayout="row">
-              <div class="timeline-badge mr-1">
-               <img src="assets/images/card-avatar.png">
-              </div>
               <div class="timeline-body" ngclass.gt-xs="ml-1">
                 <div class="timeline-body-top">
-                 <a>Jhone Doe updated his status</a><span class="mat-hint"> - 1 hour ago</span>
+                 <div class="mat-hint">11:30</div>
+                 <div>Call to customer <a class="link">Jhone Doe</a> and discuss the detail.</div>
                 </div>
-                <div class="timeline-body-content">
+              </div>
+            </div>
+
+            <div class="timeline-item mb-1" fxLayout="row">
+              <div class="timeline-body" ngclass.gt-xs="ml-1">
+                <div class="timeline-body-top">
+                 <div class="mat-hint">1 hour ago</div>
+                 <div><a class="link">Jhone Doe</a> updated his status</div>
+                </div>
+                <!-- <div class="timeline-body-content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem necessitatibus natus fugit porro at sunt mollitia repellendus deserunt, libero similique.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem necessitatibus natus fugit porro at sunt mollitia repellendus deserunt, libero similique.</p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -139,8 +148,8 @@
       </mat-card>
     </div>
 
-    <div fxFlex.gt-md="50" fxFlex="100" fxLayoutWrap="wrap" fxLayoutAlign="column" fxLayoutAlign.gt-sm="start start">
-      <div fxFlex="100" >
+    <div fxFlex.gt-md="60" fxFlex="100" fxLayoutWrap="wrap" fxLayoutAlign="column" fxLayoutAlign.gt-sm="start start">
+      <div fxFlex="100">
         <mat-card class="default list-scroll">
           <mat-card-header>
             <mat-card-title>

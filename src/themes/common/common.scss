@@ -12,6 +12,9 @@
   .mat-bg-accent {
     background: mat-color($accent);
   }
+  .mat-bg-warn {
+    background: mat-color($warn);
+  }
   .mat-bg-primary-400{
     background-color: mat-color($primary, 400);
   }
@@ -19,7 +22,7 @@
     background: mat-color($background, card);
   }
   .link{
-    color: mat-color($accent);
+    color: #1976d2;
   }
   .mat-success{
     background: #43a047;
@@ -43,5 +46,4 @@
   .mat-errors .mat-simple-snackbar-action{
     color: #fff !important;
   }
-
 }

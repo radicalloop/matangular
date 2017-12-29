@@ -35,11 +35,23 @@
        &:before{
           content: '';
           position: absolute;
-          top: 0;
+          top: 2px;
           bottom: 0;
-          left: 24px;
-          border-left: 1px solid;
+          left: 6px;
+          border-left: 2px solid;
           border-color: mat-color($foreground, divider);
+       }
+       &:after{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          bottom: -13px;
+          left: 0px;
+          border: 2px solid;
+          border-color: mat-color($accent);
+          background: #fff;
        }
       .timeline-badge{
         width: 48px;
@@ -50,6 +62,34 @@
           width: 48px;
           height: 48px;
           border-radius: 50%
+        }
+      }
+      .timeline-item{
+        position: relative;
+        padding-left: 30px;
+
+          &:before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            top: 2px;
+            left: 0px;
+            border: 2px solid;
+            background: #fff;
+        }
+
+        &:nth-child(4n+1), &:nth-child(4n+2){
+          &:before{
+            border-color: mat-color($primary);
+          }
+        }
+
+        &:nth-child(4n+3), &:nth-child(4n+4){
+          &:before{
+            border-color: mat-color($accent);
+          }
         }
       }
       .timeline-body{
