@@ -57,6 +57,35 @@
   </div>
 </div>
 
+<div fxLayout fxLayoutAlign="stretch stretch">
+
+
+
+  <div fxFlex="100" fxFlex.gt-sm="33.33" fxLayout="column" fxLayoutAlign="stretch stretch">
+    <mat-card>
+      <canvas baseChart height="210"
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-sm="66.66" fxLayout="column">
+    <mat-card>
+      <canvas baseChart height="100"
+        [data]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [chartType]="lineChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </mat-card>
+  </div>
+
+</div>
 <div fxLayout fxLayoutWrap="wrap">
   <div fxFlex="100" fxFlex.gt-sm="33.33" fxLayout="Column">
     <mat-card>

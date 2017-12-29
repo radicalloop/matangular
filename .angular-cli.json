@@ -25,7 +25,8 @@
         "theme.scss"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.js"
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/chart.js/src/chart.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
