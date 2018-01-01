@@ -28,6 +28,10 @@ export class DashboardComponent implements OnInit {
     this.pieChartType = this.pieChartType === 'doughnut' ? 'pie' : 'doughnut';
   }
 
+// public lineChartOptions:any = {
+//     responsive: true  };
+//   public pieChartOptions:any = {
+//     responsive: true  };
   public chartClicked(e:any):void {
     console.log(e);
   }
