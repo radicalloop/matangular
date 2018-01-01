@@ -12,7 +12,8 @@ export class ThemeService {
   {
      name: 'black-theme',
      baseColor: '#212121',
-     isActive: false
+     isActive: false,
+     chartColor: '#fff'
   },
   {
      name: 'light-theme',
@@ -21,6 +22,7 @@ export class ThemeService {
   }];
 
   activatedThemeName: String;
+  activatedTheme: any;
 
   constructor() {
     this.changeTheme({name: 'default-theme'});
@@ -37,6 +39,7 @@ export class ThemeService {
         t.isActive = true;
 
         this.activatedThemeName = theme.name;
+        this.activatedTheme = theme;
       }
     });
   }

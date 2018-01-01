@@ -117,7 +117,15 @@ p{
   padding-bottom: 1rem;
 }
 .p-tl{
-  padding: 5px 15px 5px 15px;
+  padding: 5px 15px 5px 15px !important;
+}
+.ptb-5{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.plr-10{
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 .s-18{
   font-size: 18px;
@@ -207,5 +215,8 @@ a{
   }
   .m-0{
     margin: 0rem !important;
+  }
+  .mr-1{
+    margin-right: 1rem !important;
   }
 }

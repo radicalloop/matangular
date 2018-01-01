@@ -28,10 +28,16 @@ export class DashboardComponent implements OnInit {
     this.pieChartType = this.pieChartType === 'doughnut' ? 'pie' : 'doughnut';
   }
 
-// public lineChartOptions:any = {
-//     responsive: true  };
-//   public pieChartOptions:any = {
-//     responsive: true  };
+public lineChartOptions:any = {
+    legend: {
+            labels: {
+                // This more specific font property overrides the global property
+                fontColor: 'black'
+            }
+        }
+     };
+  public pieChartOptions:any = {
+    responsive: true  };
   public chartClicked(e:any):void {
     console.log(e);
   }
