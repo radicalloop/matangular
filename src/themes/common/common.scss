@@ -23,6 +23,15 @@
   .mat-card-bg{
     background: mat-color($background, card);
   }
+  .mat-bg-borderd{
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid;
+    border-color: mat-color($foreground, secondary-text);
+      .mat-icon{
+        color: mat-color($foreground, secondary-text);
+      }
+  }
   .link{
     color: #1976d2;
   }

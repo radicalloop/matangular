@@ -128,10 +128,15 @@ p{
   padding-right: 10px !important;
 }
 .s-18{
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 18px !important;
+  line-height: 18px !important;
   width: 18px !important;
   height: 18px !important;
+}
+.size-30{
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
 }
 .mat-h3-light{
   font-size: 22px;
@@ -148,6 +153,9 @@ p{
 }
 .text-center{
   text-align: center
+}
+.line-height-12{
+  line-height: 12px !important;
 }
 .mat-card{
   margin: 0.33rem;
@@ -192,6 +200,10 @@ a{
 
 .mat-checkbox-layout{
   white-space: initial !important;
+}
+
+.border-radius-100{
+  border-radius: 100%;
 }
 
 @media screen and (max-width: 599px){

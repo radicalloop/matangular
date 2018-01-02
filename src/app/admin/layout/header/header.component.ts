@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   @Input('sidenav') sidenav:any;
   @Input('sidebar') sidebar:any;
 
+  removeMessage: Boolean = false;
   themes;
   displaySearch : Boolean = false;
 
@@ -24,4 +25,5 @@ export class HeaderComponent implements OnInit {
   changeTheme(theme) {
     this.themeService.changeTheme(theme);
   }
+
 }

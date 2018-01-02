@@ -20,27 +20,49 @@
     }
 }
 .color-scheme
-      {
-        .mat-menu-item{
-          height: 40px;
-          width: 40px;
-          padding: 5px;
+{
+  .mat-menu-item{
+    height: 40px;
+    width: 40px;
+    padding: 5px;
 
-          .swatch{
-            height: 40px;
-            width: 40px;
-            line-height: 40px !important;
-            border-radius: 50%;
-          }
+    .swatch{
+      height: 40px;
+      width: 40px;
+      line-height: 40px !important;
+      border-radius: 50%;
+    }
 
-          .active-icon{
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto !important;
-          }
-        }
-
-     }
+    .active-icon{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto !important;
+    }
+  }
+}
+.messages{
+  &.mat-menu-panel{
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .mat-menu-content{
+    padding-top: 0px !important
+  }
+  .middle-content > div, .header > div{
+    height: 60px
+  }
+}
+@media screen and (max-width: 599px){
+ .message-container{
+    right: 8px !important;
+  .messages{
+      &.mat-menu-panel{
+        min-width: 310px;
+        max-width: 310px;
+      }
+    }
+  }
+}

@@ -35,6 +35,7 @@ import {
   MatExpansionModule
 } from '@angular/material';
 import { SidenavAccordionDirective } from './directives/sidenav-accordian.directive';
+import { MessageAccordionDirective } from './directives/message-container.derective';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -118,9 +119,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatTabsModule,
     MatExpansionModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    MessageAccordionDirective
   ],
-  declarations: [SidenavAccordionDirective],
+  declarations: [SidenavAccordionDirective, MessageAccordionDirective],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
