@@ -5,7 +5,7 @@
   <mat-card class="p-0" [class.hidden]="!displaySettings">
     <mat-card-title class="mat-bg-primary">
       <div fxLayoutAlign="space-between center">
-        <span class="h3">Settings</span>
+        <span class="h3">Quick Actions</span>
         <span fxFlex></span>
         <button mat-icon-button (click)="displaySettings = false">
           <mat-icon>close</mat-icon>
@@ -13,16 +13,16 @@
       </div>
     </mat-card-title>
     <mat-card-content class="p-1">
-      <div class="mb-1"><b>Choose a Navigation Style</b></div>
+      <div class="mb-1"><b>Choose a Radio option</b></div>
       <mat-radio-group fxLayout="column" fxLayoutGap=".5em">
-        <mat-radio-button value="default_menu">Default menu</mat-radio-button>
-        <mat-radio-button value="seperator_menu">Separator Menu</mat-radio-button>
-        <mat-radio-button value="icon_menu">Icon Menu</mat-radio-button>
+        <mat-radio-button value="default_menu">Option A</mat-radio-button>
+        <mat-radio-button value="seperator_menu">Option B</mat-radio-button>
+        <mat-radio-button value="icon_menu">Option C</mat-radio-button>
       </mat-radio-group>
       <mat-divider class="my-1"></mat-divider>
       <div fxLayout="column" fxLayoutGap=".5em" class="mb-1">
-        <mat-checkbox>Use Breadcrumb</mat-checkbox>
-        <mat-checkbox>Fixed Topbar</mat-checkbox>
+        <mat-checkbox>Check 1</mat-checkbox>
+        <mat-checkbox>Check 2</mat-checkbox>
       </div>
     </mat-card-content>
   </mat-card>
