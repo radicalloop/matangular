@@ -61,7 +61,7 @@
   <div fxFlex="100" fxFlex.gt-md="50">
     <mat-card>
      <mat-card-content>
-      <canvas baseChart height="150"
+      <canvas baseChart #pieChart="base-chart" height="150"
         [data]="pieChartData"
         [labels]="pieChartLabels"
         [chartType]="pieChartType"
@@ -75,7 +75,7 @@
   <div fxFlex="100" fxFlex.gt-md="50">
     <mat-card>
       <mat-card-content >
-      <canvas baseChart height="150"
+      <canvas baseChart #lineChart="base-chart" height="150"
         [data]="lineChartData"
         [labels]="lineChartLabels"
         [options]="lineChartOptions"

@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { ThemeService } from '../../shared/services/theme.service';
+import { BaseChartDirective  }  from 'ng2-charts/ng2-charts';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,39 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
+  
+  @ViewChild("lineChart") lineChart: BaseChartDirective;
+  @ViewChild("pieChart") pieChart: BaseChartDirective;
+  constructor(private themeService: ThemeService) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.themeService.changeThemeSource$.subscribe(() => {     
+      this.lineChart.options.legend.labels.fontColor = this.themeService.activatedTheme.chartLabelColor;
+      this.lineChart.ngOnInit();
 
+      this.pieChart.options.legend.labels.fontColor = this.themeService.activatedTheme.chartLabelColor;
+      this.pieChart.ngOnInit();
+
+    });
+  }
+
+  public lineChartOptions:any = {
+    legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: this.themeService.activatedTheme.chartLabelColor
+          }
+      }        
+  };
+  
+  public pieChartOptions:any = {
+    legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: this.themeService.activatedTheme.chartLabelColor
+          }
+      }        
+  };
   // lineChart
   public lineChartData:Array<any> = [
     [65, 59, 80, 81, 56, 55, 40],
@@ -28,25 +60,11 @@ export class DashboardComponent implements OnInit {
     this.pieChartType = this.pieChartType === 'doughnut' ? 'pie' : 'doughnut';
   }
 
-public lineChartOptions:any = {
-    legend: {
-            labels: {
-                // This more specific font property overrides the global property
-                fontColor: 'black'
-            }
-        }
-     };
-  public pieChartOptions:any = {
-    responsive: true  };
   public chartClicked(e:any):void {
-    console.log(e);
+    //console.log(this.themeService.activatedTheme.chartLabelColor);
   }
 
   public chartHovered(e:any):void {
     console.log(e);
   }
-
-  ngOnInit() {
-  }
-
 }

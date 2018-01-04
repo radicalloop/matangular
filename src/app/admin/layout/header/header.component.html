@@ -36,109 +36,111 @@
         </span>
 
         <mat-menu #messages="matMenu" class="messages" [overlapTrigger]="false">
-          <div class="header">
-            <div fxLayout="row" fxLayoutAlign="space-between center" class="pl-1">
-              <div fxLayoutAlign="center start" fxLayout="column">
-                <h4 class="m-0">Messages</h4>
-                <div class="mat-hint mat-caption line-height-12"> You have 4 messages.</div>
-              </div>
-              <span fxFlex></span>
-              <button mat-icon-button class="mr-5">
-                <mat-icon>settings</mat-icon>
-              </button>
-            </div>
-          </div>
-          <mat-divider></mat-divider>
-          <perfect-scrollbar>
-            <div class="middle-content pl-1 pr-1" [style.height]="'300px'">
-              <div fxLayout="row" fxLayoutAlign="space-between center" [class.hidden]="removeMessage" (click)="$event.stopPropagation()">
-                <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">New user registered</div>
-                  <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
+          <div (click)="$event.stopPropagation()">
+            <div class="header">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="pl-1">
+                <div fxLayoutAlign="center start" fxLayout="column">
+                  <h4 class="m-0">Messages</h4>
+                  <div class="mat-hint mat-caption line-height-12"> You have 4 messages.</div>
                 </div>
                 <span fxFlex></span>
-                <button mat-icon-button class="size-30" (click)="removeMessage = true">
-                  <mat-icon class="s-18">close</mat-icon>
-                </button>
-              </div>
-              <mat-divider></mat-divider>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayoutAlign="center center" class="size-30 mr-5 mat-bg-borderd">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">John added you as a friend.</div>
-                  <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
-                </div>
-                <span fxFlex></span>
-                <button mat-icon-button class="size-30">
-                  <mat-icon class="s-18">close</mat-icon>
-                </button>
-              </div>
-              <mat-divider></mat-divider>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">New user registered</div>
-                  <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
-                </div>
-                <span fxFlex></span>
-                <button mat-icon-button class="size-30" >
-                  <mat-icon class="s-18">close</mat-icon>
-                </button>
-              </div>
-              <mat-divider></mat-divider>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">John added you as a friend.</div>
-                  <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
-                </div>
-                <span fxFlex></span>
-                <button mat-icon-button class="size-30">
-                  <mat-icon class="s-18">close</mat-icon>
-                </button>
-              </div>
-              <mat-divider></mat-divider>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">New user registered</div>
-                  <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
-                </div>
-                <span fxFlex></span>
-                <button mat-icon-button class="size-30">
-                  <mat-icon class="s-18">close</mat-icon>
-                </button>
-              </div>
-              <mat-divider></mat-divider>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayoutAlign="center center" class="mat-bg-primary size-30 mr-5 border-radius-100">
-                  <mat-icon class="s-18">settings</mat-icon>
-                </div>
-                <div>
-                  <div class="mat-body-1">John added you as a friend.</div>
-                  <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
-                </div>
-                <span fxFlex></span>
-                <button mat-icon-button class="size-30">
-                  <mat-icon class="s-18">close</mat-icon>
+                <button mat-icon-button class="mr-5">
+                  <mat-icon>settings</mat-icon>
                 </button>
               </div>
             </div>
-            </perfect-scrollbar>
-          <mat-divider></mat-divider>
-          <div class="footer" fxLayoutAlign="center center">
-            <a routerLink="" class="mat-caption mt-5">Mark all as read</a>
+            <mat-divider></mat-divider>
+            <perfect-scrollbar>
+              <div class="middle-content pointer-cursor pl-1 pr-1" [style.height]="'300px'">
+                <div fxLayout="row" fxLayoutAlign="space-between center" [class.hidden]="removeMessage">
+                  <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">New user registered</div>
+                    <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30" (click)="removeMessage = true">
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div fxLayoutAlign="center center" class="size-30 mr-5 mat-bg-borderd">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">John added you as a friend.</div>
+                    <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30">
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">New user registered</div>
+                    <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30" >
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">John added you as a friend.</div>
+                    <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30">
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div fxLayoutAlign="center center" class="mat-bg-primary border-radius-100 size-30 mr-5">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">New user registered</div>
+                    <div class="mat-hint mat-caption line-height-12"> 20 min ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30">
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div fxLayoutAlign="center center" class="mat-bg-primary size-30 mr-5 border-radius-100">
+                    <mat-icon class="s-18">settings</mat-icon>
+                  </div>
+                  <div>
+                    <div class="mat-body-1">John added you as a friend.</div>
+                    <div class="mat-hint mat-caption line-height-12"> 2 hours ago</div>
+                  </div>
+                  <span fxFlex></span>
+                  <button mat-icon-button class="size-30">
+                    <mat-icon class="s-18">close</mat-icon>
+                  </button>
+                </div>
+              </div>
+              </perfect-scrollbar>
+            <mat-divider></mat-divider>
+            <div class="footer" fxLayoutAlign="center center">
+              <a routerLink="" class="mat-caption mt-5">Mark all as read</a>
+            </div>
           </div>
         </mat-menu>
 

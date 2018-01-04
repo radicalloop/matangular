@@ -196,17 +196,17 @@ a{
 .font-weight-500{
   font-weight: 500 !important;
 }
-
 .mat-selection-list .mat-list-option .mat-list-text {
   padding: 0px !important;
 }
-
 .mat-checkbox-layout{
   white-space: initial !important;
 }
-
 .border-radius-100{
   border-radius: 100%;
+}
+.pointer-cursor{
+  cursor: pointer;
 }
 
 @media screen and (max-width: 599px){
