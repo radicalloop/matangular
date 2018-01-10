@@ -131,12 +131,16 @@
   <div fxFlex="100" fxFlex.gt-sm="66.66" fxLayout="Column">
     <mat-card class="recent-tickets list-scroll">
       <mat-card-header>
-        <mat-card-title>Latest Activities</mat-card-title>
+        <mat-card-title>
+          <p class="f-20">Latest Activities</p>
+        </mat-card-title>
       </mat-card-header>
       <mat-card-content class="mb-0">
        <mat-list>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/avataar.png">
+            <mat-checkbox>  
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/avataar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
            <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <div class="m-0" fxFlex="40" fxFlex.sm="60">Rob Flower</div>
              <div fxFlex="40" fxFlex.sm="60">Bought a pen drive...</div>
@@ -146,7 +150,9 @@
            <mat-chip color="active" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+            <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
            <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <div class="m-0" fxFlex="40" fxFlex.sm="60">Matt Bell</div>
              <div fxFlex="40" fxFlex.sm="60">Bought a TV...</div>
@@ -156,7 +162,9 @@
            <mat-chip color="primary" selected="true">active</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+           <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>  
            <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <div class="m-0" fxFlex="40" fxFlex.sm="60">Shawn Fleming</div>
              <div fxFlex="40" fxFlex.sm="60">Went to watch a movie...</div>
@@ -166,7 +174,9 @@
            <mat-chip color="warn" selected="true">closed</mat-chip>
          </mat-list-item>
          <mat-list-item>
-           <img class="mr-1" mat-list-avatar src="assets/images/card-avatar.png">
+            <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
            <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
              <div class="m-0" fxFlex="40" fxFlex.sm="60">Nathan Tall</div>
              <div fxFlex="40" fxFlex.sm="60">Went shopping with Jane Doe...</div>
@@ -182,25 +192,36 @@
       </mat-card-footer>
     </mat-card>
 
-    <div class="user-details" fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap">
       <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
-        <mat-card class="p-0">
-            <mat-card-subtitle class="mat-bg-primary p-tl" fxLayout="row" fxLayoutAlign="start center">
-              <img class="mr-1" mat-card-avatar src="assets/images/card-avatar.png">
-              <span>Fred Damon</span>
-              <span fxFlex></span>
-              <button mat-icon-button [matMenuTriggerFor]="progressBar">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-            </mat-card-subtitle>
-          <mat-card-content>
-            <mat-list>
-              <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
-              <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
-              <mat-list-item><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
-            </mat-list>
-          </mat-card-content>
-        </mat-card>
+          <mat-card>
+              <mat-card-title>
+                <p class="f-20">Gallery</p>
+                <span fxFlex></span>
+                <button mat-icon-button>
+                  <mat-icon>cached</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+              </mat-card-title>
+              <mat-card-content>
+                <mat-grid-list cols="4" rowHeight="1:1" gutterSize="3px">
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                  </mat-grid-list>
+              </mat-card-content>
+            </mat-card>
       </div>
       <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
         <mat-card class="p-0">
@@ -221,7 +242,39 @@
             </mat-card-content>
         </mat-card>
       </div>
+    </div> 
+    <!-- <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
+      <mat-card>
+        <mat-card-title>
+          <p class="f-20">Gallery</p>
+          <span fxFlex></span>
+          <button mat-icon-button>
+            <mat-icon>cached</mat-icon>
+          </button>
+          <button mat-icon-button>
+              <mat-icon>more_vert</mat-icon>
+            </button>
+        </mat-card-title>
+        <mat-card-content>
+          <div>
+            <div fxFlex>
+              <img src="assets/images/gallery01.jpg" alt="">
+            </div>
+            <div fxFlex>
+              <img src="assets/images/gallery01.jpg" alt="">
+            </div>
+            <div fxFlex>
+              <img src="assets/images/gallery01.jpg" alt="">
+            </div>
+            <div fxFlex>
+              <img src="assets/images/gallery01.jpg" alt="">
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
+    <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
+      </div> -->
   </div>
 </div>
 
