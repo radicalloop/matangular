@@ -86,13 +86,14 @@
     </mat-card-content>
     </mat-card>
   </div>
-
 </div>
-<div fxLayout fxLayoutWrap="wrap">
-  <div fxFlex="100" fxFlex.gt-sm="33.33" fxLayout="Column">
-    <mat-card class="p-0 p0">
-        <mat-card-title class="mb-0">
-          <p class="m-0 f-20">Top Performers</p>
+
+
+<div fxLayout.lt-md="column">
+  <div fxFlex="100" fxFlex.gt-md="33.33" fxLayout="Column">
+    <mat-card class="p-0 custom-card">
+        <mat-card-title class="mb-0" fxLayoutAlign="start center">
+          <p class="mb-0 f-20">Top Performers</p>
           <span fxFlex></span>
           <button mat-icon-button [matMenuTriggerFor]="progressBar">
             <mat-icon>more_vert</mat-icon>
@@ -126,16 +127,74 @@
         </div>
       </mat-card-content>
     </mat-card>
+
+    <mat-card class="p-0 custom-card">
+        <mat-card-title class="mb-0" fxLayoutAlign="start center">
+          <p class="f-20 mb-0">Messages</p>
+          <span fxFlex></span>
+          <button mat-icon-button>
+            <mat-icon>cached</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="gallerySetting">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #gallerySetting="matMenu">
+            <button mat-menu-item>
+            <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+          <button mat-menu-item>
+            <mat-icon>email</mat-icon><span>Inbox</span></button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+          </mat-menu>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mb-0 p-0">
+          <perfect-scrollbar>
+            <div [style.max-height]="'300px'">
+              <mat-list class="p-0 pointer-cursor">
+                <mat-list-item>
+                  <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                  <h4 mat-line>Tile with avatar</h4>
+                  <p mat-line>bushwick man bun pok pok shoreditch </p>
+                </mat-list-item>
+                <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+              </mat-list>
+            </div>
+          </perfect-scrollbar>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
+          <a class="pointer-cursor mat-body-1">View All</a>
+        </mat-card-footer>
+      </mat-card>
   </div>
 
-  <div fxFlex="100" fxFlex.gt-sm="66.66" fxLayout="Column">
-    <mat-card class="recent-tickets list-scroll">
-      <mat-card-header>
-        <mat-card-title>
-          <p class="f-20">Latest Activities</p>
+  <div fxFlex="100" fxFlex.gt-md="66.66">
+    <mat-card class="custom-card p-0 list-scroll">
+        <mat-card-title  class="mb-0" fxLayoutAlign="start center">
+          <p class="f-20 mb-0">Latest Activities</p>
         </mat-card-title>
-      </mat-card-header>
-      <mat-card-content class="mb-0">
+      <mat-divider></mat-divider>
+      <mat-card-content class="mb-0 p-0">
        <mat-list>
          <mat-list-item>
             <mat-checkbox>  
@@ -187,94 +246,83 @@
          </mat-list-item>
         </mat-list>
       </mat-card-content>
-      <mat-card-footer class="m-0">
-        <button mat-button fxFlex="100">View All</button>
+      <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
+        <a class="pointer-cursor mat-body-1">View All</a>
       </mat-card-footer>
     </mat-card>
 
     <div fxLayout="row" fxLayoutWrap="wrap">
-      <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
-          <mat-card>
-              <mat-card-title>
-                <p class="f-20">Gallery</p>
+      <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
+          <mat-card class="p-0 custom-card">
+              <mat-card-title class="mb-0" fxLayoutAlign="start center">
+                <p class="f-20 mb-0">Gallery</p>
                 <span fxFlex></span>
                 <button mat-icon-button>
                   <mat-icon>cached</mat-icon>
                 </button>
-                <button mat-icon-button>
-                    <mat-icon>more_vert</mat-icon>
-                  </button>
+                <button mat-icon-button [matMenuTriggerFor]="gallerySetting">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #gallerySetting="matMenu">
+                  <button mat-menu-item>
+                  <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+                <button mat-menu-item>
+                  <mat-icon>email</mat-icon><span>Inbox</span></button>
+                <button mat-menu-item>
+                  <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+                </mat-menu>
               </mat-card-title>
-              <mat-card-content>
-                <mat-grid-list cols="4" rowHeight="1:1" gutterSize="3px">
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                    <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                  </mat-grid-list>
+              <mat-divider></mat-divider>
+              <mat-card-content class="mb-0 p-0 p-3">
+                <perfect-scrollbar>
+                  <div [style.max-height]="'380px'">
+                    <mat-grid-list cols="4" rowHeight="1:1" gutterSize="3px">
+                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
+                    </mat-grid-list>
+                  </div>
+                </perfect-scrollbar>
               </mat-card-content>
+              <mat-divider></mat-divider>
+              <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
+                <a class="pointer-cursor mat-body-1">View All</a>
+              </mat-card-footer>
             </mat-card>
       </div>
-      <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
-        <mat-card class="p-0">
-            <mat-card-subtitle class="p-tl mat-bg-primary" fxLayout="row" fxLayoutAlign="start center">
-              <img class="mr-1" mat-card-avatar src="assets/images/avataar.png">
-              <span>Snow Benton</span>
-              <span fxFlex></span>
-              <button mat-icon-button [matMenuTriggerFor]="progressBar">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-            </mat-card-subtitle>
-            <mat-card-content>
-              <mat-list>
-                <mat-list-item><mat-icon mat-list-icon>card_membership</mat-icon>Paid Member</mat-list-item>
-                <mat-list-item><mat-icon mat-list-icon>date_range</mat-icon>Member since Jul 9, 2016</mat-list-item>
-                <mat-list-item class="mb-1"><mat-icon mat-list-icon>location_on</mat-icon>329 Dictum Court, Minnesota</mat-list-item>
-              </mat-list>
-            </mat-card-content>
+      <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
+        <mat-card class="p-0 custom-card">
+          
+          <div class="image-overlay">
+              <img mat-card-image src="assets/images/gallery04.jpg" alt="Photo of a Shiba Inu" [style.height]="'250px'" class="mb-0">
+              <h2 class="card-title overlay">Man bun tacos</h2>
+          </div>
+          <mat-card-content class="mb-0">
+              <div class="mat-caption mat-hint mb-1">01/11/2018</div>
+              <p>Vice deep v bushwick man bun pok pok shoreditch hoodie, neutra everyday carry marfa austin. Tousled portland pok pok helvetica venmo, lyft chartreuse vaporware. Chicharrones fingerstache vice mlkshk.
+                 Tilde glossier organic vaporware la croix, kombucha green juice enamel pin. YOLO woke hashtag tacos shoreditch. Poutine tilde lomo cred.</p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions class="custom-card-actions">
+            <button mat-button class="mat-body">Read More</button>
+            <span fxFlex></span>
+            <button mat-icon-button><mat-icon>favorite</mat-icon></button>
+            <button mat-icon-button><mat-icon>bookmark_border</mat-icon></button>
+            <button mat-icon-button><mat-icon>share</mat-icon></button>
+          </mat-card-actions>
         </mat-card>
       </div>
     </div> 
-    <!-- <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
-      <mat-card>
-        <mat-card-title>
-          <p class="f-20">Gallery</p>
-          <span fxFlex></span>
-          <button mat-icon-button>
-            <mat-icon>cached</mat-icon>
-          </button>
-          <button mat-icon-button>
-              <mat-icon>more_vert</mat-icon>
-            </button>
-        </mat-card-title>
-        <mat-card-content>
-          <div>
-            <div fxFlex>
-              <img src="assets/images/gallery01.jpg" alt="">
-            </div>
-            <div fxFlex>
-              <img src="assets/images/gallery01.jpg" alt="">
-            </div>
-            <div fxFlex>
-              <img src="assets/images/gallery01.jpg" alt="">
-            </div>
-            <div fxFlex>
-              <img src="assets/images/gallery01.jpg" alt="">
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100">
-      </div> -->
+    
   </div>
 </div>
 

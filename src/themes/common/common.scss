@@ -57,7 +57,15 @@
   .mat-errors .mat-simple-snackbar-action{
     color: #fff !important;
   }
-
+  .mat-card{
+    .custom-card-footer, .custom-card-actions{
+      a{
+        &:hover{
+          color: mat-color($primary) !important;
+        }
+      }  
+    }
+  }
   .messages{
     &.mat-menu-panel{
       color: mat-color($foreground, 'text');

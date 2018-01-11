@@ -111,10 +111,13 @@ p{
   padding-bottom: 1rem;
 }
 .pr-1{
-  padding-right: 1rem;
+  padding-right: 1rem !important;
 }
 .pl-1{
-  padding-left: 1rem;
+  padding-left: 1rem !important;
+}
+.pt-1{
+  padding-top: 1rem;
 }
 .pb-1{
   padding-bottom: 1rem;
@@ -129,6 +132,9 @@ p{
 .plr-10{
   padding-left: 10px !important;
   padding-right: 10px !important;
+}
+.p-3{
+  padding: 3px !important;
 }
 .s-18{
   font-size: 18px !important;
@@ -151,8 +157,14 @@ p{
 .p0 .mat-card-title{
   padding: 1rem 1.5rem .5rem;
 }
-.p0 .mat-card-content{
-  padding: 1rem 1.5rem 1.5rem;
+.p0{
+ .mat-card-content{
+    padding: 1rem 1.5rem 1.5rem;
+  }
+  .mat-card-actions{
+    padding: 10px 15px !important;
+    
+  }
 }
 .text-center{
   text-align: center
