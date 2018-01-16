@@ -1,0 +1,14 @@
+.image-dialog-container{
+    position: relative;
+    line-height: 0px;
+    overflow: hidden;
+    
+    img{
+        width: 100%;
+    }
+    .image-close-icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

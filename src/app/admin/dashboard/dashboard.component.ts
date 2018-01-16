@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
 import { ThemeService } from '../../shared/services/theme.service';
 import { BaseChartDirective  }  from 'ng2-charts/ng2-charts';
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +15,7 @@ export class DashboardComponent implements OnInit {
   
   @ViewChild("lineChart") lineChart: BaseChartDirective;
   @ViewChild("pieChart") pieChart: BaseChartDirective;
-  constructor(private themeService: ThemeService) { }
+  constructor(private themeService: ThemeService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.themeService.changeThemeSource$.subscribe(() => {     
@@ -66,5 +69,16 @@ export class DashboardComponent implements OnInit {
 
   public chartHovered(e:any):void {
     console.log(e);
+  }
+
+
+  // Dialog
+
+  openDialog(image): void {
+    console.log(image);
+    let dialogRef = this.dialog.open(ImageDialogComponent, {
+      panelClass: 'image-dialog-class',
+    });
+
   }
 }
