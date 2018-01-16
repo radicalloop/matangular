@@ -12,7 +12,8 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent implements OnInit {
-
+  fileName1 : string;
+  fileName2 : string;
   filteredOptions: Observable<string[]>;
 
   email = new FormControl('', [Validators.required, Validators.email]);
@@ -117,5 +118,17 @@ export class FormsComponent implements OnInit {
       return this.options.filter(option =>
         option.toLowerCase().indexOf(val.toLowerCase()) === 0);
    }
+
+   previewFile1(event) {
+    let files1 = event.target.files[0];
+    this.fileName1 = (files1) ? files1.name : '';  
+    console.log(this.fileName1);
+  }
+
+   previewFile2(event) {
+    let files2 = event.target.files[0];
+    this.fileName2 = (files2) ? files2.name : ''; 
+    console.log(this.fileName2);
+  }
 
 }

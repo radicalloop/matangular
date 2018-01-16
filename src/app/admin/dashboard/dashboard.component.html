@@ -277,18 +277,7 @@
                 <perfect-scrollbar>
                   <div [style.max-height]="'380px'">
                     <mat-grid-list cols="4" rowHeight="1:1" gutterSize="3px">
-                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt="" #image1 (click)="openDialog(image1)"></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery02.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery01.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery03.jpg" alt=""></mat-grid-tile>
-                      <mat-grid-tile> <img src="assets/images/gallery04.jpg" alt=""></mat-grid-tile>
+                      <mat-grid-tile *ngFor="let image of images" > <img src="{{image.url}}" #image1 (click)="openDialog(image)"></mat-grid-tile>
                     </mat-grid-list>
                   </div>
                 </perfect-scrollbar>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { ThemeService } from '../../shared/services/theme.service';
@@ -12,10 +12,26 @@ import { ImageDialogComponent } from './image-dialog/image-dialog.component';
   encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
-  
+
+  images: any[] = [
+    {"url":"assets/images/gallery01.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery01.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery01.jpg"}
+  ];
+
   @ViewChild("lineChart") lineChart: BaseChartDirective;
   @ViewChild("pieChart") pieChart: BaseChartDirective;
-  constructor(private themeService: ThemeService, public dialog: MatDialog) { }
+  constructor(private themeService: ThemeService, public dialog: MatDialog) { 
+  }
 
   ngOnInit() {
     this.themeService.changeThemeSource$.subscribe(() => {     
@@ -71,14 +87,13 @@ export class DashboardComponent implements OnInit {
     console.log(e);
   }
 
-
   // Dialog
-
+ @Input() image : string;
   openDialog(image): void {
     console.log(image);
     let dialogRef = this.dialog.open(ImageDialogComponent, {
       panelClass: 'image-dialog-class',
+      data: {image}
     });
-
   }
 }
