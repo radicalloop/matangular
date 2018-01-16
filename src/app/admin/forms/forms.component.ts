@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent implements OnInit {
-  fileName1 : string;
+
   fileName2 : string;
   filteredOptions: Observable<string[]>;
 
@@ -119,16 +119,8 @@ export class FormsComponent implements OnInit {
         option.toLowerCase().indexOf(val.toLowerCase()) === 0);
    }
 
-   previewFile1(event) {
+  uploadFile(event, file: ElementRef) {
     let files1 = event.target.files[0];
-    this.fileName1 = (files1) ? files1.name : '';  
-    console.log(this.fileName1);
+    file['value'] = (files1) ? files1.name : '';
   }
-
-   previewFile2(event) {
-    let files2 = event.target.files[0];
-    this.fileName2 = (files2) ? files2.name : ''; 
-    console.log(this.fileName2);
-  }
-
 }

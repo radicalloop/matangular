@@ -70,7 +70,7 @@
                       <mat-option value="option3">Option 3</mat-option>
                     </mat-select>
                 </mat-form-field>
-  
+
                 <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
                   <mat-select placeholder="Select with group options" [formControl]="pokemonControl">
                     <mat-option>-- None --</mat-option>
@@ -84,7 +84,7 @@
               </div>
           </div>
 
-          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pl-1">       
+          <div fxFlex="100" fxFlex.gt-md="50" ngClass.gt-md="pl-1">
             <div>
               <mat-form-field fxFlex="100">
                 <input type="text" placeholder="Pick One (AutoComplete)" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
@@ -116,23 +116,23 @@
             </div>
             <div fxLayoutAlign="start start" fxLayoutGap="5px">
               <mat-form-field fxFlex="100">
-               <input matInput [(ngModel)]="fileName1" name="fileName1" placeholder="Choose file" readonly  class="pointer-cursor" (click)="fileInput.click()">
-               <input hidden type="file" #fileInput (change)="previewFile1($event)"/>
+               <input matInput  placeholder="Choose file" readonly #file1  class="pointer-cursor" (click)="upload1.click()">
+               <input hidden type="file" #upload1 (change)="uploadFile($event, file1)"/>
               </mat-form-field>
-              <button mat-raised-button color="accent" (click)="fileInput.click()" >
+              <button mat-raised-button color="accent" (click)="upload1.click()" >
                 <mat-icon>attachment</mat-icon>
               </button>
             </div>
             <div fxLayoutGap="5px">
               <mat-form-field fxFlex="100">
-                <input matInput [(ngModel)]="fileName2" name="fileName2" placeholder="Choose file" readonly class="pointer-cursor" (click)="fileInput2.click()">
-                <input hidden type="file" #fileInput2 (change)="previewFile2($event)"/>
+                <input matInput #file2 placeholder="Choose file" readonly class="pointer-cursor" (click)="upload2.click()">
+                <input hidden type="file" #upload2 (change)="uploadFile($event, file2)"/>
               </mat-form-field>
-              <button mat-button color="accent" mat-mini-fab (click)="fileInput2.click()">
+              <button mat-button color="accent" mat-mini-fab (click)="upload2.click()">
                 <mat-icon>attachment</mat-icon>
               </button>
-            </div>  
-           
+            </div>
+
             <div class="mb-1" fxLayout fxLayoutWrap="wrap">
               <label class="mr-1 mat-body-2">Slide Toggle:</label>
               <mat-slide-toggle [checked]="true">Slide me!</mat-slide-toggle>
