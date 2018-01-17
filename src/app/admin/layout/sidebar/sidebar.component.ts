@@ -12,5 +12,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
+  hideSubmenu($event){
+    $('mat-list-item').removeClass('open'); 
+  }
 
 }

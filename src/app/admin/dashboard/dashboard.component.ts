@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
-
 import { ThemeService } from '../../shared/services/theme.service';
 import { BaseChartDirective  }  from 'ng2-charts/ng2-charts';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
@@ -14,6 +13,22 @@ import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 export class DashboardComponent implements OnInit {
 
   images: any[] = [
+    {"url":"assets/images/gallery01.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery01.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
+    {"url":"assets/images/gallery01.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery02.jpg"},
+    {"url":"assets/images/gallery03.jpg"},
+    {"url":"assets/images/gallery04.jpg"},
     {"url":"assets/images/gallery01.jpg"},
     {"url":"assets/images/gallery02.jpg"},
     {"url":"assets/images/gallery03.jpg"},
@@ -90,10 +105,10 @@ export class DashboardComponent implements OnInit {
   // Dialog
  @Input() image : string;
   openDialog(image): void {
-    console.log(image);
     let dialogRef = this.dialog.open(ImageDialogComponent, {
       panelClass: 'image-dialog-class',
       data: {image}
     });
   }
+  
 }

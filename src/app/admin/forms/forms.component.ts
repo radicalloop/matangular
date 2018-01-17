@@ -120,12 +120,8 @@ export class FormsComponent implements OnInit {
    }
 
   uploadFile(event, file: ElementRef) {
-    console.log('here');
     let files1 = event.target.files[0];
     file['value'] = (files1) ? files1.name : '';
   }
 
-  test(msg) {
-    console.log(msg);
-  }
 }

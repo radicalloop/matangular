@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <mat-nav-list>
+    <mat-nav-list (click)="hideSubmenu($event)">
       <div class="menulist mb-1">
         <mat-list-item class="sidebar-list-item" sidenavAccordian>
           <a fxLayout="row" fxLayoutAlign="start center" routerLink="dashboard">

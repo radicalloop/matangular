@@ -12,10 +12,12 @@ export class SidenavAccordionDirective implements OnInit {
   @HostListener('click',  ['$event']) click = (event) => this.onClick(event);
 
   ngOnInit() {
+  
   }
 
   onClick(event) {
-    if ($(event.target).parents('.sub-menu').length == 0) {
+    if ($(event.target).parents('.sub-menu')) {
+      event.stopPropagation();
       $('.menulist').find('.open').not($(this.el.nativeElement)).removeClass('open');
       $(this.el.nativeElement).toggleClass('open');
     }
