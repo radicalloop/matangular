@@ -1,14 +1,12 @@
+@import 'src/themes/common/common.scss';
 .error{
   .mat-icon{
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    font-size: 120px;
+    @include size(200px);
+    @include fontandline(120px);
   }
   .error-digit{
     font-weight: 600;
-    font-size: 80px;
-    line-height: 80px;
+    @include fontandline(80px);
   }
   .error-text-small{
     font-size: 24px;

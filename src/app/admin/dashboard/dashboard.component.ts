@@ -45,6 +45,7 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild("lineChart") lineChart: BaseChartDirective;
   @ViewChild("pieChart") pieChart: BaseChartDirective;
+  
   constructor(private themeService: ThemeService, public dialog: MatDialog) { 
   }
 

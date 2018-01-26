@@ -1,30 +1,36 @@
-.sidenav-container {
-    height: 100vh;
-    .quick-panel {
+@import '../../../themes/common/common.scss';
+
+.sidenav__container {
+  height: 100vh;
+    
+    .notification__panel {
         width: 300px;
         min-width: 300px;
         max-width: 300px;
 
         .mat-slide-toggle {
-           flex: 1;
+            flex: 1;
 
-          .mat-slide-toggle-label{
-             order: 1;
+            .mat-slide-toggle-label {
+                order: 1;
 
-            .mat-slide-toggle-bar{
-               order: 2;
+            .mat-slide-toggle-bar {
+                order: 2;
             }
             .mat-slide-toggle-content {
-              -webkit-box-flex: 1;
-              -ms-flex: 1;
-              flex: 1;
-           }
-         }
-      }
+                -webkit-box-flex: 1;
+                        -ms-flex: 1;
+                            flex: 1;
+            }
+            }
+        }
     }
 }
-
-.right-container{
+.container__right{
     padding: 0.33em;
+
+    @include respond-to('x-small'){
+        padding: 0.22rem 0 !important;
+    }
 }
 

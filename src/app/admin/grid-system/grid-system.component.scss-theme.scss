@@ -3,6 +3,7 @@
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
+  
   .hzView div:nth-child(4n+1){
     background-color: mat-color($primary, 100);
   }

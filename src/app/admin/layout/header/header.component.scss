@@ -1,7 +1,8 @@
+@import 'src/themes/common/common.scss';
 .mat-toolbar {
-    padding: 0px !important;
+    padding: 0 !important;
 
-    .user-icon{
+    .user__icon{
         min-height: 64px;
         height: 64px;
     }
@@ -19,21 +20,19 @@
       }
     }
 }
-.color-scheme
+.color--scheme
 {
   .mat-menu-item{
-    height: 40px;
-    width: 40px;
+    @include size(40px);
     padding: 5px;
 
     .swatch{
-      height: 40px;
-      width: 40px;
+      @include size(40px);
       line-height: 40px !important;
       border-radius: 50%;
     }
 
-    .active-icon{
+    .swatch__active--icon{
       position: absolute;
       top: 0;
       left: 0;
@@ -49,20 +48,9 @@
     max-width: 350px;
   }
   .mat-menu-content{
-    padding-top: 0px !important
+    padding-top: 0 !important
   }
   .middle-content > div, .header > div{
     height: 60px
-  }
-}
-@media screen and (max-width: 599px){
- .message-container{
-    right: 8px !important;
-  .messages{
-      &.mat-menu-panel{
-        min-width: 310px;
-        max-width: 310px;
-      }
-    }
   }
 }

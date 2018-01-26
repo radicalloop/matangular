@@ -1,4 +1,4 @@
-.logo-image img{
-  width: 100px;
-  height: 100px;
+@import 'src/themes/common/common.scss';
+.logo img{
+  @include size(100px);
 }

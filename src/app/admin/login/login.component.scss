@@ -1,36 +1,36 @@
-.logo-image img{
-  width: 100px;
-  height: 100px;
+@import 'src/themes/common/common.scss';
+
+.logo img {
+  @include size(100px);
 }
-.seperator{
+.seperator {
   margin: 0 auto;
-  .text{
+  
+  .text {
     position: relative;
   }
-  :before{
+   %seperator--pseudo{
     content: "";
     display: block;
     width: 30px;
     position: absolute;
     top: 10px;
+    border-top: 1px solid rgba(0,0,0,.12);
+   } 
+  :before {
+    @extend %seperator--pseudo;
     left: -40px;
-    border-top: 1px solid rgba(0,0,0,.12);
   }
-  :after{
-    content: "";
-    display: block;
-    width: 30px;
-    position: absolute;
-    top: 10px;
+  :after {
+    @extend %seperator--pseudo;
     right: -40px;
-    border-top: 1px solid rgba(0,0,0,.12);
   }
 }
-.google-btn{
+.google-btn {
   background-color:#d73d32;
   color: #fff;
 }
-.fb-btn{
+.fb-btn {
   background-color: #3f5c9a;
   color: #fff;
 }

@@ -1,39 +1,25 @@
 <perfect-scrollbar>
-  <div class="sidebar-panel" fxLayout="column">
+  <div class="sidebar-left" fxLayout="column">
     <div class="branding mat-brand-bg mat-elevation-z1">
       <div class="p-1">
         <div class="f-20 mb-0">ADMIN</div>
         <div class="user mb-12" fxLayout="row" fxLayoutAlign="start center">
           <div>
-            <div class="user-name">John Doe</div>
+            <div>John Doe</div>
             <div class="mat-h5 mb-0">john@doe.com</div>
           </div>
           <span fxFlex></span>
-          <div class="user-photo"><img src="assets/images/avataar.png"></div>
+          <div class="user__photo"><img src="assets/images/avataar.png"></div>
         </div>
       </div>
     </div>
     <mat-nav-list (click)="hideSubmenu($event)">
-      <div class="menulist mb-1">
-        <mat-list-item class="sidebar-list-item" sidenavAccordian>
+      <div class="menu__list mb-1">
+        <mat-list-item class="menu__item" sidenavAccordian>
           <a fxLayout="row" fxLayoutAlign="start center" routerLink="dashboard">
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
-            <!-- <span fxFlex></span>
-            <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon> -->
           </a>
-          <!-- <mat-nav-list class="sub-menu">
-            <mat-list-item>
-              <a fxLayout="row" fxLayoutAlign="start center">
-                  <span>Dashboard 1</span>
-              </a>
-            </mat-list-item>
-            <mat-list-item>
-              <a>
-                  <span>Dashboard 2</span>
-              </a>
-            </mat-list-item>
-          </mat-nav-list> -->
         </mat-list-item>
         <mat-list-item>
           <a fxLayoutAlign="start center" routerLink="profile">
@@ -77,14 +63,14 @@
             <span>DataTables</span>
           </a>
         </mat-list-item>
-        <mat-list-item class="sidebar-list-item" sidenavAccordian>
+        <mat-list-item class="menu__item" sidenavAccordian>
           <a fxLayout="row" fxLayoutAlign="start center">
             <mat-icon>view_carousel</mat-icon>
             <span>Pages</span>
             <span fxFlex></span>
             <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
           </a>
-          <mat-nav-list class="sub-menu">
+          <mat-nav-list class="menu__submenu">
             <mat-list-item>
               <a fxLayout="row" routerLink="chat">
                 <span>Chat</span>

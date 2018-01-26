@@ -1,23 +1,14 @@
+@import 'src/themes/common/common.scss';
 .mat-card{
-    .mat-card-header-text{
-      margin: 0;
+  .mat-chip{
+      padding: 4px 8px;
     }
-    .mat-chip{
-        padding: 4px 8px;
-
-         .mat-icon{
-          font-size: 16px;
-          height: 16px;
-          width: 16px;
-          margin-right: 4px;
-        }
-      }
   }
   .recent-tickets{
-    padding: 0px !important;
+    padding: 0 !important;
 
     .mat-card-header{
-       padding: 15px 0px 0px 20px !important;
+       padding: 15px 0 0 20px !important;
     }
     .mat-list-item{
       cursor: pointer;
@@ -36,7 +27,7 @@
   .custom-card{
 
     .mat-card-image{
-      margin: 0px;
+      margin: 0;
       width: 100%;
     }
 
@@ -44,21 +35,20 @@
       position: relative;
     }
     .image-overlay .card-title.overlay {
-      /* width: 100%; */
-        left: 0px;
-        text-indent: 20px;
-       padding: 15px 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.35);
-        position: absolute;
-        right: 0px;
-        margin-bottom: 10px;
-        color: #fff;
-        font-size: 1.25em;
-        margin-bottom: 10px;
-        font-weight: 300;
+      left: 0;
+      text-indent: 20px;
+      padding: 15px 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+      position: absolute;
+      right: 0;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 1.25em;
+      font-weight: 300;
     }
   }
+  
  .custom-card{
    .mat-card-title{
     padding: 7px 5px 7px 20px;
@@ -76,3 +66,4 @@
      margin: 0 !important;
    }
  }
+

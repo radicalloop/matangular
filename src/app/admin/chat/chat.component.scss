@@ -1,3 +1,5 @@
+@import 'src/themes/common/common.scss';
+
 .chat-container{
   overflow: hidden;
 
@@ -21,67 +23,64 @@
   z-index: 9999;
 }
 
-.chat-search{
-  div{
-    padding: 0.3rem 1rem;
-    background-color: #fff;
-    input{
+.chat--search-form > div{
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  
+  input{
     border: none;
     overflow:hidden;
       &:focus{
         outline: none;
       }
-    }
   }
 }
+
 .conversations-hold{
   .sender{
-    .toolbar-avatar{
+    .toolbar__avatar{
       margin-right: 1rem;
     }
   }
   .receiver{
-    .toolbar-avatar{
+    .toolbar__avatar{
       margin-left: 1rem;
       order: 2;
     }
   }
 }
 .mat-nav-list{
-  .toolbar-avatar{
+  .toolbar__avatar{
     order: -1;
-    margin-right: .6rem;
+    margin-right: 0.6rem;
   }
 }
-.toolbar-avatar{
-  position:relative;
-  &.online{
-    .chat-status{
+.toolbar__avatar{
+    position:relative;
+
+    %chat__status--pseudo{
       position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
       top: 25px;
       right: -2px;
-      border: 2px solid #fff;
-      background: #4caf50;
-    }
-  }
-  &.offline{
-    .chat-status{
-      position: absolute;
-      width: 10px;
-      height: 10px;
+      @include size(10px);
       border-radius: 50%;
-      top: 25px;
-      right: -2px;
       border: 2px solid #fff;
-      background: #ccc;
     }
-  }
+    &.online{
+      .chat__status{
+      @extend %chat__status--pseudo;
+        background: #4caf50;
+      }
+    }
+    &.offline{
+      .chat__status{
+        @extend %chat__status--pseudo;
+        background: #ccc;
+      }
+    }
 }
 .unread{
-  border-radius: 100%;
+  border-radius: 50%;
   text-align: center;
   min-width: 12px;
   height: 16px;
@@ -90,7 +89,7 @@
   padding: 2px 4px;
 }
 .conversation-msg{
-  padding: .48rem .94rem;
+  padding: 0.48rem 0.94rem;
   border-radius: 4px;
   font-size: 14px;
 }

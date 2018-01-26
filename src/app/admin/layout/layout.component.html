@@ -1,7 +1,8 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="over" position="end" class="sidenav">
+<mat-sidenav-container class="sidenav__container">
+  <!-- Notification Panel -->
+  <mat-sidenav #sidenav mode="over" position="end">
     <perfect-scrollbar>
-      <div class="quick-panel" fxLayout="column">
+      <div class="notification__panel" fxLayout="column">
         <mat-list>
           <h3 mat-subheader>Today</h3>
           <div class="secondary-text mat-display-1 p-1 mb-0" flex>
@@ -43,12 +44,12 @@
       </div>
     </perfect-scrollbar>
   </mat-sidenav>
-  <mat-sidenav #sidebar position="start" [opened]="!isMobile()" [mode]="isMobile() ? 'over' : 'side'" class="sidenav left-sidenav mat-elevation-z6">
+  <mat-sidenav #sidebar position="start" [opened]="!isMobile()" [mode]="isMobile() ? 'over' : 'side'" class="sidenav--left mat-elevation-z6">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <app-header [sidenav]="sidenav" [sidebar]="sidebar"></app-header>
   <app-breadcrumb></app-breadcrumb>
-  <div class="right-container">
+  <div class="container__right">
     <router-outlet></router-outlet>
   </div>
   <app-settings></app-settings>

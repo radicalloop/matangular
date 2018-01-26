@@ -5,7 +5,7 @@
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
-
+  
   .searchbar input,.searchbar input::placeholder{
     color: mat-color($primary, default-contrast);
   }

@@ -1,80 +1,66 @@
+@import 'src/themes/common/common.scss';
 
-.sidebar-panel .menulist a mat-icon {
-  height: 48px;
-    width: 48px;
-    line-height: 48px;
-    text-align: center;
+.sidebar-left .menu__list a mat-icon {
+  @include size(48px);
+  line-height: 48px;
+  text-align: center;
 }
 
-.left-sidenav{
+.sidenav--left {
   width: 240px;
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 
-  .sidebar-panel{
-      padding-top: 115px;
+  .sidebar-left {
+    padding-top: 115px;
 
-      .branding {
-          height: 115px;
-          position: fixed;
-          width: 100%;
-          top: 0;
-          left: 0;
-          z-index: 999;
-          .mat-h5{
-            line-height: 10px !important;
-          }
+    .branding {
+      height: 115px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+
+      .mat-h5{
+        line-height: 10px !important;
       }
-      .user{
+    }
+    .user {
+      .user__photo {
+        border: 1px solid hsla(210,8%,51%,1);
+        padding: 2px;
+        border-radius: 50%;
+        @include size(45px);
+        margin: 0 auto;
 
-          .user-photo
-           {
-            border: 1px solid hsla(210,8%,51%,1);
-            padding: 2px;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            margin: 0 auto;
-           img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-          }
-}
-        button[mat-xs-button] {
-          width: 20px;
-          height: 20px;
-          line-height: 20px;
-
-          mat-icon{
-            width: 16px;
-            height: 16px;
-            line-height: 16px !important;
-            font-size: 16px;
-          }
+        img {
+          @include size(100%);
+          border-radius: 50%;
         }
       }
+    }
       .frequently-accessed .button-row button{
         min-width: auto;
       }
-      .menulist {
+      .menu__list {
           .mat-nav-list .mat-list-item {
             font-size: 14px;
           }
-          .sidebar-list-item{
+          .menu__item{
             max-height: 48px ;
             overflow: hidden;
             transition: all .4s cubic-bezier(.35,0,.25,1);
           }
           .mat-list-item-content {
-              padding: 0px !important;
+              padding: 0 !important;
               display: block !important;
 
               .menu-caret{
                   font-size: 18px;
               }
           }
-          .sidebar-list-item.open{
+          .menu__item.open{
               max-height: 1000px;
               overflow: visible !important;
               height: auto !important;
@@ -82,7 +68,7 @@
               .menu-caret{
                 transform: rotate(180deg);
               }
-                .sub-menu{
+                .menu__submenu{
                   padding-top:0px;
                   transition: max-height .4s cubic-bezier(.35,0,.25,1);
 

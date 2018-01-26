@@ -1,3 +1,44 @@
+///Breakpoints Mixin
+$breakpoints: (
+  'x-small': (max-width: 599px),
+  'small': (max-width: 959px),
+  'medium': (max-width: 1279px),
+  'large': (max-width: 1919px)
+);
+
+@mixin respond-to($breakpoint){
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query{
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  }
+  @else{
+    @error 'No value found for `#{$breakpoint}`.'  
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+/// equal width and height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// font size and line height 
+@mixin fontandline($font-size, $line-height: $font-size) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// Theme 
 @mixin anms-common-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
@@ -25,7 +66,7 @@
   }
   .mat-bg-borderd{
     background-color: transparent;
-    border-radius: 100%;
+    border-radius: 50%;
     border: 1px solid;
     border-color: mat-color($foreground, secondary-text);
       .mat-icon{
@@ -80,13 +121,13 @@
 
 .image-dialog-class{
   .mat-dialog-container{
-    padding: 0px;
+    padding: 0;
     background: transparent !important;
     box-shadow: none;
   }
   .mat-dialog-actions:last-child{
-    margin-bottom: 0px;
-    line-height: 0px;
-    padding: 0px;
+    margin-bottom: 0;
+    line-height: 0;
+    padding: 0;
   }
 } 
