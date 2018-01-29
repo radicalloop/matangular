@@ -4,47 +4,28 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-  .list-item-active{
-     border-left: 3px solid;
-     border-color: mat-color($primary);
-   }
-   .profile-nav{
+   .profile__nav {
       margin: 0 -24px -24px !important;
       padding: 15px 0 !important;
 
-      @include respond-to('x-small'){
+      @include respond-to('x-small') {
           margin: 0 -16px -24px !important;
       }
-      .mat-list-item{
-        height: 52px;
-      }
-      span{
-        line-height: 1.1rem !important;
-      }
+      .mat-list-item { height: 52px; }
+      span { line-height: 1.1rem !important; }
     }
-   .timeline-badge{
-    .mat-icon{
-        color: #fff;
-        border-radius: 50%;
-      }
-   }
-   .mat-list-item{
-     .task-options{
-        visibility: hidden;
-      }
-      &:hover{
+   .mat-list-item {
+     .task__options { visibility: hidden; }
+      &:hover {
          background: mat-color($background, hover);
-
-          .task-options{
-          visibility: visible !important;
-        }
+          .task__options { visibility: visible !important; }
       }
     }
 
-    .timeline{
+    .timeline {
       position: relative;
 
-       &:before{
+       &:before {
           content: '';
           position: absolute;
           top: 2px;
@@ -53,7 +34,7 @@
           border-left: 2px solid;
           border-color: mat-color($foreground, divider);
        }
-       &:after{
+       &:after {
           content: '';
           position: absolute;
           @include size(10px);
@@ -64,20 +45,11 @@
           border-color: mat-color($accent);
           background: #fff;
        }
-      .timeline-badge{
-        @include size(48px);
-        position: relative;
-
-        img{
-          @include size(48px);
-          border-radius: 50%
-        }
-      }
-      .timeline-item{
+      &__item {
         position: relative;
         padding-left: 30px;
 
-          &:before{
+          &:before {
             content: '';
             position: absolute;
             @include size(10px);
@@ -88,39 +60,29 @@
             background: #fff;
         }
 
-        &:nth-child(4n+1), &:nth-child(4n+2){
-          &:before{
-            border-color: mat-color($primary);
-          }
+        &:nth-child(4n+1),
+        &:nth-child(4n+2) {
+          &:before { border-color: mat-color($primary); }
         }
 
-        &:nth-child(4n+3), &:nth-child(4n+4){
-          &:before{
-            border-color: mat-color($accent);
-          }
+        &:nth-child(4n+3),
+        &:nth-child(4n+4) {
+          &:before { border-color: mat-color($accent); }
         }
       }
-      .timeline-body{
+      &__body {
         overflow: hidden;
         width: 100%;
 
-        .timeline-body-top{
-          margin-bottom: 8px;
-        }
-        .timeline-body-content{
-          & :last-child{
-            margin-bottom: 8px;
-         }
-
-         img{
-          width: 100%;
-         }
+        &__top { margin-bottom: 8px; }
+        &__content {
+          & :last-child { margin-bottom: 8px; }
+        
+          img { width: 100%; }
         }
       }
     }
-  .mat-row{
-    &:hover{
-     background: mat-color($background, hover);
-   }
+  .mat-row { 
+    &:hover { background: mat-color($background, hover); }
   }
 }

@@ -1,12 +1,10 @@
-.image-dialog-container{
+.image__dialog__container {
     position: relative;
     line-height: 0;
     overflow: hidden;
-    
-    img{
-        width: 100%;
-    }
-    .mat-dialog-actions{
+
+    img { width: 100%; }
+    .mat-dialog-actions {
         position: absolute;
         right: 0;
         top: 0;

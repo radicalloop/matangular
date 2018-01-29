@@ -6,10 +6,10 @@ $breakpoints: (
   'large': (max-width: 1919px)
 );
 
-@mixin respond-to($breakpoint){
+@mixin respond-to($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
 
-  @if $raw-query{
+  @if $raw-query {
     $query: if(
       type-of($raw-query) == 'string',
       unquote($raw-query),
@@ -20,7 +20,7 @@ $breakpoints: (
       @content;
     }
   }
-  @else{
+  @else {
     @error 'No value found for `#{$breakpoint}`.'  
     + 'Please make sure it is defined in `$breakpoints` map.';
   }
@@ -46,88 +46,99 @@ $breakpoints: (
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-  .mat-bg-primary {
-    background: mat-color($primary);
-    color: mat-color($primary, default-contrast) !important;
-  }
-  .mat-bg-accent {
-    background: mat-color($accent);
-    color: mat-color($accent, default-contrast) !important;
-
-  }
-  .mat-bg-warn {
-    background: mat-color($warn);
-  }
-  .mat-bg-primary-400{
-    background-color: mat-color($primary, 400);
-  }
-  .mat-card-bg{
-    background: mat-color($background, card);
-  }
-  .mat-bg-borderd{
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid;
-    border-color: mat-color($foreground, secondary-text);
-      .mat-icon{
-        color: mat-color($foreground, secondary-text);
+  .mat-bg {
+    &--primary {
+      background: mat-color($primary);
+      color: mat-color($primary, default-contrast) !important;
+      
+      &--400 {
+        background-color: mat-color($primary, 400);
       }
+    }
+
+    &--accent {
+      background: mat-color($accent);
+      color: mat-color($accent, default-contrast) !important;
+    }
+    
+    &--warn {
+      background: mat-color($warn);
+    }
+
+    &--bordered {
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid;
+      border-color: mat-color($foreground, secondary-text);
+       
+      .mat-icon  {
+          color: mat-color($foreground, secondary-text);
+        }
+    }
   }
-  .link{
-    color: #1976d2;
-  }
-  .mat-success{
+
+  .link { color: #1976d2; }
+  .mat--success {
     background: #43a047;
     color: #fff !important;
+
+    .mat-snack-bar-container{
+      background: #43a047 !important;
+      color: #fff !important;
+    }
+    .mat-simple-snackbar-action {
+      color: #fff !important;
+    }
   }
-  .mat-success .mat-snack-bar-container{
-    background: #43a047 !important;
-    color: #fff !important;
-  }
-  .mat-success .mat-simple-snackbar-action{
-    color: #fff !important;
-  }
-  .mat-errors{
+  .mat--errors {
     background: #f44336 !important;
     color: #fff !important;
+
+    .mat-snack-bar-container {
+      background: #f44336 !important;
+      color: #fff !important;
+    }
+
+    .mat-simple-snackbar-action {
+      color: #fff !important;
+    }
   }
-  .mat-errors .mat-snack-bar-container{
-    background: #f44336 !important;
-    color: #fff !important;
-  }
-  .mat-errors .mat-simple-snackbar-action{
-    color: #fff !important;
-  }
-  .mat-card{
-    .custom-card-footer, .custom-card-actions{
+
+  .mat-card { 
+    &--bg {
+      background: mat-color($background, card);
+    }
+    .custom__card__footer, .custom__card__actions {
       a{
-        &:hover{
+        &:hover {
           color: mat-color($primary) !important;
         }
       }  
     }
   }
-  .messages{
-    &.mat-menu-panel{
+  .messages {
+    &.mat-menu-panel {
       color: mat-color($foreground, 'text');
     }
-    .footer{
-      a{
+    .footer {
+      a {
         color: mat-color($foreground, 'text');
       }
     }
   }
 }
 
-.image-dialog-class{
-  .mat-dialog-container{
+.image__dialog {
+  .mat-dialog-container {
     padding: 0;
     background: transparent !important;
     box-shadow: none;
   }
-  .mat-dialog-actions:last-child{
-    margin-bottom: 0;
-    line-height: 0;
-    padding: 0;
+  .mat-dialog-actions {
+    &:last-child {
+      margin-bottom: 0;
+      line-height: 0;
+      padding: 0;
+    }
   }
 } 

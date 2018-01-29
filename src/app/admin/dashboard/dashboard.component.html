@@ -4,10 +4,10 @@
       <mat-card-content fxLayoutAlign="start center">
         <div class="p-1">
           <mat-card-subtitle class="mb-0">Total Orders</mat-card-subtitle>
-          <h3 class="mat-h3-light m-0">200</h3>
+          <h3 class="mat-h3--light m-0">200</h3>
         </div>
         <span fxFlex></span>
-      <mat-card class="mat-bg-primary mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+      <mat-card class="mat-bg--primary mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
           <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
       </mat-card>
       </mat-card-content>
@@ -18,10 +18,10 @@
       <mat-card-content fxLayoutAlign="start center">
         <div class="p-1">
           <mat-card-subtitle class="mb-0">Total Sale</mat-card-subtitle>
-          <h3 class="mat-h3-light m-0">11,200</h3>
+          <h3 class="mat-h3--light m-0">11,200</h3>
         </div>
         <span fxFlex></span>
-        <mat-card class="mat-bg-accent mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+        <mat-card class="mat-bg--accent mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
           <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
         </mat-card>
       </mat-card-content>
@@ -32,10 +32,10 @@
       <mat-card-content fxLayoutAlign="start center">
         <div class="p-1">
           <mat-card-subtitle class="mb-0">Total Customers</mat-card-subtitle>
-          <h3 class="mat-h3-light m-0">98</h3>
+          <h3 class="mat-h3--light m-0">98</h3>
         </div>
         <span fxFlex></span>
-        <mat-card class="mat-bg-accent  mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+        <mat-card class="mat-bg--accent mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
           <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
         </mat-card>
       </mat-card-content>
@@ -46,10 +46,10 @@
       <mat-card-content fxLayoutAlign="start center">
         <div class="p-1">
           <mat-card-subtitle class="mb-0">Total Visits</mat-card-subtitle>
-          <h3 class="mat-h3-light m-0">1900</h3>
+          <h3 class="mat-h3--light m-0">1900</h3>
         </div>
         <span fxFlex></span>
-        <mat-card class="mat-bg-warn  mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+        <mat-card class="mat-bg--warn mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
           <mat-icon>trending_up </mat-icon><span class="ml-2">20%</span>
         </mat-card>
       </mat-card-content>
@@ -74,7 +74,7 @@
   </div>
   <div fxFlex="100" fxFlex.gt-md="50">
     <mat-card>
-      <mat-card-content >
+      <mat-card-content>
       <canvas baseChart #lineChart="base-chart" height="150"
         [data]="lineChartData"
         [labels]="lineChartLabels"
@@ -91,9 +91,9 @@
 
 <div fxLayout.lt-md="column">
   <div fxFlex="100" fxFlex.gt-md="33.33" fxLayout="Column">
-    <mat-card class="p-0 custom-card">
+    <mat-card class="p-0 custom__card">
         <mat-card-title class="mb-0" fxLayoutAlign="start center">
-          <p class="mb-0 f-20">Top Performers</p>
+          <p class="mb-0 font--20">Top Performers</p>
           <span fxFlex></span>
           <button mat-icon-button [matMenuTriggerFor]="progressBar">
             <mat-icon>more_vert</mat-icon>
@@ -128,9 +128,9 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="p-0 custom-card">
+    <mat-card class="p-0 custom__card">
         <mat-card-title class="mb-0" fxLayoutAlign="start center">
-          <p class="f-20 mb-0">Messages</p>
+          <p class="font--20 mb-0">Messages</p>
           <span fxFlex></span>
           <button mat-icon-button>
             <mat-icon>cached</mat-icon>
@@ -151,7 +151,7 @@
         <mat-card-content class="mb-0 p-0">
           <perfect-scrollbar>
             <div [style.max-height]="'300px'">
-              <mat-list class="p-0 pointer-cursor">
+              <mat-list class="p-0 pointer--cursor">
                 <mat-list-item>
                   <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
                   <h4 mat-line>Tile with avatar</h4>
@@ -182,16 +182,16 @@
           </perfect-scrollbar>
         </mat-card-content>
         <mat-divider></mat-divider>
-        <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
-          <a class="pointer-cursor mat-body-1">View All</a>
+        <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+          <a class="pointer--cursor mat-body-1">View All</a>
         </mat-card-footer>
       </mat-card>
   </div>
 
   <div fxFlex="100" fxFlex.gt-md="66.66">
-    <mat-card class="custom-card p-0 list-scroll">
+    <mat-card class="custom__card p-0 list--scroll">
         <mat-card-title  class="mb-0" fxLayoutAlign="start center">
-          <p class="f-20 mb-0">Latest Activities</p>
+          <p class="font--20 mb-0">Latest Activities</p>
         </mat-card-title>
       <mat-divider></mat-divider>
       <mat-card-content class="mb-0 p-0">
@@ -246,16 +246,16 @@
          </mat-list-item>
         </mat-list>
       </mat-card-content>
-      <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
-        <a class="pointer-cursor mat-body-1">View All</a>
+      <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+        <a class="pointer--cursor mat-body-1">View All</a>
       </mat-card-footer>
     </mat-card>
 
     <div fxLayout="row" fxLayoutWrap="wrap">
       <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
-          <mat-card class="p-0 custom-card">
+          <mat-card class="p-0 custom__card">
               <mat-card-title class="mb-0" fxLayoutAlign="start center">
-                <p class="f-20 mb-0">Gallery</p>
+                <p class="font--20 mb-0">Gallery</p>
                 <span fxFlex></span>
                 <button mat-icon-button>
                   <mat-icon>cached</mat-icon>
@@ -283,17 +283,17 @@
                 </perfect-scrollbar>
               </mat-card-content>
               <mat-divider></mat-divider>
-              <mat-card-footer class="m-0 custom-card-footer" fxLayoutAlign="center center">
-                <a class="pointer-cursor mat-body-1">View All</a>
+              <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+                <a class="pointer--cursor mat-body-1">View All</a>
               </mat-card-footer>
             </mat-card>
       </div>
       <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
-        <mat-card class="p-0 custom-card">
+        <mat-card class="p-0 custom__card">
           
-          <div class="image-overlay">
+          <div class="image--overlay">
               <img mat-card-image src="assets/images/gallery04.jpg" alt="Photo of a Shiba Inu" [style.height]="'250px'" class="mb-0">
-              <h2 class="card-title overlay">Man bun tacos</h2>
+              <h2 class="card__title overlay">Man bun tacos</h2>
           </div>
           <mat-card-content class="mb-0">
               <div class="mat-caption mat-hint mb-1">01/11/2018</div>
@@ -301,7 +301,7 @@
                  Tilde glossier organic vaporware la croix, kombucha green juice enamel pin. YOLO woke hashtag tacos shoreditch. Poutine tilde lomo cred.</p>
           </mat-card-content>
           <mat-divider></mat-divider>
-          <mat-card-actions class="custom-card-actions">
+          <mat-card-actions class="custom__card__actions">
             <button mat-button class="mat-body">Read More</button>
             <span fxFlex></span>
             <button mat-icon-button><mat-icon>favorite</mat-icon></button>

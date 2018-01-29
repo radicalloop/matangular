@@ -1,17 +1,15 @@
-.settings{
+.settings {
   position: fixed;
   bottom: 15px;
   right: 25px;
   z-index:9;
 }
-.mat-card{
+.mat-card {
   width: 250px;
 
-  .mat-card-title{
+  .mat-card-title {
     padding: .5rem 0.5rem .5rem 1rem;
 
-    .h3{
-      font-size: 18px;
-    }
+    .h3 { font-size: 18px; }
   }
 }

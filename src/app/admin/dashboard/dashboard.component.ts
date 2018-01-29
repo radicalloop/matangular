@@ -107,7 +107,7 @@ export class DashboardComponent implements OnInit {
  @Input() image : string;
   openDialog(image): void {
     let dialogRef = this.dialog.open(ImageDialogComponent, {
-      panelClass: 'image-dialog-class',
+      panelClass: 'image__dialog',
       data: {image}
     });
   }

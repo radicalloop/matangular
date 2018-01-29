@@ -1,22 +1,21 @@
 @import 'src/themes/common/common.scss';
-.error{
-  .mat-icon{
-    @include size(200px);
+.error {
+  .mat-icon {
+    @include size(120px);
     @include fontandline(120px);
   }
-  .error-digit{
+  &__digit {
     font-weight: 600;
     @include fontandline(80px);
   }
-  .error-text-small{
+  &__text--small {
     font-size: 24px;
     font-weight: 300;
   }
-  .mt{
-    margin-top: 50px;
-  }
-  .font-size-20{
+  &__desc {
     margin-top: 30px;
     font-size: 20px;
   }
+  .mt { margin-top: 50px; }
+  
 }

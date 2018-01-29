@@ -2,7 +2,7 @@
 .mat-toolbar {
     padding: 0 !important;
 
-    .user__icon{
+    .user__icon {
         min-height: 64px;
         height: 64px;
     }
@@ -15,42 +15,54 @@
           background: transparent;
           border: none;
       }
-      input:focus{
-          outline: 0;
-      }
+      input:focus { outline: 0; }
     }
 }
-.color--scheme
-{
-  .mat-menu-item{
+.color--scheme {
+  .mat-menu-item {
     @include size(40px);
     padding: 5px;
 
-    .swatch{
+    .swatch {
       @include size(40px);
       line-height: 40px !important;
       border-radius: 50%;
-    }
 
-    .swatch__active--icon{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto !important;
+      &__active--icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+      }
     }
   }
 }
-.messages{
-  &.mat-menu-panel{
+.messages {
+  &.mat-menu-panel {
     min-width: 350px;
     max-width: 350px;
   }
-  .mat-menu-content{
-    padding-top: 0 !important
-  }
-  .middle-content > div, .header > div{
+  
+  .mat-menu-content { padding-top: 0 !important; }
+
+  &__content > div,
+  .header > div {
     height: 60px
+  }
+  
+  &__content {
+    .border-radius--50,
+    .mat-bg--bordered,
+    button {
+      @include fontandline(30px);
+      @include size(30px);
+      
+      .mat-icon{
+        @include fontandline(18px);
+        @include size(18px);
+      }
+    }   
   }
 }

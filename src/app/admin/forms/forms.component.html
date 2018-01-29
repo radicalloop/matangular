@@ -116,7 +116,7 @@
             </div>
             <div fxLayoutAlign="start start" fxLayoutGap="5px">
               <mat-form-field fxFlex="100">
-               <input matInput  placeholder="Choose file" readonly #file1  class="pointer-cursor" (click)="upload1.click()">
+               <input matInput  placeholder="Choose file" readonly #file1  class="pointer--cursor" (click)="upload1.click()">
                <input [hidden]="true" type="file" #upload1 (change)="uploadFile($event, file1)"/>
               </mat-form-field>
               <button type="button" mat-raised-button color="accent" (click)="upload1.click()" >
@@ -125,7 +125,7 @@
             </div>
             <div fxLayoutGap="5px">
               <mat-form-field fxFlex="100">
-                <input matInput #file2 placeholder="Choose file" readonly class="pointer-cursor" (click)="upload2.click()">
+                <input matInput #file2 placeholder="Choose file" readonly class="pointer--cursor" (click)="upload2.click()">
                 <input [hidden]="true" type="file" #upload2 (change)="uploadFile($event, file2)"/>
               </mat-form-field>
               <button type="button" mat-button color="accent" mat-mini-fab (click)="upload2.click()">

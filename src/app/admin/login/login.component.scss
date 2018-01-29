@@ -6,9 +6,8 @@
 .seperator {
   margin: 0 auto;
   
-  .text {
-    position: relative;
-  }
+  .text { position: relative; }
+
    %seperator--pseudo{
     content: "";
     display: block;
@@ -17,6 +16,7 @@
     top: 10px;
     border-top: 1px solid rgba(0,0,0,.12);
    } 
+
   :before {
     @extend %seperator--pseudo;
     left: -40px;
@@ -26,11 +26,13 @@
     right: -40px;
   }
 }
-.google-btn {
-  background-color:#d73d32;
-  color: #fff;
-}
-.fb-btn {
-  background-color: #3f5c9a;
-  color: #fff;
+.btn {
+  &--google {
+    background-color:#d73d32;
+    color: #fff;
+  }
+  &--facebook {
+    background-color: #3f5c9a;
+    color: #fff;
+  }
 }

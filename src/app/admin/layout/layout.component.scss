@@ -14,22 +14,22 @@
             .mat-slide-toggle-label {
                 order: 1;
 
-            .mat-slide-toggle-bar {
-                order: 2;
-            }
-            .mat-slide-toggle-content {
-                -webkit-box-flex: 1;
-                        -ms-flex: 1;
-                            flex: 1;
-            }
+                .mat-slide-toggle-bar {
+                    order: 2;
+                }
+                .mat-slide-toggle-content {
+                    -webkit-box-flex: 1;
+                            -ms-flex: 1;
+                                flex: 1;
+                }
             }
         }
     }
 }
-.container__right{
+.right__container {
     padding: 0.33em;
 
-    @include respond-to('x-small'){
+    @include respond-to('x-small') {
         padding: 0.22rem 0 !important;
     }
 }

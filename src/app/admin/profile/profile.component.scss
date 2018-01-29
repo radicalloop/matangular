@@ -1,37 +1,28 @@
 @import 'src/themes/common/common.scss';
-.propic{
+.profile__pic {
   margin: 0 auto;
   @include size(100px);
 
-  img{
-    @include size(100%);
-  }
+  img { @include size(100%); }
 }
-.profile-menu__list{
+.profile-menu__list {
   position: absolute;
   top: 5px;
   right: 5px;
 }
-.mat-nav-list .mat-list-item-content{
-  padding: 0 !important;
+.mat-nav-list { 
+  .mat-list-item-content { padding: 0 !important;}
 }
 
-.mat-list-item{
-  .mat-chip{
+.mat-list-item {
+  .mat-chip {
     padding: 2px 6px !important;
     border-radius: 4px;
   }
-  .task-options{
-    visibility: hidden;
-  }
+  .task__options { visibility: hidden; }
 
-  & :hover{
-    .task-options{
-      visibility: visible;
-    }
+  & :hover {
+    .task__options { visibility: visible; }
   }
 }
-
-.mat-h5{
-  font-size: 13px;
-}
+.mat-h5 { font-size: 13px; }

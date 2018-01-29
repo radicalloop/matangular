@@ -4,16 +4,12 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
   
-  .hzView div:nth-child(4n+1){
-    background-color: mat-color($primary, 100);
-  }
-  .hzView div:nth-child(4n+2){
-    background-color: mat-color($primary, 200);
-  }
-  .hzView div:nth-child(4n+3){
-    background-color: mat-color($primary, 300);
-  }
-  .hzView div:nth-child(4n+4){
-    background-color: mat-color($primary, 400);
+  .grid__system {
+    div {
+      &:nth-child(4n+1) { background-color: mat-color($primary, 100); }
+      &:nth-child(4n+2) { background-color: mat-color($primary, 200); }
+      &:nth-child(4n+3) { background-color: mat-color($primary, 300); }
+      &:nth-child(4n+4) { background-color: mat-color($primary, 400); }
+    }
   }
 }

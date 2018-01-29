@@ -1,64 +1,50 @@
 @import 'src/themes/common/common.scss';
 
-.chat-container{
+.chat-container {
   overflow: hidden;
 
-  .mat-nav-list{
-    padding-top: 64px !important;
-  }
-  .mat-toolbar {
-    padding: 15px !important;
-  }
+  .mat-toolbar { padding: 15px !important; }
 
-  .mat-sidenav{
+  .mat-sidenav {
     .mat-toolbar {
       z-index: 9;
       position: fixed;
-    }
-  }
-}
 
-.pos-absolute{
-  position: absolute;
-  z-index: 9999;
-}
-
-.chat--search-form > div{
-  padding: 0.3rem 1rem;
-  background-color: #fff;
-  
-  input{
-    border: none;
-    overflow:hidden;
-      &:focus{
-        outline: none;
+      .chat--search-form > div {
+        padding: 0.3rem 1rem;
+        background-color: #fff;
+        
+        input {
+          border: none;
+          overflow:hidden;
+          &:focus {
+            outline: none;
+          }
+        }
       }
-  }
-}
-
-.conversations-hold{
-  .sender{
-    .toolbar__avatar{
-      margin-right: 1rem;
+    }
+    .mat-nav-list {
+      padding-top: 64px !important;
+      
+      .toolbar__avatar {
+        order: -1;
+        margin-right: 0.6rem;
+      }
+      .unread{
+        border-radius: 50%;
+        text-align: center;
+        min-width: 12px;
+        height: 16px;
+        line-height: 17px;
+        font-size: 13px;
+        padding: 2px 4px;
+      }
     }
   }
-  .receiver{
-    .toolbar__avatar{
-      margin-left: 1rem;
-      order: 2;
-    }
-  }
-}
-.mat-nav-list{
-  .toolbar__avatar{
-    order: -1;
-    margin-right: 0.6rem;
-  }
-}
-.toolbar__avatar{
+  .toolbar__avatar {
     position:relative;
 
-    %chat__status--pseudo{
+    %chat__status--pseudo {
       position: absolute;
       top: 25px;
       right: -2px;
@@ -66,30 +52,34 @@
       border-radius: 50%;
       border: 2px solid #fff;
     }
-    &.online{
-      .chat__status{
+    &.online {
+      .chat__status {
       @extend %chat__status--pseudo;
         background: #4caf50;
       }
     }
-    &.offline{
-      .chat__status{
+    &.offline {
+      .chat__status {
         @extend %chat__status--pseudo;
         background: #ccc;
       }
     }
+  }
 }
-.unread{
-  border-radius: 50%;
-  text-align: center;
-  min-width: 12px;
-  height: 16px;
-  line-height: 17px;
-  font-size: 13px;
-  padding: 2px 4px;
-}
-.conversation-msg{
-  padding: 0.48rem 0.94rem;
-  border-radius: 4px;
-  font-size: 14px;
+
+.conversation__block {
+  .sender {
+    .toolbar__avatar { margin-right: 1rem; }
+  }
+  .receiver {
+    .toolbar__avatar {
+      margin-left: 1rem;
+      order: 2;
+    }
+  }
+  .conversation__msg {
+    padding: 0.48rem 0.94rem;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 }

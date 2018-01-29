@@ -1,22 +1,21 @@
-//@import '~@angular/material/theming';
-
 @mixin anms-chat-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
-  .mat-sidenav{
+
+  .mat-sidenav {
     border-right: 1px solid mat-color($foreground, divider);
   }
 
-  .sender{
-    .conversation-msg{
+  .sender {
+    .conversation__msg {
       background-color: mat-color($primary);
       color: mat-color($primary, default-contrast);
     }
   }
-  .receiver{
-    .conversation-msg{
+  .receiver {
+    .conversation__msg {
       background-color: mat-color($accent);
       color: mat-color($accent, default-contrast);
     }

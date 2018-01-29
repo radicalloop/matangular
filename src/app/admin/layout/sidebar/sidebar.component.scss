@@ -1,11 +1,5 @@
 @import 'src/themes/common/common.scss';
 
-.sidebar-left .menu__list a mat-icon {
-  @include size(48px);
-  line-height: 48px;
-  text-align: center;
-}
-
 .sidenav--left {
   width: 240px;
   height: 100vh;
@@ -22,12 +16,10 @@
       left: 0;
       z-index: 999;
 
-      .mat-h5{
-        line-height: 10px !important;
-      }
+      .mat-h5 { line-height: 10px !important; }
     }
     .user {
-      .user__photo {
+      &__photo {
         border: 1px solid hsla(210,8%,51%,1);
         padding: 2px;
         border-radius: 50%;
@@ -40,46 +32,44 @@
         }
       }
     }
-      .frequently-accessed .button-row button{
-        min-width: auto;
+    .frequently-accessed .button-row button { min-width: auto; }
+    .menu__list {
+      mat-icon {
+        @include size(48px);
+        line-height: 48px;
+        text-align: center;
       }
-      .menu__list {
-          .mat-nav-list .mat-list-item {
-            font-size: 14px;
-          }
-          .menu__item{
-            max-height: 48px ;
-            overflow: hidden;
-            transition: all .4s cubic-bezier(.35,0,.25,1);
-          }
-          .mat-list-item-content {
-              padding: 0 !important;
-              display: block !important;
+      .mat-nav-list .mat-list-item { font-size: 14px; }
+      .menu__item {
+        max-height: 48px ;
+        overflow: hidden;
+        transition: all .4s cubic-bezier(.35,0,.25,1);
 
-              .menu-caret{
-                  font-size: 18px;
-              }
-          }
-          .menu__item.open{
-              max-height: 1000px;
-              overflow: visible !important;
-              height: auto !important;
+        &.open {
+          max-height: 1000px;
+          overflow: visible !important;
+          height: auto !important;
 
-              .menu-caret{
-                transform: rotate(180deg);
-              }
-                .menu__submenu{
-                  padding-top:0px;
-                  transition: max-height .4s cubic-bezier(.35,0,.25,1);
+          .menu-caret { transform: rotate(180deg); }
+          .menu__submenu {
+            padding-top:0px;
+            transition: max-height .4s cubic-bezier(.35,0,.25,1);
 
-                    .mat-list-item span {
-                      padding-left: 46px;
-                      height: 48px;
-                      line-height: 48px;
-                      transition: height .4s cubic-bezier(.35,0,.25,1);
-                    }
-                }
+            .mat-list-item span {
+              padding-left: 46px;
+              height: 48px;
+              line-height: 48px;
+              transition: height .4s cubic-bezier(.35,0,.25,1);
+            }
           }
+        }
       }
+      .mat-list-item-content {
+          padding: 0 !important;
+          display: block !important;
+
+          .menu-caret{ font-size: 18px; }
+      }
+    }
   }
 }
