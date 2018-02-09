@@ -2,9 +2,9 @@
 
 @include mat-core();
 
-@import 'themes/default-theme.scss';
-@import 'themes/light-theme.scss';
-@import 'themes/black-theme.scss';
+@import 'default-theme.scss';
+@import 'light-theme.scss';
+@import 'black-theme.scss';
 
 $general-typography: mat-typography-config(
   $subheading-2:  mat-typography-level(14px, 28px, 400)
@@ -14,13 +14,13 @@ $general-typography: mat-typography-config(
 @include mat-core($general-typography);
 @include mat-base-typography($general-typography);
 
-@import 'themes/quill-editor/quill-editor.scss';
-@import 'themes/common/common.scss';
+@import 'quill-editor/quill-editor.scss';
+@import 'common/common.scss';
 
-@import 'app/admin/chat/chat.component.scss-theme.scss';
-@import 'app/admin/profile/profile.component.scss-theme.scss';
-@import 'app/admin/layout/header/header.component.scss-theme.scss';
-@import 'app/admin/grid-system/grid-system.component.scss-theme.scss';
+@import 'src/app/admin/chat/chat.component.scss-theme.scss';
+@import 'src/app/admin/profile/profile.component.scss-theme.scss';
+@import 'src/app/admin/layout/header/header.component.scss-theme.scss';
+@import 'src/app/admin/grid-system/grid-system.component.scss-theme.scss';
 
 @mixin custom-components-theme($theme) {
 

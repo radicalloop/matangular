@@ -54,3 +54,17 @@
     }
   }
 
+  .image__dialog {
+    .mat-dialog-container {
+      padding: 0;
+      background: transparent !important;
+      box-shadow: none;
+    }
+    .mat-dialog-actions {
+      &:last-child {
+        margin-bottom: 0;
+        line-height: 0;
+        padding: 0;
+      }
+    }
+  }

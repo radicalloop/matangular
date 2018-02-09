@@ -1,4 +1,5 @@
-///Breakpoints Mixin
+/*---- Breakpoints Mixin -----*/
+
 $breakpoints: (
   'x-small': (max-width: 599px),
   'small': (max-width: 959px),
@@ -26,19 +27,19 @@ $breakpoints: (
   }
 }
 
-/// equal width and height
+/*---- equal width and height -----*/
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
 }
-
-/// font size and line height 
+ 
+/*---- font size and line height -----*/
 @mixin fontandline($font-size, $line-height: $font-size) {
   font-size: $font-size;
   line-height: $line-height;
 }
 
-// Theme 
+/*---- Theme  -----*/
 @mixin anms-common-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
@@ -128,17 +129,4 @@ $breakpoints: (
   }
 }
 
-.image__dialog {
-  .mat-dialog-container {
-    padding: 0;
-    background: transparent !important;
-    box-shadow: none;
-  }
-  .mat-dialog-actions {
-    &:last-child {
-      margin-bottom: 0;
-      line-height: 0;
-      padding: 0;
-    }
-  }
-} 
+ 

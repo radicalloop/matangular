@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'themes/common/common.scss';
 
-// Datatables CSS
+/*---- ngx-datatable CSS import -----*/
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
-@media screen and (max-width: 599px) {
+@include respond-to('x-small') {
   .ngx-datatable.material {
     .datatable-footer {
       .datatable-pager {
@@ -28,24 +28,18 @@
   }
 }
 
-// perfect scrollbar
-perfect-scrollbar > .ps.ps--active-y>.ps__rail-y {
-  left: auto !important;
-}
-
 body {
   position: relative;
   margin: 0;
   line-height: 1.5;
-  font-family: "Roboto", Helvetica Neue, sans-serif;
+  font-family: Roboto, Helvetica Neue, sans-serif;
 }
 
 p { margin: 0 0 1rem; }
 
 .hidden { display: none !important; }
 
-/*Margins*/
-
+/*---- Margins -----*/
 .m-0 { margin: 0 !important; }
 
 .mb-0 { margin-bottom: 0 !important; }
@@ -62,9 +56,9 @@ p { margin: 0 0 1rem; }
 
 .mr-5 { margin-right: 0.5rem !important; }
 
-.mt-1 { margin-top: 1rem!important; }
+.mt-1 { margin-top: 1rem !important; }
 
-.mb-1 { margin-bottom: 1rem!important; }
+.mb-1 { margin-bottom: 1rem !important; }
 
 .ml-1 { margin-left: 1rem !important; }
 
@@ -77,7 +71,7 @@ p { margin: 0 0 1rem; }
   margin-bottom: 1rem !important;
 }
 
-/*Paddings*/
+/*---- Paddings -----*/
 
 .p-0 { padding: 0 !important; }
 
@@ -112,6 +106,7 @@ p { margin: 0 0 1rem; }
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
+/*---- End Paddings -----*/
 
 .mat-h3--light {
   font-size: 22px;
@@ -176,3 +171,7 @@ a { text-decoration: none; }
   .mr-1 { margin-right: 1rem !important; }
 }
 
+/*---- Perfect Scrollbar -----*/
+perfect-scrollbar > .ps.ps--active-y>.ps__rail-y {
+  left: auto !important;
+}
