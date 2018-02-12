@@ -22,7 +22,7 @@
         "../node_modules/quill/dist/quill.bubble.css",
         "../node_modules/quill/dist/quill.snow.css",
         "styles.scss",
-        "theme.scss"
+        "themes/theme.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

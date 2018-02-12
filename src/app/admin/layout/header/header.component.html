@@ -154,7 +154,7 @@
           <span fxHide.xs class="ml-5">John Doe</span>
           <mat-icon fxHide.xs>keyboard_arrow_down</mat-icon>
         </button>
-        <mat-menu #userMenu="matMenu">
+        <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
           <button mat-menu-item>
             <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
           <button mat-menu-item>
