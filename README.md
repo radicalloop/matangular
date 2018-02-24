@@ -1,4 +1,6 @@
-# AngularMaterial
+# MatAngular
+
+Angular Material based no-frills admin template. Easy to integrate, easy to extend.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
