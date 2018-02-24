@@ -2,6 +2,18 @@
 
 Angular Material based no-frills admin template. Easy to integrate, easy to extend.
 
+To install, run:
+
+`npm install`
+
+`ng serve --open`
+
+It should open, or navigate to, `http://localhost:4200/`
+
+[Live Demo] (http://angular-material.radicalloop.com)
+
+-------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
 ## Development server
