@@ -2,6 +2,8 @@
 
 Angular Material based no-frills admin template. Easy to integrate, easy to extend.
 
+# [Live Demo](http://angular-material.radicalloop.com)
+
 Built with:
 
 - Angular 5
@@ -16,7 +18,9 @@ To install, run:
 
 It should open, or navigate to, `http://localhost:4200/`
 
-[Live Demo](http://angular-material.radicalloop.com)
+Built with ♥ by:
+
+- The Open Source and Javascript loving team at [RadicalLoop](https://www.radicalloop.com)
 
 Enjoy using / Contribute :)
 
@@ -53,7 +57,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 --------------
-
-Built with ♥ by:
-
-- The Open Source and Javascript loving team at https://www.radicalloop.com
